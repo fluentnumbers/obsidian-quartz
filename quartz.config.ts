@@ -15,7 +15,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "fluentnumbers.github.io",
+    baseUrl: "fluentnumbers.com",
     ignorePatterns: ["private", "templates", ".obsidian", "drafts","!published**/!(*.md)", "!(*.md)","!icons**/!(*.md)","!icon.png"],
     defaultDateType: "created",
     theme: {
