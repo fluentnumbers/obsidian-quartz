@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/05/01
+updated: 2025/05/02
 cssclasses:
   - personal-main
 ---
@@ -28,11 +28,10 @@ tags::
 %%
 
 <!-- #### Hello 👋, I am Andrejs -->
-<!-- <span class="float-right">![[profile.png|300]]</span> -->
-<!-- <img style="float: right;" src="assets/profile.png"> -->
-<!-- ![image alt >](profile.png) -->
 <!-- <img style="display: block; margin: auto;" src="assets/profile.png" width="300px"/> -->
 <img style="float: right;" src="assets/profile.png" width="250px">
+
+
 
 I am a <strong>data scientist</strong> and <strong>ML engineer</strong> on a continuous journey of learning by doing & sharing. I live in the Netherlands and have almost 10 years of experience in data science, [[Machine Learning MoC|Machine Learning]] for various industrial applications including [[remote monitoring]], [[predictive maintenance]], [[digital twin]] and, since recently, also [[asset management]].
 
