@@ -76,7 +76,7 @@ list from "000_notes/blogs"
 
 ---
 
-### Study Notes
+### Other notes
 
 > [!NOTE]- Selected LLM notes
 > ![[selected LLM notes#selected LLM notes]]
