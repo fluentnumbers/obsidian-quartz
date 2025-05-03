@@ -18,7 +18,7 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
-    Component.ArticleTitle(),
+    // Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
@@ -34,12 +34,44 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({'title': 'On this site','folderClickBehavior':'link', mapFn: (node) => {
+      if (node.displayName === "000_processed") {
+        node.displayName = "Other"
+      }
+      if (node.isFolder) {
+        node.displayName = "📁 " + node.displayName
+      } else {
+        node.displayName = "📄 " + node.displayName
+      }
+    },}),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+  ],
+  afterBody: [
+    Component.Graph(),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'fluentnumbers/obsidian-quartz',
+        // from data-repo-id
+        repoId: 'R_kgDOOjDg7A',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDOOjDg7M4Cps1s',
+        "data-mapping":"pathname",
+        "data-strict":"0",
+        "data-reactions-enabled":"1",
+        "data-emit-metadata":"0",
+        "data-input-position":"top",
+        "data-theme":"preferred_color_scheme",
+        "data-lang":"en",
+        "crossorigin":"anonymous"
+      }
+    }),
   ],
 }
 
@@ -58,7 +90,16 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({'title': 'On this site','folderClickBehavior':'link', mapFn: (node) => {
+      if (node.displayName === "000_processed") {
+        node.displayName = "Other"
+      }
+      if (node.isFolder) {
+        node.displayName = "📁 " + node.displayName
+      } else {
+        node.displayName = "📄 " + node.displayName
+      }
+    },}),
   ],
   right: [],
 }

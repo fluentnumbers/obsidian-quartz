@@ -63,12 +63,12 @@ function Test-ShouldIgnorePath {
     return $false
 }
 
-# Function to check if file is in assets/published directory
+# Function to check if file is in assets/published or bookcovers directory
 function Test-IsPublishedAsset {
     param (
         [string]$Path
     )
-    return $Path -match "\\assets\\published\\"
+    return ($Path -match "\\assets\\published\\" -or $Path -match "\\assets\\bookcovers\\")
 }
 
 # Function to check if file should be preserved
@@ -144,9 +144,16 @@ function Copy-FileWithRelativePath {
         [string]$TargetRoot
     )
 
-    # Fix: Get relative path correctly
+    # Get relative path
     $relativePath = $SourceFile.Replace($SourceRoot, "").TrimStart('\')
-    $targetPath = Join-Path $TargetRoot $relativePath
+
+    # Create target path by removing 000_notes folder level
+    $targetRelativePath = $relativePath
+    if ($targetRelativePath -match "^000_notes\\(.*)") {
+        $targetRelativePath = $matches[1]
+    }
+
+    $targetPath = Join-Path $TargetRoot $targetRelativePath
     $targetDir = Split-Path $targetPath -Parent
 
     # Create target directory if it doesn't exist
@@ -154,9 +161,14 @@ function Copy-FileWithRelativePath {
         New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
     }
 
-    # Copy the file
-    Copy-Item -Path $SourceFile -Destination $targetPath -Force
-    Write-Output "$(Get-Date): Copied $SourceFile to $targetPath" | Out-File -FilePath $logFile -Append
+    try {
+        # Copy the file
+        Copy-Item -Path $SourceFile -Destination $targetPath -Force
+        Write-Output "$(Get-Date): Copied $SourceFile to $targetPath" | Out-File -FilePath $logFile -Append
+    }
+    catch {
+        Write-Output "$(Get-Date): Error copying $SourceFile to $targetPath : $_" | Out-File -FilePath $logFile -Append
+    }
 }
 
 # Function to get all files that should be in the destination
@@ -168,7 +180,8 @@ function Get-SourceFiles {
     Get-ChildItem -Path $Path -Recurse -File | ForEach-Object {
         if (-not (Test-ShouldIgnorePath -Path $_.FullName)) {
             if (Test-ShouldPublish -FilePath $_.FullName) {
-                $relativePath = $_.FullName.Substring($sourceFolder.Length)
+                # Keep full relative path for source files
+                $relativePath = $_.FullName.Replace($sourceFolder, "").TrimStart('\')
                 $files += $relativePath
             }
         }

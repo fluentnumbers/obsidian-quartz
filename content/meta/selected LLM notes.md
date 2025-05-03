@@ -6,17 +6,17 @@ publish: "true"
 "date:": "[[2024-11-25]]"
 link: 
 tags: 
-parent: "[[all kinds of lists]]"
+parent: "[[meta]]"
 source: 
-related: 
+related: "[[LLM]]"
 created: 2024/11/25
 updated: 2025/05/01
 ---
 %%
 date:: [[2024-11-25]]
-parent:: [[all kinds of lists]]
+parent:: [[meta]]
 source::
-related::
+related:: [[LLM]]
 tags::
 %%
 ### [[selected LLM notes]]

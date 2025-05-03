@@ -8,14 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Andrejs'🪴",
+    pageTitle: "Andrejs'🌱",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "fluentnumbers.github.io",
+    baseUrl: "fluentnumbers.com",
     ignorePatterns: ["private", "templates", ".obsidian", "drafts","!published**/!(*.md)", "!(*.md)","!icons**/!(*.md)","!icon.png"],
     defaultDateType: "created",
     theme: {
@@ -84,6 +84,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+
       }),
       Plugin.Assets(),
       Plugin.Static(),
