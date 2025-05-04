@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/05/03
+updated: 2025/05/04
 cssclasses:
   - personal-main
 ---
@@ -29,19 +29,21 @@ tags::
 
 ## Hello 👋, I am Andrejs
 
-Welcome to my [[PKM|digital garden]] 🌱 - a mix of *atomic* notes connected *topographically* (like Wiki), rather than chronologically (like blogs). This place is an assumed "second brain" and includes thoughts, ideas and anything else I found useful to write down. It is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] mean I would want to write something there, but so far haven't. There is Explorer ⬅️, Search bar as well as Graph view ⬇️ to help you find stuff.
+Welcome to my [[PKM|digital garden]] 🌱 - a mix of *atomic* notes connected *topographically* (like Wiki), rather than chronologically (like blogs). This place is an assumed "second brain" and includes study notes, ideas and anything else I found useful to write down.
 
----
+The domain *fluentnumbers* was born from the fact that I am *fluent **with** numbers*, but also from my strong conviction that *numbers* (as in "data") *can be fluent* and say a lot about a business or engineering topic at hand. And I sure enjoy doing the translation!
+
+This space is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] mean I would want to write something there, but so far haven't. There is Explorer ⬅️, Search bar ⬆️ as well as Graph view ⬇️ to help you find stuff.
+
 ### About me
-<!-- <img style="display: block; margin: auto;" src="assets/profile.png" width="300px"/> -->
-<img style="float: right;" src="assets/profile.png" width="250px">
 
-I am a data scientist and ML engineer on a continuous journey of learning by doing & sharing. I live in the Netherlands and have 10 years of experience in data science, [[Machine Learning MoC|Machine Learning]] for various industrial and scientific applications including [[remote monitoring]], [[predictive maintenance]], [[digital twin]] and, since recently, also [[asset management]].
+I am a data scientist and ML engineer on a continuous journey of learning by doing & sharing. I live in the Netherlands and have 10 years of experience in [[Machine Learning MoC|Machine Learning]] for various industrial and scientific applications including [[remote monitoring]], biomedical algorithms, predictive maintenance, [[digital twin]], [[asset management]], etc.
 Besides that I
 - try to [[latest reading|read]] more, because *[a book constitutes a means of transportation through the space of experience, at the speed of a turning page](https://www.nobelprize.org/prizes/literature/1987/brodsky/lecture/)*
-- enjoy somewhat longer walks and hikes as well as travelling to other places to see how people live elsewhere
+- enjoy somewhat longer walks and hikes as well as travelling places to see how people live elsewhere
 - lately, devote disproportional amount of time to [Mafia (or Werewolf)](https://en.wikipedia.org/wiki/Mafia_(party_game)) game, but then in its **competitive** (not *party*) form
-- when I am ~~about to actively apply for jobs~~ in mood I publish also in different social networks (less and less so), hence I have random [[blogs archive]], but you can also take a look at other notes [[#Selected notes|below]].
+%% - not a fan of modern web 2.0 with (even more pessimistic of what web 3.0 brings us), but I highly value good-old personal blogs with unique content. I even use [[rss|RSS]] in 2025 to read most o[](people%20I%20follow.md)]].
+- Rarely I am in the mood to write posts on social networks (less and less so), hence I have an unsorted [[blogs archive]] and you can also take a look at other notes [[#Selected notes|below]]. %%
 
 ---
 ### CONTACTS AND LINKS
