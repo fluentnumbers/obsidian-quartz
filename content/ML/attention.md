@@ -25,7 +25,7 @@ tags::
 # [[attention]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 
-> [!NOTE]- ##### paint analogy
+> [!NOTE]- paint analogy
 > ![[Pasted image 20240813200632.png|450]]
 
 ## Notes

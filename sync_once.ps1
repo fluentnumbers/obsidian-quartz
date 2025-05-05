@@ -23,22 +23,39 @@ $ignoreExtensions = @(
     ".bak"
 )
 
-# List of files to preserve in destination (relative to targetFolder)
-$preserveFiles = @(
-    "index.md",
-    "main.md",
-    "tags.md",
-    "search.md",
-    "assets/logo.png",
-    "assets/favicon.ico",
-    "assets/icons/*",
-    "assets/profile.png",
-    "profile.png"
+
+# Always publish these resource paths
+$alwaysPublishPaths = @(
+    "\\assets\\published\\",
+    "\\assets\\bookcovers\\",
+    "\\assets\\profile\.png$"
 )
 
-# Create target folder if it doesn't exist
-if (-not (Test-Path $targetFolder)) {
-    New-Item -ItemType Directory -Path $targetFolder -Force | Out-Null
+
+# List of files to preserve in destination (relative to targetFolder)
+$preserveFiles = @()
+
+# Function to check if file should be preserved
+function Test-ShouldPreserve {
+    param (
+        [string]$Path
+    )
+    $relativePath = $Path.Replace($targetFolder, "").TrimStart('\')
+    foreach ($preserveFile in $preserveFiles) {
+        if ($preserveFile -like "*") {
+            # Handle wildcard patterns
+            $pattern = $preserveFile -replace "\*", ".*"
+            if ($relativePath -match "^$pattern$") {
+                return $true
+            }
+        } else {
+            # Handle exact matches
+            if ($preserveFiles -contains $relativePath) {
+                return $true
+            }
+        }
+    }
+    return $false
 }
 
 # Function to check if a path should be ignored
@@ -63,32 +80,15 @@ function Test-ShouldIgnorePath {
     return $false
 }
 
-# Function to check if file is in assets/published or bookcovers directory
+
+# Function to check if file is in always-published resources
 function Test-IsPublishedAsset {
     param (
         [string]$Path
     )
-    return ($Path -match "\\assets\\published\\" -or $Path -match "\\assets\\bookcovers\\")
-}
-
-# Function to check if file should be preserved
-function Test-ShouldPreserve {
-    param (
-        [string]$Path
-    )
-    $relativePath = $Path.Substring($targetFolder.Length)
-    foreach ($preserveFile in $preserveFiles) {
-        if ($preserveFile -like "*") {
-            # Handle wildcard patterns
-            $pattern = $preserveFile -replace "\*", ".*"
-            if ($relativePath -match "^$pattern$") {
-                return $true
-            }
-        } else {
-            # Handle exact matches
-            if ($preserveFiles -contains $relativePath) {
-                return $true
-            }
+    foreach ($publishPath in $alwaysPublishPaths) {
+        if ($Path -match $publishPath) {
+            return $true
         }
     }
     return $false
@@ -135,6 +135,19 @@ function Test-ShouldPublish {
     # Then check if file contains publish flag
     return (Test-FileContainsString -FilePath $FilePath -SearchStrings $publishStrings)
 }
+
+# Create target folder if it doesn't exist
+if (-not (Test-Path $targetFolder)) {
+    New-Item -ItemType Directory -Path $targetFolder -Force | Out-Null
+}
+
+# Clean up existing content before sync - delete everything in content directory
+Write-Output "$(Get-Date): Starting cleanup..." | Out-File -FilePath $logFile
+if (Test-Path $targetFolder) {
+    Get-ChildItem -Path $targetFolder -Force | Remove-Item -Force -Recurse
+    Write-Output "$(Get-Date): Removed all content from $targetFolder" | Out-File -FilePath $logFile -Append
+}
+Write-Output "$(Get-Date): Cleanup completed." | Out-File -FilePath $logFile -Append
 
 # Function to copy file while maintaining relative path
 function Copy-FileWithRelativePath {
