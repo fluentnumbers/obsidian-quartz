@@ -27,7 +27,10 @@ tags::
 ## Note
 - The effect appearing within [[long context]] for LLM, when retrieving relevant info from the context is more successful, when it is stored in the beginning or in the end of the context.
 ![[Pasted image 20241118132004.png|350]]
-> Figure 1: Changing the location of relevant information (in this case, the position of the passage that answers an input question) within the language model’s input context results in a U shaped performance curve—models are better at using relevant information that occurs at the very beginning (primacy bias) or end of its input context (recency bias), and performance degrades significantly when models must access and use information located in the middle of its input context.
+> Figure 1: Changing the location of relevant information (in this case, the position of the passage that answers an input question) 
+> within the language model’s input context results in a U shaped performance curve — 
+> models are better at using relevant information that occurs at the very beginning (primacy bias) or end of its input context (recency bias),
+> and performance degrades significantly when models must access and use information located in the middle of its input context. ^9423a0
 ## Resources
 - [\[2307.03172\] Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
 

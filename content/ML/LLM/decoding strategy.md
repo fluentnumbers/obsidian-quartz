@@ -50,6 +50,7 @@ tags::
 ## Resources
 - [Decoding Strategies in Language Models | Rajan Ghimire](https://r4j4n.github.io/blogs/posts/text_decoding/)
 - [THE CURIOUS CASE OF NEURAL TEXT DeGENERATION](https://arxiv.org/pdf/1904.09751)
+- [Dummy's Guide to Modern Samplers](https://rentry.co/samplers)
 
 ---
 ###### Links to this File

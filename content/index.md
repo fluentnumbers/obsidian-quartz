@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/05/04
+updated: 2025/05/07
 cssclasses:
   - personal-main
 ---
@@ -69,6 +69,11 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 ---
 
 ### Selected notes
+
+#### Latest
+- [[what can go wrong with LLMs]]
+- [[how to evaluate LLM chatbots]]
+- [[Briefly about transformer’s evolution or why is softmax cool]]
 
 > [!NOTE]- Selected LLM notes
 > ![[selected LLM notes#selected LLM notes]]

@@ -34,7 +34,7 @@ tags::
 	- see [[Retrieval-Augmented Generation#Re-ranking]]
 - [[query expansion]] and enhancement
 	- Another LLM-call-module can be added to *rewrite* and expand the initial user query by adding synonyms, rephrasing, complementing with initial LLM output (without RAG context), etc.
-- In addition, to **dense** embedding models, historically, there are also **sparse** representation methods. These can **and should** be used in addition to vector search, resulting in [[hybrid search]]
+- In addition, to **dense** embedding models, historically, there are also **sparse** representation methods. These can **and should** be used in addition to vector search, resulting in [[hybrid search]] ^f44082
 	 - encoding is supervised (e.g splade) or unsupervised (e.g [[BM25]], [[TF-IDF]])
 	 - search accelerated with top-k retrieval algorithms like WAND, MaxScore, BM-WAND and more
  - Using hybrid search (at least full-text + vector search) is standard to RAG, but it requires combining several scores into one
@@ -45,7 +45,6 @@ tags::
 	 - dates. freshness, source authority (for health datasets), business-relevant tags
 	 - categories: use [[entity detection]] models: GliNER
 	 - if there is no metadata, one can ask [[LLM]] to generate it
-
 - Shuffling context chunks will create randomness in outputs, which is comparable to increasing diversity of the downstream output (as an alternative to hyperparameter tuning using [[temperature|softmax temperature]]) - e.g. previously purchased items are provided in random order to make recommendation engine output more creative
  - One can generate summary of documents (or questions to each chunk\document) and embed that info too
 ### Not RAG-specific

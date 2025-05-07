@@ -39,7 +39,7 @@ tags::
 ## Evolution of embeddings
 ### Word Embeddings
 - lightweight, **context-free** word embedding
-- [[[Word2Vec]]
+- [[Word2Vec]]
 	- operates on the principle of “the semantic meaning of a word is defined by its neighbors”, or words that frequently appear close to each other in the training corpus
 	- it accounts well for local statistics of words within a certain sliding window, but it does not capture the global statistics (words in the whole corpus)
 - [[GloVe]]
