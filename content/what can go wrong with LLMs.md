@@ -164,13 +164,14 @@ As per the quote, not only the input must be the same and the same model **relea
 
 ----
 
-## Tokenization 
+## Tokenization
 ![[tokenization#Common LLM issues arising due to tokenization]]
-## Context 
+## Context
 ### Lost-in-the-middle-effect
-![[Lost in the Middle effect#^9423a0|Long-context problem]] 
+![[Lost in the Middle effect#^9423a0|Long-context problem]]
 
-
+### Context in different language
+Often databases may contain information in multiple languages, other than the user query. Not to miss out on relevant chunks of context, use [[query expansion]] [[Enterprise RAG patterns|pattern]]
 
 ## Resources
 -
