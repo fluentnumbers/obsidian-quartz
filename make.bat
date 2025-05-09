@@ -41,11 +41,11 @@ if "%1"=="quartz-build" (
 
 if "%1"=="quartz-serve" (
     echo Starting Quartz development server...
-    npx quartz build --serve --fastRebuild
+    npx quartz build --serve
     goto :eof
 )
 
-if "%1"=="sync-clean-and-serve" (
+if "%1"=="sync-and-serve" (
     echo Syncing content and starting development server...
     powershell -ExecutionPolicy Bypass -File sync_once.ps1
     echo Content synced. Starting Quartz server...
@@ -55,7 +55,7 @@ if "%1"=="sync-clean-and-serve" (
     ) else (
         echo Public folder does not exist.
     )
-    npx quartz build --serve --fastRebuild
+    npx quartz build --serve
     goto :eof
 )
 
@@ -66,4 +66,4 @@ echo   clean-html      - Clean the public folder
 echo   quartz-sync     - Run Quartz sync
 echo   quartz-build    - Build Quartz site
 echo   quartz-serve    - Start Quartz development server
-echo   sync-clean-and-serve  - Sync content and start development server
+echo   sync-and-serve  - Sync content and start development server

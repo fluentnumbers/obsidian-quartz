@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/05/01
+updated: 2025/05/09
 ---
 %%
 date:: [[2024-02-28]]
@@ -120,7 +120,7 @@ tags::
 ---
 
 ## Challenges with RAG
-- See [[tokenization#common LLM issues arising due to tokenization]]
+- See [[tokenization#Common issues due to tokenization]]
 - [[Lost in the Middle effect]] (not specific to RAG, but rather [[long context]])
 - RAG retrieval capabilities are often evaluated using [[needle in a haystack]] tasks, but that is not what we usually want in real world tasks (summarization, joining of sub-parts of long documents, etc.) --> [[knowledge graphs]] may be a good improvement for this
 - Database needs to be always up-to-date

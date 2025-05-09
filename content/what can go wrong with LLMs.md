@@ -1,13 +1,13 @@
 ---
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
 permalink: LLM/what-can-go-wrong-with-llm
 publish: "true"
 "date:": "[[2024-12-30]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[LLM]]"
-source: 
+source:
 related:
   - "[[tokenization|embedding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
@@ -74,27 +74,27 @@ As per the quote, not only the input must be the same and the same model **relea
 > ```python
 > client = OpenAI()
 > text = f"The Tesla company achieved a record production of 1.5 million vehicles in 2023, reflecting a growth rate of 20% compared to 2022."
-> 
+>
 > def compute_fingerprint(embedding):
 >     hash_obj = hashlib.sha256()
 >     hash_obj.update(np.array(embedding))
 >     return hash_obj.hexdigest()
-> 
+>
 > embeddings = []
 > for i in range(5):
 >     embedding = client.embeddings.create(input=[text], model="text-embedding-3-large").data[0].embedding
 >     embeddings.append(embedding)
-> 
+>
 > for e in embeddings:
 >     print(compute_fingerprint(e))
 > ```
 
 > [!NOTE]- Ouput
 > ```bash
-> abf808061b95c6ede71222df465c4604070fd1aab0da16376760bd056d5419bc 
-> 1fa6d80f438fb865258ce9f30db3875bd741505104aa1ae561c5b6bb7ac6acdc 
-> 1fa6d80f438fb865258ce9f30db3875bd741505104aa1ae561c5b6bb7ac6acdc 
-> 43501ed2ef1db207e059b33053eb04c347c893131b7e01bc4f52f2b41a4c7a21 
+> abf808061b95c6ede71222df465c4604070fd1aab0da16376760bd056d5419bc
+> 1fa6d80f438fb865258ce9f30db3875bd741505104aa1ae561c5b6bb7ac6acdc
+> 1fa6d80f438fb865258ce9f30db3875bd741505104aa1ae561c5b6bb7ac6acdc
+> 43501ed2ef1db207e059b33053eb04c347c893131b7e01bc4f52f2b41a4c7a21
 > 43501ed2ef1db207e059b33053eb04c347c893131b7e01bc4f52f2b41a4c7a21
 > ```
 
@@ -106,17 +106,17 @@ As per the quote, not only the input must be the same and the same model **relea
 > [!NOTE]- Code
 > ```python
 > text = f"The Tesla company achieved a record production of 1.5 million vehicles in 2023, reflecting a growth rate of 20% compared to 2022. All revenue streams reported growth, except for the Autonomous Driving, which still is in the development phase."
-> 
+>
 > areas = "Autonomous Driving, Electric Vehicles, Renewable Energy, Autonomous Driving, Battery Technology, Automotive Industry"
-> 
+>
 > def cosine_similarity(a, b) -> np.double:
 >     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
-> 
-> 
+>
+>
 > def compute_embeddings(texts):
 >     result = client.embeddings.create(input =texts, model="text-embedding-3-large")
 >     return [d.embedding for d in result.data]
-> 
+>
 > for area in areas.split(", "):
 >     txt = text.replace("Autonomous Driving", area)
 >     print(f'...{txt[110:220]}...')
@@ -165,10 +165,11 @@ As per the quote, not only the input must be the same and the same model **relea
 ----
 
 ## Tokenization
-![[tokenization#Common LLM issues arising due to tokenization]]
+![[tokenization#Common issues due to tokenization]]
 ## Context
 ### Lost-in-the-middle-effect
 ![[Lost in the Middle effect#^9423a0|Long-context problem]]
+![[Lost in the Middle effect#Note]]
 
 ### Context in different language
 Often databases may contain information in multiple languages, other than the user query. Not to miss out on relevant chunks of context, use [[query expansion]] [[Enterprise RAG patterns|pattern]]

@@ -1,5 +1,5 @@
 ---
-cssclasses: 
+cssclasses:
 aliases:
   - input representation
   - input encoding
@@ -7,15 +7,15 @@ aliases:
 permalink: note/input-encoding
 publish: true
 "date:": "[[2024-08-15]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[LLM]]"
-source: 
+source:
 related:
   - "[[byte pair encoding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
 created: 2024/08/15
-updated: 2025/05/01
+updated: 2025/05/09
 ---
 %%
 date:: [[2024-08-15]]
@@ -24,12 +24,13 @@ source::
 related:: [[byte pair encoding]]
 tags::
 %%
-# [[tokenization]]
+
+## Contents
 
 - [[#Note|Note]]
 - [[#Evolution of embeddings|Evolution of embeddings]]
 - [[#Ideal tokenizer|Ideal tokenizer]]
-- [[#Common LLM issues arising due to tokenization|Common LLM issues arising due to tokenization]] ^90c874
+- [[#Common issues due to tokenization|Common issues due to tokenization]]
 - [[#Resource|Resource]]
 
 ## Note
@@ -55,10 +56,7 @@ tags::
 - The items in the vocabulary should be meaningful, otherwise an LLM will struggle to make sense of them.
 	- ==charactrer-level tokenization is not good==
 
-## Common LLM issues arising due to tokenization
-
-^ea505b
-
+## Common issues due to tokenization
 - due to [[tokenization]] LLM has issues with many simple tasks (spelling, simple string processing) or has problems when encountering strings like `< |endofstring| >`, etc. ==many of the issues were patched in advanced models or using tools and agents in combination with LLM==
 - spelling words, spelling tasks like reversing strings: some tokens denote multiple quite long character sequences, so too much is cramped into one token
 	- asking the model to split a string into a list of characters first and then answer your question helps

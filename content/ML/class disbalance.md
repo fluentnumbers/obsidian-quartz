@@ -2,7 +2,7 @@
 cssclasses: 
 aliases:
   - class imbalance
-permalink: note/class-disbalance
+permalink: ML/class-disbalance
 publish: "true"
 "date:": "[[2025-01-02]]"
 link: 

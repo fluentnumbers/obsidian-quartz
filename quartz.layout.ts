@@ -50,7 +50,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   afterBody: [
-    Component.Graph(),
+    Component.Graph({localGraph: {linkDistance: 80,repelForce: 0.01,centerForce: 0.01,enableRadial: true}, globalGraph: {linkDistance: 100,repelForce: 0.01,centerForce: 0.01,enableRadial: true}}),
     Component.Comments({
       provider: 'giscus',
       options: {
