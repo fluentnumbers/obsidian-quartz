@@ -3,7 +3,6 @@ cssclasses:
 aliases:
   - input representation
   - input encoding
-  - tokenization
   - embedding
 permalink: note/input-encoding
 publish: true
@@ -30,7 +29,7 @@ tags::
 - [[#Note|Note]]
 - [[#Evolution of embeddings|Evolution of embeddings]]
 - [[#Ideal tokenizer|Ideal tokenizer]]
-- [[#Common LLM issues arising due to tokenization|Common LLM issues arising due to tokenization]]
+- [[#Common LLM issues arising due to tokenization|Common LLM issues arising due to tokenization]] ^90c874
 - [[#Resource|Resource]]
 
 ## Note
@@ -57,6 +56,8 @@ tags::
 	- ==charactrer-level tokenization is not good==
 
 ## Common LLM issues arising due to tokenization
+
+^ea505b
 
 - due to [[tokenization]] LLM has issues with many simple tasks (spelling, simple string processing) or has problems when encountering strings like `< |endofstring| >`, etc. ==many of the issues were patched in advanced models or using tools and agents in combination with LLM==
 - spelling words, spelling tasks like reversing strings: some tokens denote multiple quite long character sequences, so too much is cramped into one token
