@@ -41,8 +41,8 @@ I am a data scientist and ML engineer on a continuous journey of learning by doi
 Besides that I
 - try to [[latest reading|read]] more, because *[a book constitutes a means of transportation through the space of experience, at the speed of a turning page](https://www.nobelprize.org/prizes/literature/1987/brodsky/lecture/)*
 - enjoy somewhat longer walks and hikes as well as travelling places to see how people live elsewhere
-- lately, devote disproportional amount of time to [Mafia (or Werewolf)](https://en.wikipedia.org/wiki/Mafia_(party_game)) game, but then in its **competitive** (not *party*) form
-%% - not a fan of modern web 2.0 with (even more pessimistic of what web 3.0 brings us), but I highly value good-old personal blogs with unique content. I even use [[rss|RSS]] in 2025 to read most o[](people%20I%20follow.md)]].
+- lately, devote a decent amount of time to [Mafia (or Werewolf)](https://en.wikipedia.org/wiki/Mafia_(party_game)) game, but then in its **competitive** (not *party*) form
+%% - not a fan of modern web 2.0 with (even more pessimistic of what web 3.0 brings us), but I highly value good-old personal blogs with unique content. I even use [[rss|RSS]] in 2025 to read most o[](people%20I%20follow.md)]].%%
 
 ---
 ### CONTACTS AND LINKS
@@ -68,7 +68,7 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 ### Selected notes
 
 #### Latest
-%% - [[Enterprise RAG patterns]] %%
+
 - [[what can go wrong with LLMs]]
 - [[how to evaluate LLM chatbots]]
 - [[Briefly about transformer’s evolution or why is softmax cool]]

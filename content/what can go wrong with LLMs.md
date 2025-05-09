@@ -165,7 +165,7 @@ As per the quote, not only the input must be the same and the same model **relea
 ----
 
 ## Tokenization
-![[tokenization#Common LLM issues arising due to tokenization|Common LLM issues arising due to tokenization]]
+![[tokenization#Common LLM issues arising due to tokenization]]
 ## Context
 ### Lost-in-the-middle-effect
 ![[Lost in the Middle effect#^9423a0|Long-context problem]]
