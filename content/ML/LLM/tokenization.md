@@ -1,5 +1,5 @@
 ---
-cssclasses:
+cssclasses: 
 aliases:
   - input representation
   - input encoding
@@ -7,10 +7,10 @@ aliases:
 permalink: note/input-encoding
 publish: true
 "date:": "[[2024-08-15]]"
-link:
-tags:
+link: 
+tags: 
 parent: "[[LLM]]"
-source:
+source: 
 related:
   - "[[byte pair encoding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
