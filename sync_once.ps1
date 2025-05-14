@@ -1,5 +1,28 @@
+# Import dotenv module
+Import-Module dotenv
+
+# Load environment variables from .env file
+Get-Content .env | ForEach-Object {
+    if ($_ -match '^([^=]+)=(.*)$') {
+        $name = $matches[1]
+        $value = $matches[2].Trim('"')  # Remove surrounding quotes if present
+        [System.Environment]::SetEnvironmentVariable($name, $value, 'Process')
+    }
+}
+
 # Configuration
-$sourceFolder = "C:\Users\andre\OneDrive\Documents\obsidian-notes"  # Replace with your source folder path
+$sourceFolder = [System.Environment]::GetEnvironmentVariable('SOURCE_FOLDER', 'Process')
+if (-not $sourceFolder) {
+    Write-Error "SOURCE_FOLDER environment variable not found in .env file"
+    exit 1
+}
+
+# Verify the source folder exists
+if (-not (Test-Path $sourceFolder)) {
+    Write-Error "Source folder not found: $sourceFolder"
+    exit 1
+}
+
 $targetFolder = "./content"  # Replace with your target folder path
 $publishStrings = @('publish: "true"', 'publish: true')  # Both formats to search for
 $unpublishStrings = @('publish: "false"', 'publish: false')  # Formats that indicate file should not be published
@@ -48,7 +71,8 @@ function Test-ShouldPreserve {
             if ($relativePath -match "^$pattern$") {
                 return $true
             }
-        } else {
+        }
+        else {
             # Handle exact matches
             if ($preserveFiles -contains $relativePath) {
                 return $true
@@ -190,7 +214,7 @@ function Get-SourceFiles {
         [string]$Path
     )
     $files = @()
-    Get-ChildItem -Path $Path -Recurse -File | ForEach-Object {
+    Get-ChildItem -Path $Path -Recurse | Where-Object { -not $_.PSIsContainer } | ForEach-Object {
         if (-not (Test-ShouldIgnorePath -Path $_.FullName)) {
             if (Test-ShouldPublish -FilePath $_.FullName) {
                 # Keep full relative path for source files
@@ -209,7 +233,7 @@ function Get-DestinationFiles {
     )
     $files = @()
     if (Test-Path $Path) {
-        Get-ChildItem -Path $Path -Recurse -File | ForEach-Object {
+        Get-ChildItem -Path $Path -Recurse | Where-Object { -not $_.PSIsContainer } | ForEach-Object {
             # Fix: Use Replace to get relative path correctly
             $relativePath = $_.FullName.Replace($targetFolder, "").TrimStart('\')
             $files += $relativePath
@@ -245,7 +269,8 @@ foreach ($file in $destinationFiles) {
                 Write-Output "$(Get-Date): Deleted $targetFile (marked as unpublished or missing publish flag)" | Out-File -FilePath $logFile -Append
             }
         }
-    } else {
+    }
+    else {
         # Only try to remove if the file exists
         if (Test-Path $targetFile) {
             Remove-Item $targetFile -Force

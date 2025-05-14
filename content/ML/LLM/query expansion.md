@@ -12,7 +12,7 @@ parent: "[[Enterprise RAG patterns]]"
 source: 
 related: 
 created: 2024/12/04
-updated: 2025/05/07
+updated: 2025/05/12
 ---
 %%
 date:: [[2024-12-04]]
@@ -40,7 +40,7 @@ tags::
 ### Pattern visualization
 
 > [!NOTE]- Figure
-> ![[Pasted image 20250507194628.png|800]]
+> ![[Pasted image 20250513141004.png|500]]
 
 ### Use-cases and products
 - Multi-language documents in the database
