@@ -17,13 +17,13 @@ publish: "true"
 total: 277
 isbn: 0544236041 9780544236042
 cover: http://books.google.com/books/content?id=_5yUAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
-status: unread
-rating: 
+status: read
+rating: 7.5
 parent: "[[book]]"
 source: 
 related: 
 created: 2025/05/02
-updated: 2025/05/03
+updated: 2025/05/21
 ---
 
 %%
