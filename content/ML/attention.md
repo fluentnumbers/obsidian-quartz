@@ -4,6 +4,7 @@ aliases:
   - attention mechanism
   - multi-head attention
   - self-attention
+  - masked self-attention
 permalink: LLM/attention
 publish: "true"
 "date:": "[[2024-08-13]]"
@@ -13,7 +14,7 @@ parent: "[[transformer]]"
 source: 
 related: 
 created: 2024/08/13
-updated: 2025/05/01
+updated: 2025/05/29
 ---
 %%
 date:: [[2024-08-13]]
@@ -109,7 +110,15 @@ tags::
 	- ![[Pasted image 20240814114536.png|500]]
 
 ### Masked multi-head attention
-- see in [[transformer#^4b9c6b|transformers]]
+- done by adding a matrix $M$ to the attention matrix before performing the [[softmax]]
+- this is a powerful method to fully control [[receptive field]] of the [[attention|multi-head attention]] block, allowing it to *see* only what we want
+- normally, applied to:
+	- prevent the transformer from seeing the future tokens we expect it to output on each stage (causal masking) - upper-triangular mask with $-\inf$ in the upper part to zero their contribution
+	- allow variable length input outputs during inference - mask out the last (padded tokens)
+	- but there are [[Not Another Imputation Method|other useful applications]]
+
+![[Pasted image 20250529184617.png|450]]
+
 ### Grouped Query Attention
 - [What is Grouped Query Attention (GQA)? — Klu](https://klu.ai/glossary/grouped-query-attention)
 ## Resources

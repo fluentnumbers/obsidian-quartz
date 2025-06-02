@@ -25,6 +25,8 @@ tags::
 # [[transformer]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 
+## Contents
+
 - [[#Notes|Notes]]
 	- [[#Notes#Important components of transformer architecture|Important components of transformer architecture]]
 	- [[#Notes#Memory and optimization|Memory and optimization]]
@@ -37,7 +39,7 @@ tags::
 - A [[transformer]] may consist of [[encoder]] and [[decoder]] parts, or only one of them.
 	- [[#Encoder]]
 		- encoder is meant to transform input to some *good quality* representation. The output from the encoder is a series of embedding vectors representing the entire input sequence.
-		- it is enough when
+		- ==encoder-only is enough if==: ^e8ddc3
 			- you need to make a decision regarding the whole input ([[classification]]). Just add [[softmax]] to the end of [[encoder]] and you are good to go
 			- you need to create structured output with input's structure
 	- [[#Decoder]]
@@ -98,7 +100,7 @@ tags::
 - if it is a [[decoder]]-only architecture, the second [[multi-head attention]] is removed
 - during training, if we want it to output "Never gonna let you down", but it starts with any other *wrong* token (e.g. "I"), we still supply the correct \expected token "Never" to the next iteration, as if it generated correctly. this is called [[teaching forcing]]
 ![[Pasted image 20240814155808.png|400]]
-- masked [[attention#Multi-head attention|multi-head attention]] to prevent the decoder from seeing the tokens we expect it to output on each stage (whole training sample). this is done by zeroing weight matrices accordingly. this is a powerful method to fully control [[receptive field]] of the [[attention|multi-head attention]] block, allowing it to *see* only what we want ^4b9c6b
+- [[attention#Masked multi-head attention|multi-head attention]] 
 - we can train the decoder in **one** pass, but during the [[inference]] we run it many times, first with the token *start*, than *start* and it's first output token, than again with *start* and 2 output tokens, ... until we receive [[end-of-sequence]] token.
 	- ==taking many tokens as input is easier than generating many tokens== --> asking [[LLM]] if the given answer is correct is faster \ cheaper for inference than asking it to produce the correct answer
 
