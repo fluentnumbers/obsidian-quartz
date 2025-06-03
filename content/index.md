@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/05/18
+updated: 2025/06/02
 cssclasses:
   - personal-main
 ---
@@ -26,6 +26,12 @@ parent::
 source::
 tags::
 %%
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Great+Vibes&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<div align="right" style="font-family: 'Segoe Print', cursive; font-size: 32px;">
+<em>Writing makes thought visible.</em>
+</div>
 
 ## Hello 👋, I am Andrejs
 
@@ -41,7 +47,7 @@ I am a data scientist and ML engineer on a continuous journey of learning by doi
 Besides that I
 - try to [[latest reading|read]] more, because *[a book constitutes a means of transportation through the space of experience, at the speed of a turning page](https://www.nobelprize.org/prizes/literature/1987/brodsky/lecture/)*
 - enjoy somewhat longer walks and hikes as well as travelling places to see how people live elsewhere
-- lately, devote a decent amount of time to [Mafia (or Werewolf)](https://en.wikipedia.org/wiki/Mafia_(party_game)) [[mafia games|games]], but then in its **competitive** (not *party*) form
+- lately, devote a decent amount of time to [Mafia](https://en.wikipedia.org/wiki/Mafia_(party_game)) [[mafia games|games]], but then in its more strict, **competitive** form
 %% - not a fan of modern web 2.0 with (even more pessimistic of what web 3.0 brings us), but I highly value good-old personal blogs with unique content. I even use [[rss|RSS]] in 2025 to read most o[](people%20I%20follow.md)]].%%
 
 ---
@@ -55,7 +61,7 @@ Besides that I
 ### PROFESSIONAL EXPERIENCE
 
 <strong>2024 &mdash; ... </strong>
-Quant Researcher at <strong><a href="https://samco.shell.com/">Shell Asset Management Company</a></strong>, The Hague, the Netherlands
+Quant Researcher at <strong><a href="https://shell.com/">Shell</a></strong>, The Hague, the Netherlands
 
 <strong>2022 &mdash; 2024 </strong>
 Data Scientist at <strong><a href="https://www.philips.com/a-w/about.html">Philips</a></strong>, Eindhoven, the Netherlands

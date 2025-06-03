@@ -3,6 +3,8 @@ cssclasses:
 aliases:
   - digital garden
   - personal knowledge management
+  - obsidian
+  - Obsidian
 permalink: note/personal-knowledge-management
 publish: "true"
 "date:": "[[2024-07-29]]"
@@ -12,7 +14,7 @@ parent: "[[index]]"
 source: 
 related: 
 created: 2024/07/29
-updated: 2025/05/03
+updated: 2025/06/03
 ---
 %%
 date:: [[2024-07-29]]
