@@ -33,7 +33,11 @@ tags::
 <em>Writing makes thought visible.</em>
 </div>
 
+
+
 ## Hello 👋, I am Andrejs
+
+<img style="float: right;" src="assets/profile.png" width="250px">
 
 Welcome to my [[PKM|digital garden]] 🌱 - a mix of *atomic* notes connected *topographically* (like Wiki), rather than chronologically (like blogs). This place is an assumed "second brain" and includes study notes, ideas and anything else I found useful to write down.
 
