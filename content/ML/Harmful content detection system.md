@@ -11,7 +11,7 @@ source:
   - "[[Machine Learning System Design Interview - Ali Aminian Alex Xu]]"
 related: 
 created: 2025/06/03
-updated: 2025/06/03
+updated: 2025/06/18
 ---
 %%
 date:: [[2025-06-03]]
@@ -22,6 +22,8 @@ tags::
 %%
 # [[Harmful content detection system]]
 <sub>scroll ↓ to [[#Resources]]</sub>
+
+> [!NOTE] This is a summary of Chapter 5 from the book [Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview) by Ali Aminian
 
 ## Contents
 
@@ -220,7 +222,7 @@ Shows the trade-offs between the true positive rate (recall) and the false posit
 - How to substitute Transformer-based architectures with linear Transformers to create a more efficient system
 	- [How Facebook uses super-efficient AI models to detect hate speech](https://ai.meta.com/blog/how-facebook-uses-super-efficient-ai-models-to-detect-hate-speech/)
 ## Resources
-- 
+-  [Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview)
 
 ---
 ###### Links to this File
