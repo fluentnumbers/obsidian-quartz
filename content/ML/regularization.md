@@ -11,11 +11,12 @@ parent: "[[Machine Learning MoC|ML]]"
 source: 
 related: 
 created: 2024/01/20
-updated: 2025/05/01
+updated: 2025/06/18
 ---
 %%
 date:: [[2023-10-29]]
 parent:: [[Machine Learning MoC|ML]]
+related::
 source::
 tags::
 %%
@@ -25,9 +26,12 @@ tags::
 ## Contents
 
 - [[#Note|Note]]
-- [[#Regularization methods for shallow models|Regularization methods for shallow models]]
-	- [[#Regularization methods for shallow models#Methods|Methods]]
-- [[#Regularization methods for deep neural networks|Regularization methods for deep neural networks]]
+- [[#Regularization for shallow models|Regularization for shallow models]]
+	- [[#Regularization for shallow models#Methods|Methods]]
+		- [[#Methods#Lasso (L1)|Lasso (L1)]]
+		- [[#Methods#Ridge|Ridge]]
+		- [[#Methods#ElasticNet|ElasticNet]]
+- [[#Regularization for deep neural networks|Regularization for deep neural networks]]
 - [[#Resources|Resources]]
 
 ## Note

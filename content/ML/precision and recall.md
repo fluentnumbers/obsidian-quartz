@@ -14,13 +14,13 @@ source:
 related:
   - "[[F-score]]"
 created: 2024/09/09
-updated: 2025/05/01
+updated: 2025/06/18
 ---
 %%
 date:: [[2024-09-09]]
-parent::
+parent:: [[ML metric]]
 source::
-related::
+related:: [[F-score]]
 tags::
 %%
 # [[precision and recall]]
@@ -36,6 +36,7 @@ tags::
 - same as [[true positive rate]]
 - *bank wants to find all clients who will return the loan, indifferent to those who won't be able to return it*
 
+See also Precision@k and Recall@k for [[object retrieval]]: [[image retrieval#Metrics]]
 ## Resources
 - 
 

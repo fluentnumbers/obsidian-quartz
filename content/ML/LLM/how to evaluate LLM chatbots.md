@@ -12,7 +12,7 @@ related:
   - "[[published]]"
   - "[[LLM#How to evaluate LLMs?]]"
 created: 2025/01/08
-updated: 2025/05/01
+updated: 2025/06/04
 ---
 %%
 date:: [[2025-01-08]]
@@ -65,7 +65,7 @@ Then the "creative block" is tested independently, but now the prompt is supplem
 If the system is a monolith, and there is no ground truth data (can't be generated either), another LLM still can be used, but not as a judge, but rather a peer. If our system's output is *close enough* to one or more other outputs suggested by *peers* - this counts as evaluation success. If selected peers are models of different sizes, we can estimate in relative terms how good is our model on this particular task.
 
 ## Resources
--
+- 
 
 ###### Publish links
 - [how to evaluate LLM chatbots. how to say if your undetermenistic… | by Andrejs | Jan, 2025 | Medium](https://medium.com/p/3a62c19161ac)

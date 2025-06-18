@@ -1,7 +1,7 @@
 ---
 cssclasses: 
 aliases: 
-permalink: note/continuous-batching
+permalink: LLM/continuous-batching
 publish: "true"
 "date:": "[[2024-11-12]]"
 link: 
