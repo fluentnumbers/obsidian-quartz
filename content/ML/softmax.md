@@ -8,15 +8,15 @@ link:
 tags: 
 parent: "[[activation function]]"
 source: 
-related: 
+related: "[[Briefly about transformer’s evolution or why is softmax cool]]"
 created: 2025/01/12
-updated: 2025/05/01
+updated: 2025/06/18
 ---
 %%
 date:: [[2025-01-12]]
 parent:: [[activation function]]
 source::
-related::
+related:: [[Briefly about transformer’s evolution or why is softmax cool]]
 tags::
 %%
 # [[softmax]]
@@ -27,13 +27,13 @@ tags::
 - used in multi-class classification problems (including [[next token prediction]] tasks) as a generalization of [[logistic regression]], see [[logistic regression#^027f8a]]
 
 ### Formula
-![[Pasted image 20250112194036.png|500]]
+![[Pasted image 20250112194036.png|300]]
 - $\vec z$ of input elements [$z_0...z_K$]
 - Output of softmax is always a positive number regardless of the input sign
 - dividing the exponent by a parameter [[temperature]] T allows for controlling [[entropy]] and affecting the output distribution
+- ==See also [[Briefly about transformer’s evolution or why is softmax cool]]==
 ## Resources
--
-
+- 
 ---
 ###### Links to this File
 ```dataview
