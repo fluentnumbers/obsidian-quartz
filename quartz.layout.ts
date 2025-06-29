@@ -48,6 +48,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.RecentNotes({"title": "Recent", limit: 5,showTags: false,}),
   ],
   afterBody: [
     Component.Graph({localGraph: {linkDistance: 120, fontSize: 0.8,repelForce: 0.5,centerForce: 0.3,opacityScale: 2,enableRadial: true,focusOnHover: true}, globalGraph: {linkDistance: 200, fontSize: 0.8,repelForce: 0.5,centerForce: 0.2,opacityScale: 2,enableRadial: true,focusOnHover: true}}),

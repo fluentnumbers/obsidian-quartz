@@ -73,8 +73,9 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 
 ---
 
-[[blogs/]]
-### Selected notes
+### Highlights
+
+Earlier [[published]] blogposts: [[blogs/]].
 
 #### Latest
 - [[Enterprise RAG patterns]]
