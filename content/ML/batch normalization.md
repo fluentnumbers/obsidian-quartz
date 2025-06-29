@@ -1,7 +1,8 @@
 ---
 cssclasses: 
-aliases: 
-permalink: note/batch-normalization
+aliases:
+  - BatchNorm
+permalink: ML/batch-normalization
 publish: "true"
 "date:": "[[2024-08-13]]"
 link: 

@@ -11,6 +11,7 @@ source:
 related:
   - "[[published]]"
   - "[[LLM#How to evaluate LLMs?]]"
+  - "[[Ragas]]"
 created: 2025/01/08
 updated: 2025/06/04
 ---
@@ -18,7 +19,7 @@ updated: 2025/06/04
 date:: [[2025-01-08]]
 parent:: [[model evaluation]]
 source::
-related:: [[published]] [[LLM#How to evaluate LLMs?]] [[chatbot]]
+related:: [[published]] [[LLM#How to evaluate LLMs?]] [[chatbot]] [[Ragas]]
 tags::
 %%
 # [[how to evaluate LLM chatbots]]

@@ -1,6 +1,7 @@
 ---
-cssclasses:
-aliases: 
+cssclasses: 
+aliases:
+  - object retrieval
 permalink: ML-CV/image-retrieval
 publish: true
 "date:": "[[2025-06-18]]"
@@ -8,9 +9,9 @@ link:
 tags: 
 parent: "[[computer vision]]"
 source: 
-related:
+related: 
 created: 2025/06/18
-updated: 2025/06/18
+updated: 2025/06/20
 ---
 %%
 date:: [[2025-06-18]]
@@ -54,13 +55,13 @@ tags::
 	- *undefined* class for all objects not belonging to any given class
 	- classification for millions of classes are not feasible (and we know that face detection systems work for everyone unconditionally)
 - Therefore, another approach is used:
-	- During training: work with triplets of data samples (anchor $x_a$, positive $x_p$ and negative $x_n$ examples) and train the model to produce such embeddings that their [[similarity measurement|distance]] will be such that $|x_a-x_p|$ is small and $|x_a-x_n|$ is large
+	- During [[#Training]]: work with triplets of data samples (anchor $x_a$, positive $x_p$ and negative $x_n$ examples) and train the model to produce such embeddings that their [[similarity measurement|distance]] will be such that $|x_a-x_p|$ is small and $|x_a-x_n|$ is large
 		- the exact definition of what is small and large and how to make the model learn such vector representation depends on selected [[loss function]], [[ML metric]]
 		- some [[#Loss functions]] and [[#Sampling methods]] assume not triplets, but sets of four objects in each training iteration
-	- During inference:
-		- pass the input object through the network to calculate its vector embedding
-		- compute distances to existing database entries
-		- decide whether there is a match within available objects
+	- During [[inference]]:
+		- pass the input object through the backbone network to calculate its vector embedding
+		- normalize the embeddings
+		- compute distances to existing database entries and decide which entries to select (e.g. [[k-nearest neighbors]]-like approach with [[Faiss]], [[cosine similarity]] or else)
 - Currently, one is unlikely to train models from scratch, but rather use existing foundation models such as [DINOv2 by Meta AI](https://dinov2.metademolab.com/) in [[transfer learning]] or [[fine-tuning]] modes
 
 ## Training
@@ -82,6 +83,9 @@ tags::
 	- too strict for some applications: for [[street-to-shop]] app it is ok to show 5 images on the screen, if any one of them is a match to what user searched for
 	- unindicative during training: with k=1 metrics such as recall@k and precision@k will not evolve for very long time (potentially never)
 
+#### Implementation tips
+- Use pretrained models such as [[ResNet]]
+- [[batch normalization|BatchNorm]] layers are often frozen for stability
 ## Metrics
 - [[precision and recall|recall]]@k and [[precision and recall|precision]]@k
 	- ![[Pasted image 20250618140420.png|300]]
@@ -114,22 +118,24 @@ tags::
 - 
 ## Sampling methods
 - Due to the way [[#Loss functions]] are constructed, sometimes gradients will be 0 with no update needed resulting in inefficient training
-- We want such sampling that the training is *hard*
-- For most sampling methods holds that bigger [[batch size]] allows more precise implementation of sampling method, resulting in better resulting metrics 
+- We want such [[batching|sampling]] that the training is *hard*
+- For most sampling methods holds that bigger [[batch size]] allows more precise implementation of sampling method, resulting in better resulting metrics
 	- to combat this effect: [Cross-Batch Memory for Embedding Learning](https://arxiv.org/abs/1912.06798)
 ### Hard Positives and Hard Negatives
 - for a given anchor take positives which are far away
 - for a given anchor take positives which are as close as possible
 
 ### Semi-hard Negatives
+- taking too easy or too hard examples both make training go slow due to noisy or [[vanishing gradients]] 
 - take negatives which are ==already== further away than positives from the anchor
 	- desired condition already satisfied, except for the effect of the $\alpha$ parameter
 ![[Pasted image 20250618155619.png|400]]
 
 ### Distance Weighted Sampling
 - advanced method to sample objects with different distances probabilistically
-	- inversely proportional to the probability of such distance: the more often two images are at this distance, the less we sample
+	- inversely proportional to the probability of such distance: the more often two images are at **this** distance, the less we sample objects at such distance
 ![[Pasted image 20250618155905.png|400]]
+
 ## Resources
 ### Datasets
 - [Stanford Online Products Dataset \| Papers With Code](https://paperswithcode.com/dataset/stanford-online-products)

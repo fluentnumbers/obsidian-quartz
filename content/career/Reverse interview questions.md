@@ -6,17 +6,17 @@ publish: "true"
 link: 
 tags: 
 created: 2023/06/08
-updated: 2025/05/01
-parent: "[[job search]]"
+updated: 2025/06/19
+parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
 source:
 ---
 %%
 date:: [[2023-06-08]]
-parent:: [[job search]]
+parent:: [[interview]]
 source::
-related::: [[Interview questions]]
+related::: [[all kinds of lists]]
 tags::
 %%
 # [[Reverse interview questions]]

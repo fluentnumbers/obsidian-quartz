@@ -68,6 +68,8 @@ tags::
 	 - A typical re-ranking solution uses [open-source Cross-Encoder models from sentence transformers](https://sbert.net/examples/applications/retrieve_rerank/README.html), which take both the question and context as input and return a score from 0 to 1. Though it is also possible to use GPT4 + prompt engineering.gg
 	 - Originally, cross-encoder is a binary classifier where the probability of being a positive class is taken as a similarity score. Now there are also T5-based re-rankers, RankGPT, ...
 	 - generally bi-encoder is more *loose* and reranker is more *strict*
+	 - [Search reranking with cross-encoders](https://cookbook.openai.com/examples/search_reranking_with_cross-encoders)
+	 - [Retrieve & Re-Rank — Sentence Transformers documentation](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html#retrieval-bi-encoder)
 
 ### Full MVP vanilla RAG
 - Full MVP *vanilla* RAG pipeline may look like this (with *combine the scores* module too)
