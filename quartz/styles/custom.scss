@@ -1,6 +1,14 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
+.page-listing div.section {
+    grid-template-columns: 3fr 1fr;
+
+    p.meta:has(> time) {
+        display: none;
+    }
+}
+
 // @font-face {
 //     font-family: "Inter";
 //     src: url("/static/fonts/Inter.woff2") format("woff2");
