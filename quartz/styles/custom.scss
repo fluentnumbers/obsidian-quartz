@@ -9,6 +9,14 @@
     }
 }
 
+
+.recent-notes div.section {
+
+    p.meta:has(> time) {
+        display: none;
+    }
+}
+
 // @font-face {
 //     font-family: "Inter";
 //     src: url("/static/fonts/Inter.woff2") format("woff2");
