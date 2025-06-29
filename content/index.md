@@ -75,7 +75,10 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 
 ### Highlights
 
-Earlier [[published]] blogposts: [[blogs/]].
+#### Blogposts archive
+
+> [!NOTE]- Blogposts previously [[published]] elsewhere on the Internet
+> ![[blogs archive#Published earlier on the Internet]]
 
 #### Latest
 - [[Enterprise RAG patterns]]
@@ -83,5 +86,6 @@ Earlier [[published]] blogposts: [[blogs/]].
 - [[how to evaluate LLM chatbots]]
 - [[Briefly about transformer’s evolution or why is softmax cool]]
 
+#### Everything ML
 > [!NOTE]- Selected LLM notes
 > ![[selected LLM notes#selected LLM notes]]

@@ -10,7 +10,7 @@ parent: "[[meta]]"
 source: 
 related: 
 created: 2025/05/03
-updated: 2025/05/03
+updated: 2025/06/29
 ---
 %%
 date:: [[2025-05-03]]
@@ -21,7 +21,6 @@ tags::
 %%
 # [[blogs archive]]
 <sub>scroll ↓ to [[#Resources]]</sub>
-
 ## Published earlier on the Internet
 
 %%
@@ -41,7 +40,3 @@ list from "000_notes/blogs"
 - [[how to evaluate LLM chatbots]]
 
 ---
-###### Links to this File
-```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
-```
