@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/06/02
+updated: 2025/06/29
 cssclasses:
   - personal-main
 ---
@@ -32,8 +32,6 @@ tags::
 <div align="right" style="font-family: 'Segoe Print', cursive; font-size: 32px;">
 <em>Writing makes thought visible.</em>
 </div>
-
-
 
 ## Hello 👋, I am Andrejs
 
@@ -75,6 +73,7 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 
 ---
 
+[[blogs/]]
 ### Selected notes
 
 #### Latest

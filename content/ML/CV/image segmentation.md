@@ -1,5 +1,5 @@
 ---
-permalink: 
+permalink: ML-CV/image-segmentation
 cssclasses: 
 aliases:
   - semantic segmentation
@@ -52,7 +52,7 @@ tags::
 	- which portion of pixels do we classify correctly
 	- global accuracy is not suitable by strong [[class disbalance|class imbalance]]
 	- class-average accuracy does not allow to see the effect of [[false positive rate|false positives]] (100% minor class accuracy and 99% accuracy on background class can still be a lot of FP)
-- mean [[intersection over union]]
+- mean [[intersection over union 1]]
 	- doesn't show which classes (in case of multi-class) are misinterpreted
 - [[confusion matrix]], [[precision and recall]]
 

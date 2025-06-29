@@ -1,7 +1,7 @@
 ---
 cssclasses: 
 aliases: 
-permalink: note/blogs-archive
+permalink: meta/blogs-archive
 publish: "true"
 "date:": "[[2025-05-03]]"
 link: 
