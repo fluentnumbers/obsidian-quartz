@@ -24,7 +24,7 @@ tags::
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## Note
-- used for [[object retrieval]] applications
+- used for [[image retrieval|object retrieval]] applications
 - an outdated loss (from 2006) still used in academic papers to show that model improvement is achieved by the algorithm and not a better loss
 - asking the model to make such representations of input objects $X_1$ and $X_2$ that
 	- if same class: as close together as possible

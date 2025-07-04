@@ -13,7 +13,7 @@ related:
   - "[[LLM#How to evaluate LLMs?]]"
   - "[[Ragas]]"
 created: 2025/01/08
-updated: 2025/06/04
+updated: 2025/07/02
 ---
 %%
 date:: [[2025-01-08]]
@@ -42,7 +42,7 @@ Below is a conceptual guide on how a mainstream LLM product can be tested.
 ![[Pasted image 20250109194729.png|800]]
 ### Human Feedback
 
-First what probably comes to mind is human feedback. It is highly subjective, inconsistent proxy metric of your system's performance in production. Despite all this it is an absolute must-have, because it is cheap and fast indicator that something is wrong and needs to be investigated further.
+First what probably comes to mind is human feedback. It is highly subjective, inconsistent proxy metric of your system's performance in production. Despite all this it is an absolute must-have, because it is cheap and fast indicator that something is wrong and needs to be investigated further. Moreover, it is often the ultimate business metric that the project aims to increase - satisfaction scores, ticket deflection rate, ticket-to-human-agent-rate, etc. These are all metrics to fetch from real-time usage.
 
 ### Compare to the ground truth
 

@@ -8,28 +8,37 @@ link:
 tags: 
 parent: "[[RAG]]"
 source: 
-related:
+related: "[[how to evaluate LLM chatbots]]"
 created: 2025/01/14
-updated: 2025/05/01
+updated: 2025/07/04
 ---
 %%
 date:: [[2025-01-14]]
 parent:: [[Retrieval-Augmented Generation|RAG]]
 source::
-related::
+related:: [[how to evaluate LLM chatbots]]
 tags::
 %%
 # [[Advanced RAG techniques]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 ## Advanced improvements to RAG
+
+> [!NOTE] Note
+> RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
+
 - Most probably you have to chunk your context data into smaller pieces. ==Chunking strategy== can have a huge impact on RAG performance.
 	- small chunks --> limited context --> incomplete answers
-	- large chunks --> noise in data --> poor [[recall]]
+	- large chunks --> noise in data --> poor [[precision and recall|recall]]
 	- By symbols, sentences, semantic meaning, using dedicated model or an LLM call
 	- [[semantic chunking]] by detecting where the change of topic has happened
 	- Consider inference latency, number of tokens [[tokenization|embedding]] models were trained on
 	- Overlapping or not?
 	- Use small chunks on embedding stage and large size during the inference, by appending adjacent chunks before feeding to LLM
+- [[fine-tuning]] to make models output citations\ref
+	- Start with small batches, measure performance, and increase data volume until you reach your desired accuracy level.
+	- shuffle the order of retrieved sources to prevent position bias
+		- unless sources are sorted by relevance (the model assumes that the 1st chunk is the most relevant)
+		- newer models with large context windows are less prone to the [[Lost in the Middle effect]] and have improved recall across the whole context window
 - [[re-ranking]]
 	- see [[Retrieval-Augmented Generation#Re-ranking]]
 - [[query expansion]] and enhancement
@@ -37,16 +46,32 @@ tags::
 - In addition, to **dense** embedding models, historically, there are also **sparse** representation methods. These can **and should** be used in addition to vector search, resulting in [[hybrid search]] ^f44082
 	 - encoding is supervised (e.g splade) or unsupervised (e.g [[BM25]], [[TF-IDF]])
 	 - search accelerated with top-k retrieval algorithms like WAND, MaxScore, BM-WAND and more
- - Using hybrid search (at least full-text + vector search) is standard to RAG, but it requires combining several scores into one ^6fd281
+ - Using [[hybrid search]] (at least full-text + vector search) is standard to RAG, but it requires combining several scores into one ^6fd281
 	 - use weighted average
 	 - take several top-results from each search module
-	 - use [[Reciprocal Rank Fusion]], Mean Average Precision, NDCG, etc.
+	 - use [[Reciprocal Rank Fusion]], [[mean average precision]], NDCG, etc.
  - [[metadata filtering]] reduces the search space, hence, improves retrieval and reduces computational burden
 	 - dates. freshness, source authority (for health datasets), business-relevant tags
-	 - categories: use [[entity detection]] models: GliNER
+	 - categories: use [[named entity recognition]] models: GliNER
 	 - if there is no metadata, one can ask [[LLM]] to generate it
 - Shuffling context chunks will create randomness in outputs, which is comparable to increasing diversity of the downstream output (as an alternative to hyperparameter tuning using [[temperature|softmax temperature]]) - e.g. previously purchased items are provided in random order to make recommendation engine output more creative
- - One can generate summary of documents (or questions to each chunk\document) and embed that info too
+ - One can [[synthetic data generation for RAG evaluation#^ea0ca7|generate summary of documents]] (or questions to each chunk\document) and embed that info too
+ - create*search tools* specialized for your use-cases, rather than search for *data types*. The question is not *whether I am searching for semantic or structured data?*, but *which tool would be the best to use for this specific search?* ^c819e0
+	- Generic document search that searches everything, Contact search for finding people, Request for Information search that takes specific RFI codes.
+	- Evaluate the *tool selection* capability separately
+	-  Make the model *write a plan of all the tools it might want to use* for a given query. Possibly present the plan for users approval, creates valuable training data based on acceptance rates.
+	- The naming of tools significantly impacts how models use them. Naming it *grep* or else can affect the efficiency.
+ - formatting ^9d73c5
+	- [Does Prompt Formatting Have Any Impact on LLM Performance?](https://arxiv.org/html/2411.10541v1)
+		- check which format (markdown, json, xml) works best for your application. there are also [discussions about token-efficiency](https://community.openai.com/t/markdown-is-15-more-token-efficient-than-json/841742)
+		- spaces between tokens in markdown tables (like "| data |" instead of "|data|") affects how the model processes the information.
+	- [The Impact of Document Formats on Embedding Performance and RAG Effectiveness in Tax Law Application](https://www.robertodiasduarte.com.br/the-impact-of-document-formats-on-embedding-performance-and-rag-effectiveness-in-tax-law-applications/#Conclusion_Navigating_Format_Choices_for_Optimal_Tax_Law_RAG)
+- multi-agent vs single-agent systems
+	- communication overhead if agents are NOT read-only, need to align who modifies what
+	- if all read-only, for instance, in search of personality info - one may search professional sources, one about personal life, another smth else
+	- benefit of multi-agents - token efficiency, Especially if there are more tokens than one agent can consume in the context
+		-  The performance just increases with the amount of tokens each sub-agent is able to consume. If you have 10 sub-agents, you can use more tokens, and your research quality is better
+
 ### Not RAG-specific
  - Off-the-shelf bi-encoders [[tokenization|embedding]] models) can be fine-tuned like any other model, but it is barely done on practice by anyone as there are *much lower hanging fruits*
 ### Other
@@ -63,6 +88,7 @@ tags::
 ## Resources
 - [GitHub - NirDiamant/RAG\_Techniques: This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems](https://github.com/NirDiamant/RAG_Techniques)
 - [Yet another RAG system - implementation details and lessons learned : r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/16cbimi/yet_another_rag_system_implementation_details_and/)
+- [[AI Engineering - Chip Huyen]]
 
 ---
 ###### Links to this File

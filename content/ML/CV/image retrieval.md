@@ -11,7 +11,7 @@ parent: "[[computer vision]]"
 source: 
 related: 
 created: 2025/06/18
-updated: 2025/06/20
+updated: 2025/07/03
 ---
 %%
 date:: [[2025-06-18]]
@@ -100,7 +100,6 @@ tags::
 		- with increasing k, recall@k can only grow or stay the same, that is the task becomes *easier*, because you only need 1 out of k elements to be true positive
 		- 
 - not being ideal metrics, still, with fixed Retrieval set and $k$ - the higher precision and recall the better
-- ==In practice it is good to track evolution of metrics for various $k$: 1, 10, 50, 1000....==
 
 ## Loss functions
 -  Need to define such a [[loss function|loss]] that during training it will push *anchor* and *positive example* closer together and make *negative example* further away
@@ -126,7 +125,7 @@ tags::
 - for a given anchor take positives which are as close as possible
 
 ### Semi-hard Negatives
-- taking too easy or too hard examples both make training go slow due to noisy or [[vanishing gradients]] 
+- taking too easy or too hard examples both make training go slow due to noisy or [[vanishing gradients]]
 - take negatives which are ==already== further away than positives from the anchor
 	- desired condition already satisfied, except for the effect of the $\alpha$ parameter
 ![[Pasted image 20250618155619.png|400]]

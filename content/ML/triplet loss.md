@@ -11,7 +11,7 @@ source:
 related:
   - "[[contrastive loss]]"
 created: 2025/06/18
-updated: 2025/06/18
+updated: 2025/07/03
 ---
 %%
 date:: [[2025-06-18]]
@@ -24,7 +24,7 @@ tags::
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## Note
-- used for [[object retrieval]] applications
+- used for [[image retrieval|object retrieval]] applications
 - ensure that anchor and positive representations be closer, than anchor and negative
 - ![[Pasted image 20250618152300.png|500]]
 	- $[a]_+$ means $ReLU(a)$ or $max(0,a)$

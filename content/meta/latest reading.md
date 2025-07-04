@@ -15,7 +15,7 @@ related:
   - "[[index|about-me]]"
   - "[[meta]]"
 created: 2024/08/20
-updated: 2025/05/21
+updated: 2025/06/29
 ---
 %%
 date:: [[2024-08-20]]
@@ -27,9 +27,10 @@ tags::
 # [[latest reading]]
 
 ## 2025
-- [[Taal voor de leuk - Paulien Cornelisse]] - a collection of *anecdotes* and short observations about the Dutch language and how speaking a language shapes our culture and perception of the world.
+- [[The Man Who Mistook His Wife for a Hat - Oliver Sacks]] -
+- [[Daughters of the Samurai A Journey from East to West and Back - Janice P Nimura]] -
+- [[Taal voor de leuk - Paulien Cornelisse]] - a collection of *anecdotes* and short observations about the Dutch language and how speaking a language shapes our culture and perception of the world. Humor is particularly hard to grasp in a foreign language, so every laugh I get from this book is a small compliment to myself.
 - [[Under the Dome Part 1 - Stephen King]] - another one from a storyteller-genius. I am not a fan of mystics, so my choice of King's books is rather limited to the ones with *sort-of-realistic* setting. And although my absolute top-1 is occupied by the his 11/22/63 *novel*, reading *this* one also kept me on my toes non-stop. If you forget about the reasons, why all inhabitants of one small city in the US, couldn't leave it and no one (and nothing) could come within the city borders - it is a very realistic description of a group behavior under stress and scare. Really frightening times when making a thousand people believe total bullshit is easier than persuading an individual. And don't even think about watching the series, even if you don't have time for the book. Movies can hardly pass on the suspense of King's books, let alone bad movies.
-- [[The Making of the Atomic Bomb - Richard Rhodes]] - another monumental, interesting, but heavy read, which will take more than one re-start to read... in progress
 - [[AI Engineering - Chip Huyen]] in progress
 - [[Stuff Matters - Mark Miodownik]] - did you ever thought about [[Stuff Matters - Mark Miodownik#^1929d6|how crucial reinforced concrete is to our civilization]] or *why does paper yellow with age*? The book goes into everyday things like chocolate, plastic. glass and uncovers them from manufacturing, historical perspectives. There is also always a personal story behind, which makes the book read as a novel, rather than an encyclopedia.
 - [[Looking for Alaska - John Green]] - the book about growing up, friendship, first love, physical traction. It is hopeful and sad, but not doomed-all-the-way (like the [Adolescence](https://www.imdb.com/title/tt31806037/)) movie, but more like [Dead Poets Society](https://www.imdb.com/title/tt0097165/)-sad. And, btw, [[Netflix]] did a miniseries here too - [Looking for Alaska](https://www.imdb.com/title/tt3829868/). All in all, not a must-read, but I see how this can cut to the heart when the mood is right.
@@ -37,6 +38,7 @@ tags::
 
 ### Books I stopped reading, but may return to
 - [[Thinking with Data - Max Shron]]
+- [[The Making of the Atomic Bomb - Richard Rhodes]] - another monumental, interesting, but heavy read, which will take more than one re-start to read... in progress
 ## 2024
 
 - [[Fall of Giants - Ken Follett]] - a monumental trilogy... A weak attempt to bind historical background and fictional plot together. Historical insight is superficial and not deep enough so that if one is interested in history can much faster gain the same or more information in shorter time. Regarding the fictional\adventurous part, I would say it's not that much adventurous at all, but the biggest problem is that all actors stay static personality-wise. They react to events happening to them, but their inside personality is not developing. They still are the same people in the end of the book.

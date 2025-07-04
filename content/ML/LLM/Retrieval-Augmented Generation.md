@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/05/09
+updated: 2025/07/04
 ---
 %%
 date:: [[2024-02-28]]
@@ -37,6 +37,7 @@ tags::
 - [[#Advanced RAG techniques|Advanced RAG techniques]]
 - [[#Other topics|Other topics]]
 - [[#Resources|Resources]]
+
 
 ## Note
  - RAG is stitching together [[information retrieval]] and generation parts, where the latter is handled by [[LLM]]s.
@@ -76,48 +77,8 @@ tags::
 
 ![[Pasted image 20241031183445.png|900]]
 
-## Evaluating information retrieval
-- See general approach to evaluating LLMs: [[LLM#How to evaluate LLMs?]] and [[how to evaluate LLM chatbots]]
-- RAG impact is dependent on the quality of retrieved documents, which in turn is evaluated by:
-	- relevance: how good the system is at ranking relevant documents higher and irrelevant documents lower
-	- information density: if two documents are equally relevant, we should prefer one that’s more concise and has fewer extraneous details
-	- level of detail:
-
-> [!NOTE]- Metrics
-> ### Metrics
-> - [[precision and recall|recall@k]]: all the relevant
-> - precision@k: nothing, but relevant
-> - [[Normalized Discounted Cumulative Gain]]@k: [NDCG: What It Is and Where To Use It? AI Essential Lessons](https://arize.com/blog-course/ndcg/)
-> - [[Mean Reciprocal Rank]]
-> - LGTM@10
-> - Industry-based:
-> 	- engagement: click, add, dwell
-> 	- Revenue
-> 	- Multi-objective ranking, not just optimizing relevance.
-> - [Mastering RAG: 8 Scenarios To Evaluate Before Going To Production - Galileo](https://galileo.ai/blog/mastering-rag-8-scenarios-to-test-before-going-to-production)
-> - [GitHub - amazon-science/RAGChecker: RAGChecker: A Fine-grained Framework For Diagnosing RAG](https://github.com/amazon-science/RAGChecker)
-
-> [!NOTE]- Build your own relevance dataset
-> ### Build your own relevance dataset
-> - Sample user queries and their outputs from a production RAG and put a few hours to rank the results
-> 	- Irrelevant, somehow relevant, highly relevant.
-> 	- Static collection is preferred for consistency
-> - If there is no existing system, use LLM to generate queries for your content.
-> - Create a good prompt for [[LLM-as-a-judge]] to achieve automatic ranking at the same level as your own manual
-> #### Prompt example
-> `Given a query and a passage, you must provide a score on an integer scale of 0 to 3 with the following meanings:`
-`0 = represent that the passage has nothing to do with the query,`
-`1 = represents that the passage seems related to the query but does not answer it,`
-`2 = represents that the passage has some answer for the query, but the answer may be a bit unclear, or hidden amongst extraneous information and`
-`3 = represents that the passage is dedicated to the query and contains the exact answer. Important Instruction: Assign category 1 if the passage somewhat related to the topic but not completely, category 2 if passage presents something very important related to the entire topic but also has some extra information and category 3 if the passage only and entirely refers to the topic. If none of the above satisfies give it category 0.`
-`Query: (query)`
-`Passage: (passage)`
-`Split this problem into steps:`
-`Consider the underlying intent of the search.`
-`Measure how well the content matches a likely intent of the query (M) .`
-`Measure how trustworthy the passage is (T).`
-`Consider the aspects above and the relative importance of each, and decide on a final score (0). Final score must be an integer value only.`
-`Do not provide any code in result. Provide each score in the format of: ##final score: score without providing any reasoning.`
+## Evaluating information retrieval 
+- See [[Evaluating information retrieval]]
 
 ---
 
@@ -134,14 +95,20 @@ tags::
 - Relevant document got into top-K, but the LLM didn't use that info for output generation --> finetune the model for the contextual data or reduce the noise level in the retrieved context
 - LLM output is not following expected format ---> finetune the model, or improve the prompt
 - Pooling **dilutes** long text representation: During the encoding step, each token in the query receives a representation and then there is a pooling step which is typically averaging to provide one vector for all tokens in a query (==query-sentence ---> one vector==)
-- Requires chunking
+- Requires [[chunking strategy|chunking]]
 	- One doc ---> many chunks and vectors.
 	- Retrieve docs or chunks?
 - Fixed vocabulary
-
+- temporal data
+	- challenging because the model needs to keep track of order of events and consequences
+	- medical\prescription records, FED speeches, economic reports
+	- present chunks chronologically, explore the effect of ascending vs descending order
+	- two-stage approach: let the model first extract and reorganize relevantnt info, then reason about it
+	- mining reasoning chains from users to create training data
 ---
 
 ## Advanced RAG techniques
+- See [[Advanced RAG techniques]]
 > [!note]- from [[Advanced RAG techniques]]
 > ![[Advanced RAG techniques#Advanced improvements to RAG]]
 

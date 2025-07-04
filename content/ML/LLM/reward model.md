@@ -2,7 +2,7 @@
 cssclasses: 
 aliases:
   - reward modeling
-permalink: note/reward-model
+permalink: LLM/reward-model
 publish: "true"
 "date:": "[[2024-09-04]]"
 link: 
@@ -12,7 +12,7 @@ source:
 related:
   - "[[paper review - Llama 3 Herd of Models]]"
 created: 2024/09/04
-updated: 2025/05/01
+updated: 2025/06/30
 ---
 %%
 date:: [[2024-09-04]]
@@ -56,7 +56,7 @@ tags::
 - ![[Pasted image 20240903170021.png|300]]
 
 ## Resources
--
+- [Reward Models - by Cameron R. Wolfe, Ph.D.](https://cameronrwolfe.substack.com/p/reward-models)
 
 ---
 ###### Links to this File

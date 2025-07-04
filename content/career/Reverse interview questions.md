@@ -5,15 +5,15 @@ aliases:
 publish: "true"
 link: 
 tags: 
-created: 2023/06/08
-updated: 2025/06/19
+created: 2025/06/08
+updated: 2025/06/29
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
 source:
 ---
 %%
-date:: [[2023-06-08]]
+date:: [[2025-06-08]]
 parent:: [[interview]]
 source::
 related::: [[all kinds of lists]]
