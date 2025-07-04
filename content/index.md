@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/06/29
+updated: 2025/07/04
 cssclasses:
   - personal-main
 ---
@@ -81,6 +81,7 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 > ![[blogs archive#Published earlier on the Internet]]
 
 #### Latest
+- [[Evaluating information retrieval]]
 - [[Enterprise RAG patterns]]
 - [[what can go wrong with LLMs]]
 - [[how to evaluate LLM chatbots]]
