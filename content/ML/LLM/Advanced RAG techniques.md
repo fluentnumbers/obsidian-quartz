@@ -26,7 +26,7 @@ tags::
 > [!NOTE] Note
 > RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
 
-- Most probably you have to chunk your context data into smaller pieces. ==Chunking strategy== can have a huge impact on RAG performance.
+- Most probably you have to chunk your context data into smaller pieces. ==Chunking strategy== can have a huge impact on [[Evaluating information retrieval|RAG performance]].
 	- small chunks --> limited context --> incomplete answers
 	- large chunks --> noise in data --> poor [[precision and recall|recall]]
 	- By symbols, sentences, semantic meaning, using dedicated model or an LLM call
@@ -56,7 +56,7 @@ tags::
 	 - if there is no metadata, one can ask [[LLM]] to generate it
 - Shuffling context chunks will create randomness in outputs, which is comparable to increasing diversity of the downstream output (as an alternative to hyperparameter tuning using [[temperature|softmax temperature]]) - e.g. previously purchased items are provided in random order to make recommendation engine output more creative
  - One can [[synthetic data generation for RAG evaluation#^ea0ca7|generate summary of documents]] (or questions to each chunk\document) and embed that info too
- - create*search tools* specialized for your use-cases, rather than search for *data types*. The question is not *whether I am searching for semantic or structured data?*, but *which tool would be the best to use for this specific search?* ^c819e0
+ - create *search tools* specialized for your use-cases, rather than search for *data types*. The question is not *whether I am searching for semantic or structured data?*, but *which tool would be the best to use for this specific search?* ^c819e0
 	- Generic document search that searches everything, Contact search for finding people, Request for Information search that takes specific RFI codes.
 	- Evaluate the *tool selection* capability separately
 	-  Make the model *write a plan of all the tools it might want to use* for a given query. Possibly present the plan for users approval, creates valuable training data based on acceptance rates.

@@ -40,19 +40,21 @@ tags::
 ## Related
 - See general approach to evaluating LLMs: [[LLM#How to evaluate LLMs?]] and [[how to evaluate LLM chatbots]]
 ## Note
-- end-to-end [[model evaluation]] is challenging, unless we expect a single short answer
-	- evaluate information extraction (did the system find the correct information?), reasoning (Given correct information, did the system make the right conclusions?), output generation (Was the final response clear and actionable?)
+- end-to-end [[model evaluation]] is challenging, unless we expect a single short answer.Evaluate separately:
+	- information extraction (did the system find the correct information?)
+    - reasoning (Given correct information, did the system make the right conclusions?)
+    - output generation (Was the final response clear and actionable?)
 	- some domains are easier than others
 		- coding: does the code pass tests?
 	- user feedback or the way they interact with the results can be the ultimate metric
-		- AI-generated emails: do users make edits before sending?
+		- [[#^96c623|forAI-generated emails]]: do users make edits before sending?
 - when evaluating the performance of the system you have, don't forget to register what is missing
 	- Inventory issues - Lack of data to fulfill certain user requests. Better algorithm can't help with that,
 	- Capability issues - Functionality gaps where a system can't perform certain types of queries or filters.
 - [[Retrieval-Augmented Generation|RAG]] impact is dependent on the quality of retrieved documents, which in turn is evaluated by:
 	- relevance: how good the system is at ranking relevant documents higher and irrelevant documents lower
 	- information density: if two documents are equally relevant, we should prefer one that’s more concise and has fewer extraneous details
-		- interestingly, built-in PDF extraction services (e.g. by Adobe) encode each page with a fixed number of tokens --> ==retrieval from a dense page will be worse, because of higher data compression==
+		- apparently,[built-in Google PDF processing encodes each page with a fixed number of tokens](https://www.perplexity.ai/search/find-any-articles-reverse-engi-Paw70fpKSCKI9jAVxb6xvg) --> ==retrieval from a dense page will be worse, because of higher data compression==
 	- level of detail:
 - Separate retrieval evaluations vs generation evals and focus on the retrieval part first
 	- retrieval is cheap, generation expensive
@@ -73,7 +75,7 @@ tags::
 	- [[t-test]] is another way to tell if the difference in the means of the two configurations is due to chance
 		- use distribution of the means from bootstraping, not means themselves
 		- high [[p-value]] and low t-statistics points to ==NO statistical significance==
-- if you have[[Advanced RAG techniques#^c819e0|a number of tools for various search-use-cases]] (somewhat similar to [[intent recognition]]) evaluate them independently
+- if you have [[Advanced RAG techniques#^c819e0|a number of tools for various search-use-cases]] (somewhat similar to [[intent recognition]]) evaluate them independently
 	- ask the model to make a plan which tools to use. track plan acceptance rates by the users
 
 ## Build your own relevance dataset
@@ -114,7 +116,7 @@ tags::
 ### Use-case defined
 - end-user-engagement: click, add, dwell
 - human-involved evaluation, but not end-users:
-	- for instance, AI system generates emails to prospective buyers with several price options, conditional discounts and other upselling tricks. Prior sending these emails reviewed by sales people. If they make corrections\edits to the email, we consider that smth went wrong in model reasoning and analyze the pitfall.
+	- for instance, AI system generates emails to prospective buyers with several price options, conditional discounts and other upselling tricks. Prior sending these emails reviewed by sales people. If they make corrections\edits to the email, we consider that smth went wrong in model reasoning and analyze the pitfall. ^96c623
 - satisfaction feedback
 - ratio of FAQ requests forwarded to a live agent
 - Revenue

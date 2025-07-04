@@ -1,0 +1,51 @@
+---
+cssclasses: 
+aliases: 
+permalink: ML/confidence-interval
+publish: true
+"date:": "[[2024-09-10]]"
+link: 
+tags: 
+parent: "[[hypothesis testing]]"
+source: 
+related:
+  - "[[bootstrapping]]"
+created: 2024/09/10
+updated: 2025/07/04
+---
+%%
+date:: [[2024-09-10]]
+parent:: [[hypothesis testing]]
+source::
+related:: [[bootstraping]]
+tags::
+%%
+# [[confidence interval]]
+<sub>scroll ↓ to [[#Resources]]</sub>
+
+## Note
+- confidence level
+	- alpha risk = 1 - [[confidence level]], the risk that population parameter (e.g. mean) is not within the CI
+	- confidence LEVEL up --> WIDER confidence interval --> less practicall value
+	- confidence level 68% --> t-stats ~= 1 (from the T-table)
+	- confidence level 95% --> t-stats ~= 2
+	- confidence level 99% --> t-stats ~= 3
+- CI(mu) = sample mean +- MOE = sample mean +- Tstats * SEmean
+	- CI = 2*MOE
+- Sample size n
+	o   sample size n up --> narrower confidence interval (by sqrt(n))
+	o   at n = 25, reduction of 80% of CI is achieved
+	o   if n<30, sample mean is a student-distribution and t-stats needs to be defined from the Z-table
+- ![[Pasted image 20240910191601.png|600]]
+- ![[Pasted image 20240910191615.png|600]]
+- ![[Pasted image 20240910191631.png|600]]
+
+## Resources
+- [[karpov courses]]
+- [[Design for Six Sigma]]
+
+---
+###### Links to this File
+```dataview
+table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+```
