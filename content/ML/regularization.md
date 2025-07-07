@@ -1,9 +1,8 @@
 ---
-permalink: notes/regularization
+permalink: ML/regularization
 cssclasses: 
 aliases:
   - regularization methods
-  - regularization
 publish: "true"
 link: 
 tags: 
