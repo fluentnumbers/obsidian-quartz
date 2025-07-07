@@ -42,8 +42,11 @@ tags::
 - [[normalization]] is required for most algorithms
 
 ### Methods
+%%
 [[regularization exc.excalidraw#^group=MP9PVHo5T4IVp6sDvHxof]]
-![[regularization exc.excalidraw.svg|500]]
+[[regularization exc.excalidraw.svg|500]]
+%%
+![[Pasted image 20250707212441.png|500]]
 - λ is a [[hyperparameters|hyperparameter]] and needs to be adjusted from experiments
 - Minimizing the sum of two functions
 #### Lasso (L1)
