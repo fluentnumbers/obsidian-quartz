@@ -8,7 +8,7 @@ link:
 tags: 
 parent: "[[model evaluation]]"
 source: 
-related:
+related: "[[Systematically Improving RAG Applications]]"
 created: 2025/07/04
 updated: 2025/07/04
 ---
@@ -40,7 +40,7 @@ tags::
 ## Related
 - See general approach to evaluating LLMs: [[LLM#How to evaluate LLMs?]] and [[how to evaluate LLM chatbots]]
 ## Note
-- end-to-end [[model evaluation]] is challenging, unless we expect a single short answer.Evaluate separately:
+- end-to-end [[model evaluation]] is challenging, unless we expect a single short answer. Evaluate separately:
 	- information extraction (did the system find the correct information?)
     - reasoning (Given correct information, did the system make the right conclusions?)
     - output generation (Was the final response clear and actionable?)
@@ -51,6 +51,8 @@ tags::
 - when evaluating the performance of the system you have, don't forget to register what is missing
 	- Inventory issues - Lack of data to fulfill certain user requests. Better algorithm can't help with that,
 	- Capability issues - Functionality gaps where a system can't perform certain types of queries or filters.
+	- Examine [[false negative rate|false negatives]] of your retrieval; what should have been retrieved, but it wasn't.
+- ==Retrieval sufficiency - evaluate if retrieved docs provide enough information to completely answer the query, not just whether they all are relevant.==
 - [[Retrieval-Augmented Generation|RAG]] impact is dependent on the quality of retrieved documents, which in turn is evaluated by:
 	- relevance: how good the system is at ranking relevant documents higher and irrelevant documents lower
 	- information density: if two documents are equally relevant, we should prefer one that’s more concise and has fewer extraneous details

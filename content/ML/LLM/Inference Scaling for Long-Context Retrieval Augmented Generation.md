@@ -1,23 +1,24 @@
 ---
 cssclasses: 
 aliases: 
-permalink: note/inference-scaling-for-long-context
+permalink: RAG/inference-scaling-for-long-context
 publish: "true"
 "date:": "[[2024-11-18]]"
 link: https://arxiv.org/abs/2410.04343
 tags: 
-parent: "[[paper review]]"
+parent: "[[Advanced RAG techniques]]]"
 source: 
 related:
   - "[[long context]]"
+  - "[[paper review]]"
 created: 2024/11/18
 updated: 2025/05/01
 ---
 %%
 date:: [[2024-11-18]]
-parent:: [[paper review]]
+parent:: [[Advanced RAG techniques]]
 source::
-related:: [[long context]]
+related:: [[long context]] [[paper review]]
 tags::
 %%
 # [[Inference Scaling for Long-Context Retrieval Augmented Generation]]
@@ -25,7 +26,7 @@ tags::
 
 ## Note
 - investigate how performance scales with increasing magnitude of the inference compute?
-- they consider 2 advanced [[RAG]] modifications
+- they consider 2 advanced [[Retrieval-Augmented Generation|RAG]] modifications
 	- ==Demonstration RAG== (DRAG) combines RAG with few-shot examples; its inference compute scales with both number of documents and number of queries
 	- ==Iterative Demonstration-Based RAG (IterDRAG)==
 		- Decomposes the query into simpler sub-queries.

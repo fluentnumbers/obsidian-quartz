@@ -85,6 +85,7 @@ tags::
 			- average time for a single end-to-end LLM request in seconds
 			- Processing speed of input tokens versus generation speed of output tokens as in *3500 prompt tokens per second vs 350 generated ones*
 			- average **time-to-first-token** in relation to the time required to generate a single output token
+			- 
 	- **Cost**: the amount of money spent to process a request. If not completely the same, ==this is synonymous to the throughput==.
 
 > [!NOTE]- Additional metrics
@@ -138,7 +139,8 @@ tags::
 
 ### FLOPs needed to generate one token
 - *Roughly speaking,* to generate a single token, each token needs to be multiplied by all the parameters and then the results are summed across all parameters.
-	- `FLOP = 2 * num_parameters * batch_size`
+	- `FLOP = 2 * num_parameters * batch_size * C`
+		- C is an additional coeff denoting how many iterations required for one generation. C=1 for text generation, but can be higher for different architectures, image generation like [[Generative adversarial network]]s
 
 ### LLM throughput
 - `time_of_computation = FLOP needed / GPU peak FLOPs = (2 * num_parameters * batch_size) / GPU_peak_FLOPs`

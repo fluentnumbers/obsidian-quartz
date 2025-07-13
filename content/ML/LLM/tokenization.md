@@ -4,7 +4,7 @@ aliases:
   - input representation
   - input encoding
   - embedding
-permalink: note/input-encoding
+permalink: LLM/input-encoding
 publish: true
 "date:": "[[2024-08-15]]"
 link: 
@@ -15,7 +15,7 @@ related:
   - "[[byte pair encoding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
 created: 2024/08/15
-updated: 2025/05/09
+updated: 2025/07/10
 ---
 %%
 date:: [[2024-08-15]]
@@ -34,7 +34,7 @@ tags::
 - [[#Resource|Resource]]
 
 ## Note
-- Embeddings aim to obtain a low dimensional representation of the original data while preserving most of the essential information
+- Embeddings aim to obtain a low dimensional representation of the original data in a continuous vector space, while preserving most of the essential information
 - Tokenization is a substep of the embedding process, but often these are seen as synonyms
 - Tokenizer is an object separate from an [[LLM]] model, a *preprocessing* stage that requires an (independent) multi-language training set
 	- more training data in a particular language fed into tokenizer results in denser sequences, which is beneficial for the [[attention]] mechanism with limited context length

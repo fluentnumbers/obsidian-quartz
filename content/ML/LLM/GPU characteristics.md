@@ -28,7 +28,7 @@ tags::
 - **GPU memory size**: the total amount of memory available on the GPU. It is where LLMs store all their data.
 - **GPU memory bandwidth**: the maximum speed at which data can be transferred (read or write) between the compute engine (or CUDA cores) and the GPU memory
 ![[1,3,6,5.png|500]]
-
+- Nvidia A100 has 312 TFLOPS for FP16 or 19.5 TFLOPS for FP32
 ## Resources
 - 
 

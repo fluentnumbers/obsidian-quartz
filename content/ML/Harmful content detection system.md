@@ -11,19 +11,19 @@ source:
   - "[[Machine Learning System Design Interview - Ali Aminian Alex Xu]]"
 related: 
 created: 2025/06/03
-updated: 2025/06/18
+updated: 2025/07/11
 ---
 %%
 date:: [[2025-06-03]]
 parent:: [[ML system design]]
 source:: [[Machine Learning System Design Interview - Ali Aminian Alex Xu]]
-related::
+related:: 
 tags::
 %%
 # [[Harmful content detection system]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 
-> [!NOTE] This is a summary of Chapter 5 from the book [Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview) by Ali Aminian
+> [!NOTE] Big part of this note is a summary of Chapter 5 from the book [Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview) by Ali Aminian. It is also possible to find several youtube videos discussing the same chapter.
 
 ## Contents
 
@@ -54,6 +54,10 @@ tags::
 - If the post is removed, we provide users an explanation or link to the rules.
 - Some threats must be real-time, such as violent content, Other threads can be handled via batch processing.
 - 
+
+> [!NOTE]+ Questions
+> - What are the consequences of false positives and false negatives?
+> - What to do when we find harmful content? Should we remove it, or block until human review is done.
 
 ## Frame the Problem as an ML Task
 
@@ -110,6 +114,15 @@ All post modalities are fused together to create features. Engineered features U
 ## Data preparation
 
 ### Available data
+- Supervised data 
+	- labelled data
+	- Open NSFW dataset 
+- Semi-supervised data
+	- user reports 
+	- negative user actions such as hiding content 
+- unsupervised data
+	- Post comments
+	- User behavior
 #### Users
 |**ID**|**Username**|**Age**|**Gender**|**City**|**Country**|**Email**|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -134,8 +147,8 @@ All post modalities are fused together to create features. Engineered features U
 Each post contains several content types each with their own preprocessing and [[feature extraction]] steps
 - Textual content
 - Image or video
-- User reactions to the post
-- Author
+- User reactions to the post (Shares, views, negative reactions)
+- Author (age, user embeddings, last N posts of harmful content.)
 - Contextual information
 #### Textual content
 - Pre-processing
@@ -223,6 +236,7 @@ Shows the trade-offs between the true positive rate (recall) and the false posit
 	- [How Facebook uses super-efficient AI models to detect hate speech](https://ai.meta.com/blog/how-facebook-uses-super-efficient-ai-models-to-detect-hate-speech/)
 ## Resources
 -  [Machine Learning System Design Interview](https://bytebytego.com/intro/machine-learning-system-design-interview)
+- [Harmful Content Detection / Content Moderation \| ML System Design Problem Breakdown - YouTube](https://www.youtube.com/watch?v=9KUC_nHydZg)
 
 ---
 ###### Links to this File

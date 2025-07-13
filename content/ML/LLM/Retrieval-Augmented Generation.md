@@ -83,11 +83,15 @@ tags::
 ---
 
 ## Challenges with RAG
+> [!NOTE] See [[Advanced RAG techniques]]
+
 - See [[tokenization#Common issues due to tokenization]]
 - [[Lost in the Middle effect]] (not specific to RAG, but rather [[long context]])
-- RAG retrieval capabilities are often evaluated using [[needle in a haystack]] tasks, but that is not what we usually want in real world tasks (summarization, joining of sub-parts of long documents, etc.) --> [[knowledge graphs]] may be a good improvement for this
-- Database needs to be always up-to-date
-- [[multi-hop question answering]] -> [[knowledge graphs]]
+- RAG retrieval capabilities are often evaluated using [[needle in a haystack]] tasks, but that is not what we usually want in real world tasks (summarization, joining of sub-parts of long documents, etc.) --> [[knowledge graph]] may be a good improvement for this
+- *Index stallness*, database needs to be always up-to-date ---> timestamps [[metadata filtering]] ^82cf5f
+- [[multi-hop question answering]] -> [[knowledge graph]]
+- documents' encoding failures due to formats, tables or encoding ---> monitor processed data at each step, implement error handling
+- Irrelevant documents accumulate and await to be retrieved for a query --> careful curation, [[metadata filtering]]
 - Privacy or access rights can be compromised when RAG is used by various users
 - Database may contain factual or outdated info (sometimes along with the correct info) --> increase data quality checks or improve model robustness, put more weight on more recent documents, filter by date
 - Relevant document is missing in top-K retrievals ---> improve the embedder or re-ranker
@@ -95,10 +99,13 @@ tags::
 - Relevant document got into top-K, but the LLM didn't use that info for output generation --> finetune the model for the contextual data or reduce the noise level in the retrieved context
 - LLM output is not following expected format ---> finetune the model, or improve the prompt
 - Pooling **dilutes** long text representation: During the encoding step, each token in the query receives a representation and then there is a pooling step which is typically averaging to provide one vector for all tokens in a query (==query-sentence ---> one vector==)
-- Requires [[chunking strategy|chunking]]
+- Requires [[chunking strategy|chunking]]. See [[Advanced RAG techniques#^c77646]]
 	- One doc ---> many chunks and vectors.
 	- Retrieve docs or chunks?
 - Fixed vocabulary
+- Arbitrary queries
+	- Low information value or vague queries (e.g. "health tips") ---> detect and ask users for clarification
+	- Off-topic queries --> [[intent recognition]] and fallback scenario
 - temporal data
 	- challenging because the model needs to keep track of order of events and consequences
 	- medical\prescription records, FED speeches, economic reports
@@ -127,6 +134,7 @@ tags::
 - [RAG From Scratch: Part 1 (Overview) - YouTube](https://www.youtube.com/watch?v=wd7TZ4w1mSw&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)
 - [Local Retrieval Augmented Generation (RAG) from Scratch (step by step tutorial) - YouTube](https://www.youtube.com/watch?v=qN_2fnOPY-M): 5 hours step by step hands-on tutorial
 - [Retrieval-Augmented Generation for Large Language Models: A Survey](https://arxiv.org/abs/2312.10997)
+- [awesome RAG](https://github.com/Poll-The-People/awesome-rag
 
 ###### [[Data Talks Club]]
 [[DTC - LLM Zomcamp]]
