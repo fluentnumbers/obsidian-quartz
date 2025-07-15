@@ -26,7 +26,7 @@ tags::
 ## Advanced improvements to RAG
 
 > [!NOTE] Note
-> RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
+> RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data generation for RAG evaluation]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
 
 - ==[[chunking strategy]]== can have a huge impact on [[Evaluating information retrieval|RAG performance]]. ^c77646
 	- small chunks --> limited context --> incomplete answers ^789f4e
@@ -39,10 +39,10 @@ tags::
 	- page-size chunks, because we answer the question "on which page can I find this?"
 - [[fine-tuning]] to make models output citations\ref
 	- Start with small batches, measure performance, and increase data volume until you reach your desired accuracy level.
-	- shuffle the order of retrieved sources to prevent position bias
+	- shuffle the order of retrieved sources to prevent position bias ^447647
 		- unless sources are sorted by relevance (the model assumes that the 1st chunk is the most relevant)
 		- newer models with large context windows are less prone to the [[Lost in the Middle effect]] and have improved recall across the whole context window
-- [[re-ranking]]
+- [[reranker]]
 	- see [[Retrieval-Augmented Generation#Re-ranking]]
 	- minimize using of *manual boosting* (e.g. boost recent content or specific keywords)
 - separate indices for document categories
@@ -83,6 +83,7 @@ tags::
 	- if all read-only, for instance, in search of personality info - one may search professional sources, one about personal life, another smth else
 	- benefit of multi-agents - token efficiency, Especially if there are more tokens than one agent can consume in the context
 		-  The performance just increases with the amount of tokens each sub-agent is able to consume. If you have 10 sub-agents, you can use more tokens, and your research quality is better
+- See also [[Inference Scaling for Long-Context Retrieval Augmented Generation]]
 
 ### Not RAG-specific
  - Off-the-shelf bi-encoders [[tokenization|embedding]] models) can be fine-tuned like any other model, but it is barely done on practice by anyone as there are *much lower hanging fruits*

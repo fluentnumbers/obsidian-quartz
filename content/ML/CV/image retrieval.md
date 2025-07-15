@@ -11,7 +11,7 @@ parent: "[[computer vision]]"
 source: 
 related: 
 created: 2025/06/18
-updated: 2025/07/03
+updated: 2025/07/15
 ---
 %%
 date:: [[2025-06-18]]
@@ -32,7 +32,7 @@ tags::
 - [[#Metrics|Metrics]]
 - [[#Loss functions|Loss functions]]
 	- [[#Loss functions#Contrastive loss|Contrastive loss]]
-	- [[#Loss functions#Triplet loss|Triplet loss]]
+	- [[#Loss functions#Triplet loss|Triplet loss]] ^1cff40
 	- [[#Loss functions#Range loss|Range loss]]
 	- [[#Loss functions#Margin loss|Margin loss]]
 - [[#Sampling methods|Sampling methods]]
@@ -44,7 +44,7 @@ tags::
 
 ## Note
 - Applications
-	- [[object retrieval]]
+	- [[image retrieval|object retrieval]]
 		- [[face recognition]]
 		- [[street-to-shop]]
 	- [[one-shot learning]]
@@ -61,7 +61,7 @@ tags::
 	- During [[inference]]:
 		- pass the input object through the backbone network to calculate its vector embedding
 		- normalize the embeddings
-		- compute distances to existing database entries and decide which entries to select (e.g. [[k-nearest neighbors]]-like approach with [[Faiss]], [[cosine similarity]] or else)
+		- compute distances to existing database entries and decide which entries to select (e.g. [[k-nearest neighbors]]-like approach with [[Faiss]], [[cosine similarity]] or another [[similarity measurement|similarity distance]])
 - Currently, one is unlikely to train models from scratch, but rather use existing foundation models such as [DINOv2 by Meta AI](https://dinov2.metademolab.com/) in [[transfer learning]] or [[fine-tuning]] modes
 
 ## Training

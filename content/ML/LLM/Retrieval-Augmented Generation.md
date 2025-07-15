@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/07/04
+updated: 2025/07/15
 ---
 %%
 date:: [[2024-02-28]]
@@ -37,7 +37,6 @@ tags::
 - [[#Advanced RAG techniques|Advanced RAG techniques]]
 - [[#Other topics|Other topics]]
 - [[#Resources|Resources]]
-
 
 ## Note
  - RAG is stitching together [[information retrieval]] and generation parts, where the latter is handled by [[LLM]]s.
@@ -63,21 +62,25 @@ tags::
 		- Vector index (IVF, PQ, HNSW, DiskANN++)
 - [[vector search]] is always combined with [[keyword search]], which help handling specific terms and acronyms. Their inference computational overhead is unnoticeable, but the impact can be unbeatable for certain queries. Good old method is [[BM25]] ([[TF-IDF]])
 
-### Re-ranking
- - To fix the disadvantage of the [[#^d4ee40|bi-encoder approach]] when documents' and queries' representations are computed **separately**, we can add another *re-ranking* stage with [[cross-encoder]] as an extra step, before calling the generator model. ^2dc17c
+### Reranking
+ - To fix the disadvantage of the [[#^d4ee40|bi-encoder approach]] when documents' and queries' representations are computed **separately**, we can add another *[[reranking]]* stage with [[cross-encoder]] as an extra step, before calling the generator model. ^2dc17c
 	 - The idea is to use a powerful, computationally expensive model to score only ==a subset== of your documents, previously retrieved by a more efficient and cheap model. It is **not computationally feasible** for each query-document pair.
-	 - A typical re-ranking solution uses [open-source Cross-Encoder models from sentence transformers](https://sbert.net/examples/applications/retrieve_rerank/README.html), which take both the question and context as input and return a score from 0 to 1. Though it is also possible to use GPT4 + prompt engineering.gg
-	 - Originally, cross-encoder is a binary classifier where the probability of being a positive class is taken as a similarity score. Now there are also T5-based re-rankers, RankGPT, ...
+	 - A typical reranking solution uses [open-source Cross-Encoder models from sentence transformers](https://sbert.net/examples/applications/retrieve_rerank/README.html), which take both the question and context as input and return a score from 0 to 1. Though it is also possible to use GPT4 + prompt engineering.gg
+	 - Originally, cross-encoder is a binary classifier where the probability of being a positive class is taken as a similarity score. Now there are also T5-based rerankers, RankGPT, ...
 	 - generally bi-encoder is more *loose* and reranker is more *strict*
 	 - [Search reranking with cross-encoders](https://cookbook.openai.com/examples/search_reranking_with_cross-encoders)
 	 - [Retrieve & Re-Rank — Sentence Transformers documentation](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html#retrieval-bi-encoder)
+ - For evaluation of [[reranker]] models we need **hard negatives** - examples very similar to relevant chunks, but which should not be ranked high.
+	 - be diligent and creative with properly selecting triplets for reranker training, see also [[image retrieval#Sampling methods]] for reference
+ - Reranker-as-a-Service: [Cohere \ Boost Enterprise Search and Retrieval](https://cohere.com/rerank) with custom [[fine-tuning]] via API possible
+	 - default reranker can often yield worse results, so [[fine-tuning]] with custom ([[synthetic data generation for RAG evaluation|synthethic data]]) is advised
 
 ### Full MVP vanilla RAG
 - Full MVP *vanilla* RAG pipeline may look like this (with *combine the scores* module too)
 
 ![[Pasted image 20241031183445.png|900]]
 
-## Evaluating information retrieval 
+## Evaluating information retrieval
 - See [[Evaluating information retrieval]]
 
 ---
@@ -94,7 +97,7 @@ tags::
 - Irrelevant documents accumulate and await to be retrieved for a query --> careful curation, [[metadata filtering]]
 - Privacy or access rights can be compromised when RAG is used by various users
 - Database may contain factual or outdated info (sometimes along with the correct info) --> increase data quality checks or improve model robustness, put more weight on more recent documents, filter by date
-- Relevant document is missing in top-K retrievals ---> improve the embedder or re-ranker
+- Relevant document is missing in top-K retrievals ---> improve the embedder or reranker
 - Relevant document was chopped during context retrieval ---> use LLM with larger context size or improve the mechanism of context retrieval
 - Relevant document got into top-K, but the LLM didn't use that info for output generation --> finetune the model for the contextual data or reduce the noise level in the retrieved context
 - LLM output is not following expected format ---> finetune the model, or improve the prompt

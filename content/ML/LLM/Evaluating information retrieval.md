@@ -10,7 +10,7 @@ parent: "[[model evaluation]]"
 source: 
 related: "[[Systematically Improving RAG Applications]]"
 created: 2025/07/04
-updated: 2025/07/04
+updated: 2025/07/15
 ---
 %%
 date:: [[2025-07-04]]
@@ -42,14 +42,14 @@ tags::
 ## Note
 - end-to-end [[model evaluation]] is challenging, unless we expect a single short answer. Evaluate separately:
 	- information extraction (did the system find the correct information?)
-    - reasoning (Given correct information, did the system make the right conclusions?)
-    - output generation (Was the final response clear and actionable?)
+	- reasoning (Given correct information, did the system make the right conclusions?)
+	- output generation (Was the final response clear and actionable?)
 	- some domains are easier than others
 		- coding: does the code pass tests?
 	- user feedback or the way they interact with the results can be the ultimate metric
 		- [[#^96c623|forAI-generated emails]]: do users make edits before sending?
 - when evaluating the performance of the system you have, don't forget to register what is missing
-	- Inventory issues - Lack of data to fulfill certain user requests. Better algorithm can't help with that,
+	- Inventory issues - Lack of data to fulfill certain user requests. Better algorithm can't help with that ---> ==design a fallback scenario or a baseline algorithm==
 	- Capability issues - Functionality gaps where a system can't perform certain types of queries or filters.
 	- Examine [[false negative rate|false negatives]] of your retrieval; what should have been retrieved, but it wasn't.
 - ==Retrieval sufficiency - evaluate if retrieved docs provide enough information to completely answer the query, not just whether they all are relevant.==
@@ -78,7 +78,7 @@ tags::
 		- use distribution of the means from bootstraping, not means themselves
 		- high [[p-value]] and low t-statistics points to ==NO statistical significance==
 - if you have [[Advanced RAG techniques#^c819e0|a number of tools for various search-use-cases]] (somewhat similar to [[intent recognition]]) evaluate them independently
-	- ask the model to make a plan which tools to use. track plan acceptance rates by the users
+	- ask the model to make a plan which tools to use, track plan acceptance rates by the users
 
 ## Build your own relevance dataset
 #### Real data
@@ -95,14 +95,19 @@ tags::
 - different [[tokenization|embedding]] models by size, dimensionality, developer, ...
 	- `text-embeddings-3-small` vs `large`
 - [[chunking strategy]]
-- test how the [[re-ranking]] performance changes depending on the N chunks we pass in
+- test how the [[reranker]] performance changes depending on the N chunks we pass in
+	- composite scoring function of several sources
+	- [[Advanced RAG techniques#^447647|shuffling vs no-shuffling]]
 - [[hybrid search]] vs [[vector search]]-only
 - [[Advanced RAG techniques#^9d73c5|formatting]] of your documents (markdown, yaml, json, xml)
 
 ### Other
 - [[invariance testing]]
-	- the system's output shouldn't change due to rephrasing, shorter\longer queries, abbreviations, change of irrelevant details (names, genders, etc.)
-- Experiment with the [[top-k sampling]] with [[cosine similarity]] and top N with [[re-ranking]] to see how to get better [[precision and recall|recall]] where N << K
+	- the system's output shouldn't change due to
+		- rephrasing
+		- shorter\longer queries, abbreviations, punctuation, grammar mistakes
+		- change of irrelevant details (names, genders, etc.)
+- Experiment with the [[top-k sampling]] with [[cosine similarity]] and top N with [[reranker]] to see how to get better [[precision and recall|recall]] where N << K
 - compare [[latency]] trade-offs
 ## Metrics
 [[ML metric]]

@@ -6,7 +6,7 @@ publish: "true"
 link: 
 tags: 
 created: 2025/06/08
-updated: 2025/06/29
+updated: 2025/07/15
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
@@ -97,8 +97,9 @@ tags::
 - What is the company's growth plan for the next 1 year? 5 years?
 - Where does the funding come from and who influences the high level plan/direction?
 - What are the bottlenecks for the company at the moment? How do you plan to solve them?
-## Routine and closing up
+## About the interview, routine and closing up
 - Is there anything else I can tell you about my skills and qualifications to let you know that I am a good fit for this job?
+	- Is there anything more in my profile\CV that requires highlighting\clarifying?
 - <font color="#00b050">When can I expect to hear from you?</font>
 
 ## Resources

@@ -6,7 +6,7 @@ publish: "true"
 "date:": "[[2024-11-18]]"
 link: https://arxiv.org/abs/2410.04343
 tags: 
-parent: "[[Advanced RAG techniques]]]"
+parent: "[[Advanced RAG techniques]]"
 source: 
 related:
   - "[[long context]]"
