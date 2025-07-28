@@ -39,7 +39,7 @@ if users delete part of AI-generated content (email, blog, citations), then the 
 		- skipping a song is weaker than deleting it from a playlist
 	- [[ecommerce]]
 		- bought and returned items
-	- data can also be generated [[synthetic data generation for RAG evaluation 1|synthetically]]
+	- data can also be generated [[synthetic data generation for RAG evaluation|synthetically]]
 		- create examples of the same abbreviation in different contexts
 - [[tokenization|embedder]] [[fine-tuning|finetuning]] with triplets and [[triplet loss]]
 - [[Evaluating information retrieval]] block

@@ -77,7 +77,7 @@ tags::
  - For evaluation of [[reranker]] models we need **[[hard negative]]s** - examples very similar to relevant chunks, but which should not be ranked high.
 	 - be diligent and creative with properly selecting triplets for reranker training, see also [[image retrieval#Sampling methods]] for reference
  - Reranker-as-a-Service: [Cohere \ Boost Enterprise Search and Retrieval](https://cohere.com/rerank) with custom [[fine-tuning]] via API possible
-	 - default reranker can often yield worse results, so [[fine-tuning]] with custom ([[synthetic data generation for RAG evaluation 1|synthethic data]]) is advised
+	 - default reranker can often yield worse results, so [[fine-tuning]] with custom ([[synthetic data generation for RAG evaluation|synthethic data]]) is advised
 
 #### How to select every ranking model for fine tuning
 - It's an iterative process where one cannot just select the perfect model architecture from the beginning. Instead, it's good to create a framework which will include testing several models and evaluating them against specific constraints such as latency, costing requirements, and performance.

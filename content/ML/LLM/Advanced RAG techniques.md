@@ -39,7 +39,7 @@ tags::
 ## Advanced improvements to RAG
 
 > [!NOTE] Note
-> RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data generation for RAG evaluation 1]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
+> RAG intertwines with the general topic of [[model evaluation]], and adjacent to such things as [[synthetic data generation for RAG evaluation]] and [[Retrieval-Augmented Generation#Challenges with RAG|Challenges with RAG]]
 
 ### Chunking
 
@@ -88,7 +88,7 @@ tags::
 
 ### Other
 - See also [[Inference Scaling for Long-Context Retrieval Augmented Generation]]
-- One can [[synthetic data generation for RAG evaluation 1#^ea0ca7|generate summary of documents]] (or questions to each chunk\document) and embed that info too
+- One can [[synthetic data generation for RAG evaluation#^ea0ca7|generate summary of documents]] (or questions to each chunk\document) and embed that info too
 - [[query expansion]] and enhancement to make queries look more alike to documents in the database
 	- Another LLM-call-module can be added to *rewrite* and expand the initial user query by adding synonyms, rephrasing, complementing with initial LLM output (without RAG context), etc.
 	- if costs are not an issue, multiple *copies* of the same query can be processed for higher confidence (e.g. [[intent recognition]])
