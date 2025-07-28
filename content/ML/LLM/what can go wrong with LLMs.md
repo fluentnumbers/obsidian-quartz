@@ -4,21 +4,22 @@ aliases:
 permalink: LLM/what-can-go-wrong-with-llm
 publish: "true"
 "date:": "[[2024-12-30]]"
-link: 
+link: https://fluentnumbers.medium.com/what-can-go-wrong-with-llms-9326959621a7
 tags: 
 parent: "[[LLM]]"
 source: 
 related:
   - "[[tokenization|embedding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
+  - "[[published]]"
 created: 2024/12/30
-updated: 2025/05/09
+updated: 2025/07/26
 ---
 %%
 date:: [[2024-12-30]]
 parent:: [[LLM]]
 source::
-related:: [[tokenization|embedding]] [[Retrieval-Augmented Generation|RAG]]
+related:: [[tokenization|embedding]] [[Retrieval-Augmented Generation|RAG]] [[published]]
 tags::
 %%
 # [[what can go wrong with LLMs]]
@@ -34,9 +35,14 @@ tags::
 	- [[#Embeddings#Numerical instability|Numerical instability]]
 	- [[#Embeddings#Cosine similarity is not always the best choice|Cosine similarity is not always the best choice]]
 - [[#Tokenization|Tokenization]]
+- [[#Context|Context]]
+	- [[#Context#Lost-in-the-middle-effect|Lost-in-the-middle-effect]]
+	- [[#Context#Context in different language|Context in different language]]
+- [[#Other|Other]]
 - [[#Resources|Resources]]
 
 ## Hallucinations
+[[hallucination]]
 Assume the documents we query are unique, LLM wasn't trained on them and can't know the answer itself. Let's do a quick test on SotA models (**without internet access**) and ask it a simple question about the Heroes of Might and Magic 3.
 `How much damage do Dendroids inflict in HoMM3? Answer with one number range or N/A only.`. The true answer is [10-14](https://heroes.thelazy.net/index.php/Dendroid_Guard_and_Dendroid_Soldier).
 
@@ -172,6 +178,8 @@ As per the quote, not only the input must be the same and the same model **relea
 ### Context in different language
 Often databases may contain information in multiple languages, other than the user query. Not to miss out on relevant chunks of context, use [[query expansion]] [[Enterprise RAG patterns|pattern]]
 
+## Other
+- 
 ## Resources
 -
 

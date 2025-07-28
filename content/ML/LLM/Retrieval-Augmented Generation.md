@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/07/15
+updated: 2025/07/26
 ---
 %%
 date:: [[2024-02-28]]
@@ -50,7 +50,7 @@ tags::
 
 ---
 ## Vanilla RAG
- - Simplest pipeline for **retrieval** with *bi-encoder approach*, when context documents and queries are computed entirely separately, unaware of each other.
+ - Simplest pipeline for **retrieval** with *[[bi-encoder]] approach*, when context documents and queries are computed entirely separately, unaware of each other.
 
  ![[Pasted image 20241031175813.png|900]]
 ^d4ee40
@@ -70,11 +70,18 @@ tags::
 	 - generally bi-encoder is more *loose* and reranker is more *strict*
 	 - [Search reranking with cross-encoders](https://cookbook.openai.com/examples/search_reranking_with_cross-encoders)
 	 - [Retrieve & Re-Rank — Sentence Transformers documentation](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html#retrieval-bi-encoder)
- - For evaluation of [[reranker]] models we need **hard negatives** - examples very similar to relevant chunks, but which should not be ranked high.
+ - Reranker can be
+	 - an [[tokenization|embedding]] model classifying Data is relevant or not.
+	 - a [[cross-encoder]] model with a nuanced output between 0 and 1
+	 - an LLM-based
+ - For evaluation of [[reranker]] models we need **[[hard negative]]s** - examples very similar to relevant chunks, but which should not be ranked high.
 	 - be diligent and creative with properly selecting triplets for reranker training, see also [[image retrieval#Sampling methods]] for reference
  - Reranker-as-a-Service: [Cohere \ Boost Enterprise Search and Retrieval](https://cohere.com/rerank) with custom [[fine-tuning]] via API possible
 	 - default reranker can often yield worse results, so [[fine-tuning]] with custom ([[synthetic data generation for RAG evaluation|synthethic data]]) is advised
 
+#### How to select every ranking model for fine tuning
+- It's an iterative process where one cannot just select the perfect model architecture from the beginning. Instead, it's good to create a framework which will include testing several models and evaluating them against specific constraints such as latency, costing requirements, and performance.
+- https://bge-model.com/
 ### Full MVP vanilla RAG
 - Full MVP *vanilla* RAG pipeline may look like this (with *combine the scores* module too)
 
@@ -88,26 +95,26 @@ tags::
 ## Challenges with RAG
 > [!NOTE] See [[Advanced RAG techniques]]
 
-- See [[tokenization#Common issues due to tokenization]]
+> [!NOTE] See [[what can go wrong with LLMs]]
+
+> [!NOTE] See [[tokenization#Common issues due to tokenization]]
+
 - [[Lost in the Middle effect]] (not specific to RAG, but rather [[long context]])
 - RAG retrieval capabilities are often evaluated using [[needle in a haystack]] tasks, but that is not what we usually want in real world tasks (summarization, joining of sub-parts of long documents, etc.) --> [[knowledge graph]] may be a good improvement for this
-- *Index stallness*, database needs to be always up-to-date ---> timestamps [[metadata filtering]] ^82cf5f
-- [[multi-hop question answering]] -> [[knowledge graph]]
-- documents' encoding failures due to formats, tables or encoding ---> monitor processed data at each step, implement error handling
-- Irrelevant documents accumulate and await to be retrieved for a query --> careful curation, [[metadata filtering]]
+- [[multi-hop question answering]] ---> [[knowledge graph]] is potentially a solution
+- documents' encoding failures due to formats, tables or unexpected encoding (e.g. UTF-8 vs Latin-1) **silently** reduce your knowledge index ---> ==monitor processed data at each step, implement error handling==, be careful with off-the-shelf PDF extractors
+- Irrelevant documents accumulate and await to be retrieved for a query, *ticking time bombs* ---> careful curation, [[metadata filtering]]
+	- documents can **become** irrelevant with time: *Index staleness*, database needs to be always up-to-date ---> timestamps [[metadata filtering]] ^82cf5f
 - Privacy or access rights can be compromised when RAG is used by various users
 - Database may contain factual or outdated info (sometimes along with the correct info) --> increase data quality checks or improve model robustness, put more weight on more recent documents, filter by date
 - Relevant document is missing in top-K retrievals ---> improve the embedder or reranker
 - Relevant document was chopped during context retrieval ---> use LLM with larger context size or improve the mechanism of context retrieval
 - Relevant document got into top-K, but the LLM didn't use that info for output generation --> finetune the model for the contextual data or reduce the noise level in the retrieved context
-- LLM output is not following expected format ---> finetune the model, or improve the prompt
+- LLM output is not following expected format ---> [[fine-tuning|finetuning]] the model, or improve the prompt
 - Pooling **dilutes** long text representation: During the encoding step, each token in the query receives a representation and then there is a pooling step which is typically averaging to provide one vector for all tokens in a query (==query-sentence ---> one vector==)
-- Requires [[chunking strategy|chunking]]. See [[Advanced RAG techniques#^c77646]]
-	- One doc ---> many chunks and vectors.
-	- Retrieve docs or chunks?
-- Fixed vocabulary
+- [[chunking strategy]] is a hyperparameter and it is not independent from others.
 - Arbitrary queries
-	- Low information value or vague queries (e.g. "health tips") ---> detect and ask users for clarification
+	- Low information value or vague queries (e.g. "health tips") ---> detect through heuristics or classifiers and ask users for clarification
 	- Off-topic queries --> [[intent recognition]] and fallback scenario
 - temporal data
 	- challenging because the model needs to keep track of order of events and consequences
@@ -115,6 +122,9 @@ tags::
 	- present chunks chronologically, explore the effect of ascending vs descending order
 	- two-stage approach: let the model first extract and reorganize relevantnt info, then reason about it
 	- mining reasoning chains from users to create training data
+- [[multi-hop question answering]], reasoning-based queries that require connecting information from multiple sources ---> [[AI agent|agentic AI]] workflows, pre-constructed [[knowledge graph]]
+- [[hallucination]] ---> inline [[Advanced RAG techniques#^95a6c6|citations]]
+
 ---
 
 ## Advanced RAG techniques

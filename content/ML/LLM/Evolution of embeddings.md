@@ -1,7 +1,7 @@
 ---
 cssclasses: 
 aliases: 
-permalink: note/evolution-of-embeddings
+permalink: LLM/evolution-of-embeddings
 publish: "true"
 "date:": "[[2024-11-14]]"
 link: 

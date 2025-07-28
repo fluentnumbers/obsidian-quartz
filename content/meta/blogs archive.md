@@ -10,7 +10,7 @@ parent: "[[meta]]"
 source: 
 related: 
 created: 2025/05/03
-updated: 2025/06/29
+updated: 2025/07/22
 ---
 %%
 date:: [[2025-05-03]]
@@ -29,6 +29,7 @@ list from "000_notes/blogs"
 ```
 %%
 
+- [[How to kindly request the best interview feedback]]
 - [[before a meeting starts]]
 - [[Know your colleagues]]
 - [[to deceive a diplomat speak the truth]]

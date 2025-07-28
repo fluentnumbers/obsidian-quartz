@@ -1,22 +1,24 @@
 ---
-cssclasses:
+cssclasses: 
 aliases: 
 permalink: LLM/evaluating-information-retrieval
 publish: true
 "date:": "[[2025-07-04]]"
-link: 
+link: https://fluentnumbers.medium.com/cheatsheet-for-rag-evaluation-cee0f1b039b6
 tags: 
 parent: "[[model evaluation]]"
 source: 
-related: "[[Systematically Improving RAG Applications]]"
+related:
+  - "[[Systematically Improving RAG Applications]]"
+  - "[[published]]"
 created: 2025/07/04
-updated: 2025/07/15
+updated: 2025/07/26
 ---
 %%
 date:: [[2025-07-04]]
 parent:: [[model evaluation]]
 source::
-related:: [[Systematically Improving RAG Applications]]
+related:: [[Systematically Improving RAG Applications]] [[published]]
 tags::
 %%
 # [[Evaluating information retrieval]]
@@ -48,20 +50,28 @@ tags::
 		- coding: does the code pass tests?
 	- user feedback or the way they interact with the results can be the ultimate metric
 		- [[#^96c623|forAI-generated emails]]: do users make edits before sending?
+- Implement evaluation **before** increasing the system complexity, otherwise you can't monitor performance progression.
+- Separate retrieval evaluations vs generation evals and focus on the retrieval part first
+	- retrieval is cheap, generation expensive
+	- generation comes later in the pipeline and assumes the retrieval is correct
 - when evaluating the performance of the system you have, don't forget to register what is missing
-	- Inventory issues - Lack of data to fulfill certain user requests. Better algorithm can't help with that ---> ==design a fallback scenario or a baseline algorithm==
+	- Inventory issues - ==Lack of data== to fulfill certain user requests. Better algorithm can't help with that ---> ==design a fallback scenario or a baseline algorithm==
 	- Capability issues - Functionality gaps where a system can't perform certain types of queries or filters.
 	- Examine [[false negative rate|false negatives]] of your retrieval; what should have been retrieved, but it wasn't.
+- repeat your test questions multiple times and calculate answers consistency, probability of being accurate
 - ==Retrieval sufficiency - evaluate if retrieved docs provide enough information to completely answer the query, not just whether they all are relevant.==
 - [[Retrieval-Augmented Generation|RAG]] impact is dependent on the quality of retrieved documents, which in turn is evaluated by:
 	- relevance: how good the system is at ranking relevant documents higher and irrelevant documents lower
 	- information density: if two documents are equally relevant, we should prefer one that’s more concise and has fewer extraneous details
 		- apparently,[built-in Google PDF processing encodes each page with a fixed number of tokens](https://www.perplexity.ai/search/find-any-articles-reverse-engi-Paw70fpKSCKI9jAVxb6xvg) --> ==retrieval from a dense page will be worse, because of higher data compression==
 	- level of detail:
-- Separate retrieval evaluations vs generation evals and focus on the retrieval part first
-	- retrieval is cheap, generation expensive
-	- generation comes later in the pipeline and assumes the retrieval is correct
 - Group your [[model evaluation|evaluation]] set queries by difficulty into N groups (e.g. 5x20) and only start evaluating the next group once you reach the desired accuracy or recall on simpler questions. ^0824a6
+- Know what you improve ^86c765
+	- Prioritize high volume, low satisfaction result queries
+	- Collect user feedback in real time with simplest methods To identify emerging issues and query trends.
+	- query classification and [[clustering]]
+		- Use [[few-shot learning|few-shot ]] classifiers, segment queries into categories or put labels such as time sensitive, financial, multi-step.
+		- 
 - [[#Build your own relevance dataset]]
 	- ==Better data is better than better models==
 	- public [[benchmark]] like [MTEB](https://huggingface.co/spaces/mteb/leaderboard) rarely are as relevant as specific-application dataset
@@ -79,7 +89,7 @@ tags::
 		- high [[p-value]] and low t-statistics points to ==NO statistical significance==
 - if you have [[Advanced RAG techniques#^c819e0|a number of tools for various search-use-cases]] (somewhat similar to [[intent recognition]]) evaluate them independently
 	- ask the model to make a plan which tools to use, track plan acceptance rates by the users
-
+- [[LLM-as-a-judge]]
 ## Build your own relevance dataset
 #### Real data
 - If available, sample user queries and their outputs from a production RAG and put time to rank the results yourself or with the help of LLM
@@ -97,7 +107,7 @@ tags::
 - [[chunking strategy]]
 - test how the [[reranker]] performance changes depending on the N chunks we pass in
 	- composite scoring function of several sources
-	- [[Advanced RAG techniques#^447647|shuffling vs no-shuffling]]
+	- [[chunking strategy#^447647|shuffling vs no-shuffling]]
 - [[hybrid search]] vs [[vector search]]-only
 - [[Advanced RAG techniques#^9d73c5|formatting]] of your documents (markdown, yaml, json, xml)
 

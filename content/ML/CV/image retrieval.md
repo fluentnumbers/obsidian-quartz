@@ -2,6 +2,7 @@
 cssclasses: 
 aliases:
   - object retrieval
+  - metric learning
 permalink: ML-CV/image-retrieval
 publish: true
 "date:": "[[2025-06-18]]"
@@ -11,7 +12,7 @@ parent: "[[computer vision]]"
 source: 
 related: 
 created: 2025/06/18
-updated: 2025/07/15
+updated: 2025/07/25
 ---
 %%
 date:: [[2025-06-18]]
@@ -121,9 +122,7 @@ tags::
 - For most sampling methods holds that bigger [[batch size]] allows more precise implementation of sampling method, resulting in better resulting metrics
 	- to combat this effect: [Cross-Batch Memory for Embedding Learning](https://arxiv.org/abs/1912.06798)
 ### Hard Positives and Hard Negatives
-- for a given anchor take positives which are far away
-- for a given anchor take positives which are as close as possible
-
+- [[hard negative]]
 ### Semi-hard Negatives
 - taking too easy or too hard examples both make training go slow due to noisy or [[vanishing gradients]]
 - take negatives which are ==already== further away than positives from the anchor
