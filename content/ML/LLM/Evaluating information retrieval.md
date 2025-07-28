@@ -98,7 +98,7 @@ tags::
 - collect unstructured feedback (comments, issue reports)
 	- hierarchical [[clustering]] to identify patterns and create a taxonomy of categories
 #### Synthetic data
-- If there is no existing system, use LLM to generate queries for your content. See [[synthetic data generation for RAG evaluation]]
+- If there is no existing system, use LLM to generate queries for your content. See [[synthetic data generation for RAG evaluation 1]]
 ## Types of experiments
 - ==Prioritize experiments based on potential impact and resources==, log everything and present in tidy format
 ### System architecture decisions

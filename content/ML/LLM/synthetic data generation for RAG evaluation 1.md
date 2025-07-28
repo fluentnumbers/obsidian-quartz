@@ -21,7 +21,7 @@ source::
 related:: [[model evaluation]] [[synthetic data]]
 tags::
 %%
-# [[synthetic data generation for RAG evaluation]]
+# [[synthetic data generation for RAG evaluation 1]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## Contents
