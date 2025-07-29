@@ -41,7 +41,7 @@ Welcome to my [[PKM|digital garden]] 🌱 - a mix of *atomic* notes connected *t
 
 The domain *fluentnumbers* was born from the fact that I am *fluent **with** numbers*, but also from my strong conviction that *numbers* (as in "data") *can be fluent* and say a lot about a business or engineering topic at hand. And I sure enjoy doing the translation!
 
-This space is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] (if you hover a cursor over them, you see nothing) mean I would want to write something there, but so far haven't. There is **Explorer** ⬅️, **Search** bar ⬆️, ➡️ **Recent** notes as well as **Graph view** ⬇️ to help you find stuff.
+This space is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] (if you hover a cursor over them, you see nothing) mean I would want to write something there, but so far haven't. There is **Explorer** ⬅️, **Search** bar ⬆️, **Recent** notes ➡️ as well as **Graph view** ⬇️ to help you find stuff.
 
 ### About me
 
