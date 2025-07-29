@@ -12,7 +12,7 @@ related:
   - "[[Systematically Improving RAG Applications]]"
   - "[[published]]"
 created: 2025/07/04
-updated: 2025/07/26
+updated: 2025/07/29
 ---
 %%
 date:: [[2025-07-04]]
@@ -49,7 +49,7 @@ tags::
 	- some domains are easier than others
 		- coding: does the code pass tests?
 	- user feedback or the way they interact with the results can be the ultimate metric
-		- [[#^96c623|forAI-generated emails]]: do users make edits before sending?
+		- [[Evaluating information retrieval#^96c623|for AI-generated emails]]: do users make edits before sending?
 - Implement evaluation **before** increasing the system complexity, otherwise you can't monitor performance progression.
 - Separate retrieval evaluations vs generation evals and focus on the retrieval part first
 	- retrieval is cheap, generation expensive

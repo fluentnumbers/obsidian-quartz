@@ -11,7 +11,7 @@ parent: "[[Machine Learning MoC]]"
 source: 
 related: 
 created: 2025/01/02
-updated: 2025/05/01
+updated: 2025/07/28
 ---
 %%
 date:: [[2025-01-02]]
@@ -33,7 +33,8 @@ tags::
 - from [[ML System design course - Training datasets]]
   ![[ML System design course - Training datasets#^bbbae2|ML System design course>Class imbalance]]
 ## Resources
--
+- https://alexanderdyakonov.wordpress.com/2021/05/27/imbalance/
+- https://www.svds.com/tbt-learning-imbalanced-classes/
 
 ---
 ###### Links to this File
