@@ -11,7 +11,7 @@ source:
 related:
   - "[[paper review]]"
 created: 2024/08/20
-updated: 2025/05/01
+updated: 2025/07/29
 ---
 %%
 date:: [[2024-08-20]]
@@ -35,7 +35,7 @@ Llama 3 delivers comparable quality to leading language models such as GPT-4 on 
 
 - this is [[over-training]] - using more compute power for pre-training smaller (8B) models, than they optimally require according to [[scaling laws]] for given model size. E
 
-> We make design choices that seek to maximize our ability to scale the model development process. For example, we opt for a standard dense [[transformer]] model architecture (Vaswani et al., 2017) with minor adaptations, rather than for a [[mixture-of-experts]] model (Shazeer et al., 2017) to maximize training stability. ...
+> We make design choices that seek to maximize our ability to scale the model development process. For example, we opt for a standard dense [[transformer]] model architecture (Vaswani et al., 2017) with minor adaptations, rather than for a [[Mixture-of-Experts]] model (Shazeer et al., 2017) to maximize training stability. ...
 
 - preference for conservative, but controllable choices, which ensures less complications during training. This includes some hardware choices (there is a separate chapter about that), but also e.g. choice for [[direct preference optimization]] instead of [[Reinforcement Learning from Human Feedback|RLHF]], which is less stable and more complex to scale.
 

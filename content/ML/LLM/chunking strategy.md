@@ -11,7 +11,7 @@ parent: "[[Advanced RAG techniques]]"
 source: 
 related: 
 created: 2025/07/26
-updated: 2025/07/26
+updated: 2025/07/29
 ---
 %%
 date:: [[2025-07-26]]
@@ -27,6 +27,7 @@ tags::
 - ==[[chunking strategy]]== can have a huge impact on [[Evaluating information retrieval|RAG performance]]. ^c77646
 	- small chunks --> limited context --> incomplete answers ^789f4e
 	- large chunks --> noise in data --> poor [[precision and recall|recall]]
+		- general, but not-universal advice: use larger chunks for fixed-output queries (e.g. extracting a specific answer\number) and smaller chunks for expanding-output queries (e.g. summarize, list all...). 
 	- By symbols, sentences, semantic meaning, using dedicated model or an LLM call
 	- [[semantic chunking]] by detecting where the change of topic has happened
 	- Consider inference latency, number of tokens [[tokenization|embedding]] models were trained on

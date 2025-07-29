@@ -2,7 +2,7 @@
 cssclasses: 
 aliases:
   - KV-caching
-permalink: note/prefix-caching
+permalink: LLM/prefix-caching
 publish: "true"
 "date:": "[[2024-11-13]]"
 link: 

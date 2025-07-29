@@ -15,7 +15,7 @@ parent:
 source:
 related:
 created: 2024/07/27
-updated: 2025/07/04
+updated: 2025/07/29
 cssclasses:
   - personal-main
 ---
@@ -41,15 +41,16 @@ Welcome to my [[PKM|digital garden]] 🌱 - a mix of *atomic* notes connected *t
 
 The domain *fluentnumbers* was born from the fact that I am *fluent **with** numbers*, but also from my strong conviction that *numbers* (as in "data") *can be fluent* and say a lot about a business or engineering topic at hand. And I sure enjoy doing the translation!
 
-This space is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] mean I would want to write something there, but so far haven't. There is Explorer ⬅️, Search bar ⬆️ as well as Graph view ⬇️ to help you find stuff.
+This space is constantly in development (except when it is not), hence *imperfect* in nature. [[Links without destination]] (if you hover a cursor over them, you see nothing) mean I would want to write something there, but so far haven't. There is **Explorer** ⬅️, **Search** bar ⬆️, ➡️ **Recent** notes as well as **Graph view** ⬇️ to help you find stuff.
 
 ### About me
 
-I am a data scientist and ML engineer on a continuous journey of learning by doing & sharing. I live in the Netherlands and have 10 years of experience in [[Machine Learning MoC|Machine Learning]] for various industrial and scientific applications including [[remote monitoring]], biomedical algorithms, predictive maintenance, [[digital twin]], [[asset management]], etc.
+I am a data scientist and ML engineer on a continuous journey of learning by doing & sharing. I live in the Netherlands and have 10 years of experience in signal processing and [[Machine Learning MoC|Machine Learning]] for various industrial and scientific applications including [[remote monitoring]], biomedical algorithms, predictive maintenance, [[digital twin]], [[asset management]], etc.
 Besides that I
-- try to [[latest reading|read]] more, because *[a book constitutes a means of transportation through the space of experience, at the speed of a turning page](https://www.nobelprize.org/prizes/literature/1987/brodsky/lecture/)*
+- challenge myself to [[latest reading|read]] more, because *[a book constitutes a means of transportation through the space of experience, at the speed of a turning page](https://www.nobelprize.org/prizes/literature/1987/brodsky/lecture/)*
 - enjoy somewhat longer walks and hikes as well as travelling places to see how people live elsewhere
-- lately, devote a decent amount of time to [Mafia](https://en.wikipedia.org/wiki/Mafia_(party_game)) [[mafia games|games]], but then in its more strict, **competitive** form
+- play online chess, tirelessly explore new [[Productivity hacks|productivity hacks]] (to stop procrastination, of course 😊), tinker with my [[self-hosted|self-hosting]] setup
+- lately, devote a decent amount of time to [Mafia](https://en.wikipedia.org/wiki/Mafia_(party_game)) [[mafia games|games]], but then in its more strict, **competitive** form. This is a socio-psychological game developing such skills as attention to details, self-confidence (as well as self-control), conflict management, analytical thinking and many more.
 %% - not a fan of modern web 2.0 with (even more pessimistic of what web 3.0 brings us), but I highly value good-old personal blogs with unique content. I even use [[rss|RSS]] in 2025 to read most o[](people%20I%20follow.md)]].%%
 
 ---
@@ -74,19 +75,7 @@ Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></s
 ---
 
 ### Highlights
-
-#### Blogposts archive
-
-> [!NOTE]- Blogposts previously [[published]] elsewhere on the Internet
-> ![[blogs archive#Published earlier on the Internet]]
-
-#### Latest
-- [[Evaluating information retrieval]]
-- [[Enterprise RAG patterns]]
-- [[what can go wrong with LLMs]]
-- [[how to evaluate LLM chatbots]]
-- [[Briefly about transformer’s evolution or why is softmax cool]]
-
 #### Everything ML
-> [!NOTE]- Selected LLM notes
-> ![[selected LLM notes#selected LLM notes]]
+![[selected LLM notes#selected LLM notes]]
+#### Blogposts archive
+ ![[blogs archive#Published earlier on the Internet]]

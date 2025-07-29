@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/07/26
+updated: 2025/07/29
 ---
 %%
 date:: [[2024-02-28]]
@@ -101,7 +101,7 @@ tags::
 
 - [[Lost in the Middle effect]] (not specific to RAG, but rather [[long context]])
 - RAG retrieval capabilities are often evaluated using [[needle in a haystack]] tasks, but that is not what we usually want in real world tasks (summarization, joining of sub-parts of long documents, etc.) --> [[knowledge graph]] may be a good improvement for this
-- [[multi-hop question answering]] ---> [[knowledge graph]] is potentially a solution
+- [[multi-hop question answering]], reasoning-based queries that require connecting information from multiple sources ---> ---> pre-constructed [[knowledge graph]] is potentially a solution, [[AI agent|agentic AI]] workflows
 - documents' encoding failures due to formats, tables or unexpected encoding (e.g. UTF-8 vs Latin-1) **silently** reduce your knowledge index ---> ==monitor processed data at each step, implement error handling==, be careful with off-the-shelf PDF extractors
 - Irrelevant documents accumulate and await to be retrieved for a query, *ticking time bombs* ---> careful curation, [[metadata filtering]]
 	- documents can **become** irrelevant with time: *Index staleness*, database needs to be always up-to-date ---> timestamps [[metadata filtering]] ^82cf5f
@@ -122,13 +122,11 @@ tags::
 	- present chunks chronologically, explore the effect of ascending vs descending order
 	- two-stage approach: let the model first extract and reorganize relevantnt info, then reason about it
 	- mining reasoning chains from users to create training data
-- [[multi-hop question answering]], reasoning-based queries that require connecting information from multiple sources ---> [[AI agent|agentic AI]] workflows, pre-constructed [[knowledge graph]]
 - [[hallucination]] ---> inline [[Advanced RAG techniques#^95a6c6|citations]]
 
 ---
 
 ## Advanced RAG techniques
-- See [[Advanced RAG techniques]]
 > [!note]- from [[Advanced RAG techniques]]
 > ![[Advanced RAG techniques#Advanced improvements to RAG]]
 

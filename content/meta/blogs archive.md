@@ -10,7 +10,7 @@ parent: "[[meta]]"
 source: 
 related: 
 created: 2025/05/03
-updated: 2025/07/22
+updated: 2025/07/29
 ---
 %%
 date:: [[2025-05-03]]
@@ -21,7 +21,7 @@ tags::
 %%
 # [[blogs archive]]
 <sub>scroll ↓ to [[#Resources]]</sub>
-## Published earlier on the Internet
+###### Published earlier on the Internet
 
 %%
 ```dataview
@@ -37,7 +37,5 @@ list from "000_notes/blogs"
 - [[Artificial-Intelligence-as-a-Software-as-a-Medical-Device]]
 - [[The reasons most ML quant funds fail (lecture summary)]]
 - [[Как я готовлюсь голосовать в Нидерландах]]
-- [[Briefly about transformer’s evolution or why is softmax cool]]
-- [[how to evaluate LLM chatbots]]
 
 ---

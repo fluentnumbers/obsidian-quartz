@@ -10,7 +10,7 @@ parent: "[[meta]]"
 source: 
 related: "[[LLM]]"
 created: 2024/11/25
-updated: 2025/05/01
+updated: 2025/07/29
 ---
 %%
 date:: [[2024-11-25]]
@@ -19,11 +19,20 @@ source::
 related:: [[LLM]]
 tags::
 %%
-### [[selected LLM notes]]
-#### Hot topics in LLM
+###### [[selected LLM notes]]
+
+- [[Evaluating information retrieval]]
+- [[synthetic data generation for RAG evaluation]]
+- [[Advanced RAG techniques]]
+- [[Enterprise RAG patterns]]
+- [[what can go wrong with LLMs]]
+- [[how to evaluate LLM chatbots]]
+- [[Briefly about transformer’s evolution or why is softmax cool]]
+- [[paper review - Llama 3 Herd of Models| Paper Review - Llama 3.1 model - how is the one of the best open-source models designed?]]
+
+%%
 [[LLM]] - basic info and the source to other notes for deeper understanding
 [[LLM inference]] basics and [[inference optimization]]
-[[paper review - Llama 3 Herd of Models| Paper Review - Llama 3.1 model - how is the one of the best open-source models designed?]]
 
 [[tokenization|Tokenizers, embedding models - corner stone of each LLM task]] and [[byte pair encoding|Byte Pair Encoding]] as one of popular tokenization ideas
 [[scaling laws| Scaling Laws]] - how to distribute compute budget efficiently between dataset size and number of trainable parameters?
@@ -42,7 +51,6 @@ tags::
 [[layer normalization|Layer normalization]]
 [[dropout|Dropout]]
 [[Gated Linear Unit]]
-[[Briefly about transformer’s evolution or why is softmax cool]]
 
 #### Evaluation of LLMs
 
@@ -52,5 +60,6 @@ FROM outgoing([[model evaluation]]) OR [[model evaluation]] AND -[[]]
 WHERE contains(parent,[[model evaluation]])
 SORT file.name ASC
 ```
+%%
 
  ---

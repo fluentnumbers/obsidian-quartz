@@ -23,7 +23,7 @@ tags::
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## Note
-- [[LLM inference#^62c056|The second phase]] of LLM inference known as *auto-regressive decoding* is memory-bound and it is not easy to naively use additional parallel compute capacities to speed up the process.
+- [[LLM inference#^62c056|The second phase]] of [[LLM inference]] known as *auto-regressive decoding* is memory-bound and it is not easy to naively use additional parallel compute capacities to speed up the process.
 - The main idea of [[speculative decoding]] is to use a much smaller secondary model, **drafter**, to run ahead of the main model and predict more tokens, for instance, 4 tokens ahead. This will happen more quickly as the drafter is much faster and smaller than the main model. Then the main model is used to verify the hypothesis of the drafter in parallel for each of the four steps: the first token, the first two tokens, the first three tokens, and all four tokens. In the end, the hypothesis with the maximum number of tokens is accepted.
 ![[Pasted image 20241113110853.png|800]]
 - The main model steps are run in parallel and because we are not compute bound in decode, we can use extra compute capacity to get better decode [[latency]].

@@ -1,7 +1,7 @@
 ---
 cssclasses: 
 aliases: 
-permalink: note/llm-inference
+permalink: LLM/llm-inference
 publish: true
 "date:": "[[2024-11-03]]"
 link: 

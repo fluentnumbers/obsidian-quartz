@@ -10,6 +10,7 @@ parent: "[[published]]"
 source: 
 related:
   - "[[Career MoC]]"
+  - "[[blogs archive]]"
 created: 2025/07/22
 updated: 2025/07/22
 ---
@@ -17,7 +18,7 @@ updated: 2025/07/22
 date:: [[2025-07-22]]
 parent:: [[published]]
 source::
-related:: [[Career MoC|career]]
+related:: [[Career MoC|career]] [[blogs archive]]
 tags::
 %%
 # [[How to kindly request the best interview feedback]]
