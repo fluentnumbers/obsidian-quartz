@@ -9,7 +9,7 @@ link:
 tags: 
 parent: "[[inference optimization]]"
 source: 
-related:
+related: "[[LoRA]]"
 created: 2024/09/07
 updated: 2025/05/05
 ---
@@ -17,7 +17,7 @@ updated: 2025/05/05
 date:: [[2024-09-07]]
 parent:: [[inference optimization]]
 source::
-related::
+related:: [[LoRA]]
 tags::
 %%
 # [[quantization]]
@@ -35,11 +35,11 @@ tags::
 - ![[Pasted image 20240907120154.png|700]]
 
 ## Activation-aware Weights Quantization (AWQ)
-
+- 
 ## Post-training quantization (PTQ)
-
+- 
 ## Quantization-aware training (QAT)
-
+- 
 ## Resources
 - [Webinar: "Quantization: unlocking scalability for LLMs" - YouTube](https://www.youtube.com/watch?v=qx6p9thgEno)
 - [Егор Швецов | Model compression -Introduction intro Quantization - YouTube](https://www.youtube.com/watch?v=L4liz40QRTk)

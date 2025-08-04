@@ -1,6 +1,6 @@
 ---
-cssclasses:
-aliases: 
+cssclasses: 
+aliases:
   - hard negatives
   - hard negative sampling
 permalink: ML/hard-negative
@@ -8,17 +8,19 @@ publish: true
 "date:": "[[2025-07-25]]"
 link: 
 tags: 
-parent: "[[model training]]"
+parent: "[[batching]]"
 source: 
-related: 
+related:
+  - "[[model training]]"
+  - "[[hard positive]]"
 created: 2025/07/25
 updated: 2025/07/25
 ---
 %%
 date:: [[2025-07-25]]
-parent:: [[model training]]
+parent:: [[batching]]
 source::
-related:: [[hard positive]]
+related:: [[hard positive]] [[model training]]
 tags::
 %%
 # [[hard negative]]

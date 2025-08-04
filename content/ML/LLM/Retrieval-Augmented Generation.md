@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/07/29
+updated: 2025/07/31
 ---
 %%
 date:: [[2024-02-28]]
@@ -61,7 +61,8 @@ tags::
 		 - encoding is mainly supervised via [[transfer learning]] (text embedding [[encoder]]-style [[transformer]] models)
 		- Vector index (IVF, PQ, HNSW, DiskANN++)
 - [[vector search]] is always combined with [[keyword search]], which help handling specific terms and acronyms. Their inference computational overhead is unnoticeable, but the impact can be unbeatable for certain queries. Good old method is [[BM25]] ([[TF-IDF]])
-
+- 
+ 
 ### Reranking
  - To fix the disadvantage of the [[#^d4ee40|bi-encoder approach]] when documents' and queries' representations are computed **separately**, we can add another *[[reranking]]* stage with [[cross-encoder]] as an extra step, before calling the generator model. ^2dc17c
 	 - The idea is to use a powerful, computationally expensive model to score only ==a subset== of your documents, previously retrieved by a more efficient and cheap model. It is **not computationally feasible** for each query-document pair.
@@ -71,9 +72,10 @@ tags::
 	 - [Search reranking with cross-encoders](https://cookbook.openai.com/examples/search_reranking_with_cross-encoders)
 	 - [Retrieve & Re-Rank — Sentence Transformers documentation](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html#retrieval-bi-encoder)
  - Reranker can be
-	 - an [[tokenization|embedding]] model classifying Data is relevant or not.
+	 - an [[tokenization|embedding]] model classifying data is relevant or not.
 	 - a [[cross-encoder]] model with a nuanced output between 0 and 1
 	 - an LLM-based
+ - In terms of speed [[BM25]] or [[TF-IDF]] is the fastest (but lower accuracy), then goes the [[cosine similarity]]-based [[bi-encoder]] and, finally, a precomputed [[cross-encoder]] classifier is extremely compute-intensive
  - For evaluation of [[reranker]] models we need **[[hard negative]]s** - examples very similar to relevant chunks, but which should not be ranked high.
 	 - be diligent and creative with properly selecting triplets for reranker training, see also [[image retrieval#Sampling methods]] for reference
  - Reranker-as-a-Service: [Cohere \ Boost Enterprise Search and Retrieval](https://cohere.com/rerank) with custom [[fine-tuning]] via API possible
@@ -81,7 +83,7 @@ tags::
 
 #### How to select every ranking model for fine tuning
 - It's an iterative process where one cannot just select the perfect model architecture from the beginning. Instead, it's good to create a framework which will include testing several models and evaluating them against specific constraints such as latency, costing requirements, and performance.
-- https://bge-model.com/
+- https://bge-model.com/ I 
 ### Full MVP vanilla RAG
 - Full MVP *vanilla* RAG pipeline may look like this (with *combine the scores* module too)
 

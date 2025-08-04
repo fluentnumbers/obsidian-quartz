@@ -7,7 +7,7 @@ permalink: meta/productivity-hacks
 publish: "true"
 "date:": "[[2025-06-27]]"
 link: 
-tags: 
+tags: [0]
 parent: "[[productivity]]"
 source: 
 related:
@@ -15,7 +15,7 @@ related:
 created_date: 2025/06/27
 updated_date: 2025/06/27
 created: 2025/06/27
-updated: 2025/07/29
+updated: 2025/07/30
 ---
 %%
 date:: [[2025-06-27]]
@@ -48,6 +48,8 @@ tags::
 
 ## Tricks
 - A trick to getting started is just to tell yourself you're just going to do 5 minutes and then you can stop. To help with this you can leave a typo in your last commit then your first task is to `git commit --amend` to fix it. Or you can leave a unit test failing with a trivial fix. Anything to just get you to open the editor and start typing. https://www.reddit.com/r/productivity/comments/13m5cxh/how_do_i_get_into_a_flow_state_at_work/
+- ==vigorously delete from your feed any content creators, who post bullshit, AI-generated slope, anything that thrives on people FOMO==
+- learn to distinguish news and events. Events do have consequences. News are irrelevant.
 
 ## Resources
 

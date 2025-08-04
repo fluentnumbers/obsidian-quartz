@@ -11,13 +11,13 @@ source:
 related:
   - "[[image retrieval]]"
 created: 2025/06/18
-updated: 2025/06/18
+updated: 2025/07/31
 ---
 %%
 date:: [[2025-06-18]]
 parent:: [[similarity measurement]]
 source::
-related::
+related:: [[image retrieval]]
 tags::
 %%
 # [[test Lowe]]

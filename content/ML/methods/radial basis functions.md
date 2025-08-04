@@ -1,21 +1,21 @@
 ---
-cssclasses:
+cssclasses: 
 aliases:
   - RBF
-permalink: note/radial-basis-functions
+permalink: ML/radial-basis-functions
 publish: true
 "date:": "[[2024-12-21]]"
 link: 
 tags: 
-parent: "[[Machine Learning MoC]]"
+parent: "[[ML methods]]"
 source: 
-related:
+related: 
 created: 2024/12/21
-updated: 2025/05/01
+updated: 2025/07/31
 ---
 %%
 date:: [[2024-12-21]]
-parent::
+parent:: [[ML methods]]
 source::
 related::
 tags::

@@ -8,21 +8,21 @@ link:
 tags: 
 parent: "[[deep learning|neural network]]"
 source: 
-related: 
+related: "[[neural network architecture]]"
 created: 2024/08/13
-updated: 2025/06/18
+updated: 2025/07/31
 ---
 %%
 date:: [[2024-08-13]]
-parent::
+parent:: [[deep learning]]
 source::
-related::
+related:: [[neural network architecture]]
 tags::
 %%
 # [[training degradation]]
 
 ## Notes
-- Authors of [\[1512.03385\] Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) noticed that deeper networks not always give better testing (but also training) accuracy. why is that?
+- Authors of [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385) noticed that deeper networks not always give better testing (but also training) accuracy. why is that?
 	  ![[Pasted image 20240813180447.png|500]]
 - ==can be an [[overfitting]] issue?==
 	- ==No==, because then the training set error would be lower for the larger network.

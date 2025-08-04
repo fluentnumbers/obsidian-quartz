@@ -3,8 +3,8 @@ cssclasses:
 aliases:
   - DPO
   - Direct Preference Optimization
-  - прямая оптимизация предпочтения 
-permalink: note/direct-preference-optimization
+  - прямая оптимизация предпочтения
+permalink: LLM/direct-preference-optimization
 publish: true
 "date:": "[[2024-08-31]]"
 link: 
