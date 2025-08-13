@@ -1,5 +1,5 @@
 ---
-permalink: LLM/LLM
+permalink: LLM
 cssclasses: 
 aliases:
   - large language models
