@@ -11,7 +11,7 @@ parent: "[[Advanced RAG techniques]]"
 source: 
 related: 
 created: 2025/07/26
-updated: 2025/08/04
+updated: 2025/08/11
 ---
 %%
 date:: [[2025-07-26]]
@@ -34,7 +34,7 @@ tags::
 	- Overlapping or not?
 	- Use small chunks on embedding stage and large size during the inference, by appending adjacent chunks before feeding to LLM
 	- page-size chunks, because we answer the question "on which page can I find this?"
-	- ==sub-chanks with links to a parent-chunk with larger context==
+	- ==sub-chanks with links to a parent-chunk with larger context== ^df06d6
 - hierarchical chunking gradually zooms into relevant context and improves efficiency of *clarifying questions* within a multi-turn conversation
 	- multiple levels based on document metadata, sections, pages, paragraphs and sentences
 	- Each chunk retains information about its metadata, hierarchical level, parent-child relationship, extracts confidence scores, etc.
@@ -43,11 +43,11 @@ tags::
 		- unless sources are sorted by relevance (the model assumes that the 1st chunk is the most relevant)
 		- newer models with large context windows are less prone to the [[Lost in the Middle effect]] and have improved recall across the whole context window
 
-### Chunking rankings example
-![[hero_table.png|900]] from https://research.trychroma.com/evaluating-chunking
+> [!example]- Chunking rankings from https://research.trychroma.com/evaluating-chunking
+>  ![[hero_table.png|900]]
 
 ## Resources
-- 
+- [r/Rag -  Best chunking strategy for RAG on annual/financial reports?](https://www.reddit.com/r/Rag/comments/1mjwde9/best_chunking_strategy_for_rag_on_annualfinancial/)
 
 ---
 ###### Links to this File

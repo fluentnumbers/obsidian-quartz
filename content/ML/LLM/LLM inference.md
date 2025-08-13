@@ -11,7 +11,7 @@ source:
 related:
   - "[[GPU]]"
 created: 2024/11/03
-updated: 2025/05/01
+updated: 2025/08/09
 ---
 %%
 date:: [[2024-11-03]]
@@ -166,6 +166,7 @@ tags::
 
 ## Resources
 - [[Nebius LLM course]]
+- [All About Transformer Inference](https://jax-ml.github.io/scaling-book/inference/)
 
 ---
 ###### Links to this File

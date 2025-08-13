@@ -13,7 +13,7 @@ related:
   - "[[Enterprise RAG patterns]]"
   - "[[published]]"
 created: 2025/01/14
-updated: 2025/07/26
+updated: 2025/08/04
 ---
 %%
 date:: [[2025-01-14]]
@@ -81,6 +81,9 @@ tags::
 		- check which format (markdown, json, xml) works best for your application. there are also [discussions about token-efficiency](https://community.openai.com/t/markdown-is-15-more-token-efficient-than-json/841742)
 		- spaces between tokens in markdown tables (like "| data |" instead of "|data|") affects how the model processes the information.
 	- [The Impact of Document Formats on Embedding Performance and RAG Effectiveness in Tax Law Application](https://www.robertodiasduarte.com.br/the-impact-of-document-formats-on-embedding-performance-and-rag-effectiveness-in-tax-law-applications/#Conclusion_Navigating_Format_Choices_for_Optimal_Tax_Law_RAG)
+- Synonyms and taxonomic similarity
+	- Generating more user queries with synonyms may not be effective, because synonyms do not fit the context
+	- If there is a taxonomy list, like for instance in [[ecommerce]], one can create a prompt to classify a user query to one of those taxonomy entries, e.g. `furniture>Baby furniture>Crib&Toddler bed accessories` and then search among *hyponyms* (children, more specific concepts), *hypernyms* (parents, more general groups) or *siblings* (similar to the selected category).
 ### Reranker
 - [[reranker]]
 	- see [[Retrieval-Augmented Generation#Re-ranking]]

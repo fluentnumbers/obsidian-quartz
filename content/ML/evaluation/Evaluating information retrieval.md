@@ -12,7 +12,7 @@ related:
   - "[[Systematically Improving RAG Applications]]"
   - "[[published]]"
 created: 2025/07/04
-updated: 2025/07/29
+updated: 2025/08/04
 ---
 %%
 date:: [[2025-07-04]]
@@ -99,6 +99,11 @@ tags::
 	- hierarchical [[clustering]] to identify patterns and create a taxonomy of categories
 #### Synthetic data
 - If there is no existing system, use LLM to generate queries for your content. See [[synthetic data generation for RAG evaluation]]
+
+#### Evaluation datasets \ benchmarks
+- [TREC](https://pages.nist.gov/trec-browser/)
+- [BEIR](https://github.com/beir-cellar/beir)
+- [MS Marco](https://github.com/microsoft/MSMARCO-Passage-Ranking)
 ## Types of experiments
 - ==Prioritize experiments based on potential impact and resources==, log everything and present in tidy format
 ### System architecture decisions
@@ -119,6 +124,7 @@ tags::
 		- change of irrelevant details (names, genders, etc.)
 - Experiment with the [[top-k sampling]] with [[cosine similarity]] and top N with [[reranker]] to see how to get better [[precision and recall|recall]] where N << K
 - compare [[latency]] trade-offs
+- Head (frequent) queries vs tail queries
 ## Metrics
 [[ML metric]]
 ### Technical
@@ -129,12 +135,14 @@ tags::
 	-  [NDCG: What It Is and Where To Use It? AI Essential Lessons](https://arize.com/blog-course/ndcg/)
 - [[Mean Reciprocal Rank]]
 - LGTM@10
+- Monitor the average [[cosine similarity]] of your queries over time. A sudden change might signal a shift in user behavior or data. For instance, in a [[recommendation system]] many new users attracted by a **seasonal promotion** may be unable to afford regular (expensive) goods, bought by regular customers.
 
-### Use-case defined
+### Industrial
 - end-user-engagement: click, add, dwell
 - human-involved evaluation, but not end-users:
 	- for instance, AI system generates emails to prospective buyers with several price options, conditional discounts and other upselling tricks. Prior sending these emails reviewed by sales people. If they make corrections\edits to the email, we consider that smth went wrong in model reasoning and analyze the pitfall. ^96c623
 - satisfaction feedback
+- conversion, retention, engagement
 - ratio of FAQ requests forwarded to a live agent
 - Revenue
 - Multi-objective ranking, not just optimizing relevance.
