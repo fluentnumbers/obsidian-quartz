@@ -3,10 +3,11 @@ permalink: career/reverse-interview-questions
 cssclasses: 
 aliases: 
 publish: "true"
+"date:": "[[2025-06-08]]"
 link: 
 tags: 
 created: 2025/06/08
-updated: 2025/07/15
+updated: 2025/08/13
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
@@ -23,8 +24,7 @@ tags::
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## About the position and the team
-- <font color="#00b050">Why is the company hiring? (substitute, growth, ...?)</font>
-	- Why did the company decide to hire an outsider over promoting an internal employee?
+- <font color="#00b050">Why is the company hiring? (substitute, growth, ...?)</font> Why did the company decide to hire an outsider over promoting an internal employee? ^e89c6b
 - <font color="#00b050">Are you looking for a data scientist with software engineering skills or a software engineer with understanding of data and AI?</font>
 - Growth prospects
 	- What's the junior/senior balance of the team? How relatively senior will I be in the team and in the company?
@@ -45,7 +45,8 @@ tags::
 	- Tell me about the behaviors of a person that you would consider a high-performing/high-potential employee.
 	- Why do you think some engineers perform better or worse than others?
 	- How is the performance review process set up? How is the progress tracked on team and individual level?
-
+- <font color="#00b050">how does the DS team gets projects and allocates their time? Do the projects come from upper management, from internal\external stakeholders or do the DS need to propose and *defend* their project ideas internally themselves?</font> ^edacb2
+- <font color="#00b050">Could you share one of your recent successful AI initiatives? I want to understand the baseline...</font> 
 ## About communication at work
 - Who are the stakeholders? Do you enjoy working with them?
 	- Tell me about who I would be working most closely with.
@@ -65,9 +66,10 @@ tags::
 	- Do you publish in journals, write whitepapers, open-source libraries?
 - Are you prepared for disaster recovery?
 - Would you be ashamed if your closed source codebase is published on the internet tomorrow?
-- Is AI being seen as money-maker or money-saver (or money spender)?
+- Is AI being seen as money-maker or money-saver (hopefully, not a money spender)?
+- What kind of laptops do data scientists get? Which computational resources are available?
 - <font color="#00b050">What is the plan to make or save more money by using cloud and data?</font>
-
+- <font color="#00b050">What kind of laptop do data scientists get? What kind of compute resources do they have access to?</font>
 ### About ML and MLOps
 - The JD mentions [[Spark|PySpark]] - how much is it really needed, how big is the datasets? Does work require tweaking the internals of Spark for best performance?
 - What is the process of getting the output of your work in the production and how long does it take?
@@ -75,7 +77,8 @@ tags::
 - How much time and effort it takes to maintain existing models w.r.t. creating new value?
 - Do you have an [[ML system design]] document that you follow in every project? What are the must do points there?
 - Custom datasets
-	- Where does labeled data come from? How is (smart) labeling process?
+	- Where does labeled data come from? How smart is labeling process?
+	- Do you work with [[synthetic data]]?
 ## About interviewer as a manager
 - How long do you manage people\teams\projects? Do you enjoy that? Do you have time for tinkering with code yourself?
 - What happens if the team misses a milestone? What are the consequences and actions of that?

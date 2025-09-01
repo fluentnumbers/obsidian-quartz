@@ -56,13 +56,13 @@ Besides that I
 ---
 ### CONTACTS AND LINKS
 
-- [Email](mailto:andrejs.fedjajevs@outlook.com)
+- andrejs.fedjajevs at outlook.com
 - [LinkedIn](https://www.linkedin.com/in/fedjajevs)
 - [Medium](https://medium.com/@fluentnumbers)
 - [ORCID](https://orcid.org/0000-0002-3047-9329)
 
+%%
 ### PROFESSIONAL EXPERIENCE
-
 <strong>2024 &mdash; ... </strong>
 Quant Researcher at <strong><a href="https://shell.com/">Shell</a></strong>, The Hague, the Netherlands
 
@@ -71,6 +71,8 @@ Data Scientist at <strong><a href="https://www.philips.com/a-w/about.html">Phili
 
 <strong>2016 &mdash; 2022</strong>
 Senior R&D Engineer at <strong><a href="https://www.imec-int.com/en">Imec</a></strong>, Eindhoven, the Netherlands
+%%
+
 
 ---
 

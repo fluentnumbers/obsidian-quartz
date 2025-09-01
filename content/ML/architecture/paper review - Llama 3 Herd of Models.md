@@ -40,7 +40,7 @@ Llama 3 delivers comparable quality to leading language models such as GPT-4 on 
 - preference for conservative, but controllable choices, which ensures less complications during training. This includes some hardware choices (there is a separate chapter about that), but also e.g. choice for [[direct preference optimization]] instead of [[Reinforcement Learning from Human Feedback|RLHF]], which is less stable and more complex to scale.
 
 ## General overview
-- [[#^1887bf|architecture]]: classic **dense** decoder-only [[transformer]] (not [[mixture-of-experts]]) from [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [[#^1887bf|architecture]]: classic **dense** decoder-only [[transformer]] (not [[Mixture-of-Experts]]) from [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 	- see below for [[#3.2 Model architecture]]
 - development comprises from model [[#Pre-training]] and [[#Post-training]]
 
@@ -70,7 +70,7 @@ First they train on a small context window (8K), then increase it to 128K tokens
 > - heuristic filtering
 > 	- removing duplicated lines which are different: logging, error messages
 > 	- *dirty words* counting
-> 	- [[Kullback-Leibler divergence]] to filter out documents with many outliers comparing to the training corpus token distribution
+> 	- [[Kullback-Leibler divergence 1]] to filter out documents with many outliers comparing to the training corpus token distribution
 > - model-based quality filtering: find high-quality tokens
 > 	- light text classifiers as [[fasttext]]
 > 	- heavy pipelines: ^a7b252

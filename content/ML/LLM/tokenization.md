@@ -71,6 +71,7 @@ tags::
 ## Resource
 - [What are embeddings?](https://vickiboykis.com/what_are_embeddings/) [[zotero]]
 - [Word Embeddings](https://lena-voita.github.io/nlp_course/word_embeddings.html) [[thesaurus]]
+- [How LLMs See the World](https://blog.bytebytego.com/p/how-llms-see-the-world)
 - [Let's build the GPT Tokenizer - YouTube](https://youtu.be/zduSFxRajkE?si=KGKdZBeLDp2FepCx)
 
 ---

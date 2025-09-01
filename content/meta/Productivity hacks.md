@@ -15,7 +15,7 @@ related:
 created_date: 2025/06/27
 updated_date: 2025/06/27
 created: 2025/06/27
-updated: 2025/07/30
+updated: 2025/08/20
 ---
 %%
 date:: [[2025-06-27]]
@@ -43,6 +43,7 @@ tags::
 - Journaling works very well for me. [[PKM|obsidian]] is a great tool for [[PKM|personal knowledge management]]. One can keep the desired level of organization, but even with that set to None and also None extra time spent - it is still relatively easy to go back and find something you didn't even know was written down by you.
 - Do not type. Talk. Voice-to-text models like Whisper made tremendous advances in recent years and are easily wrapped into applications allowing you to type less. Everywhere. UX-wise there are decent tools out there (e.g. https://whispertyping.com/), but if privacy concern is important for you, luckily, there are [[self-hosted]] alternatives - [pluja\whishper](https://github.com/pluja/whishper), [aschmelyun\subvert](https://github.com/aschmelyun/subvert)
 - [The Optimal iPhone Settings and Best Apps for Productivity, Focus, and Health](https://medium.com/better-humans/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8)
+- switch smartphone screen into B&W mode
 
 ---
 

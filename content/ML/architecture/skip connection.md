@@ -45,7 +45,7 @@ tags::
 > ![[training degradation#Notes]]
 
 ### How
-- Residual connections propagate the inputs to the output of one or more layers. This has the effect of making the optimization procedure easier to learn and also helps deal with vanishing and exploding gradients.
+- Residual connections propagate the inputs to the output of one or more layers. This has the effect of making the optimization procedure easier to learn and also helps deal with [[vanishing gradients]] and [[exploding gradients]].
 - ![[Pasted image 20240813175853.png|500]]
 - The skip connection works because each layer is trying to reduce its own contribution to the final error, while participating in the network made up of all the other layers. The skip connection is part of the network, so the layer learns it doesn’t need to process the parts of the tensor that don’t change. This makes the layer’s job simpler, enabling it to be smaller and faster.
 - ![[Pasted image 20240813183246.png|500]]

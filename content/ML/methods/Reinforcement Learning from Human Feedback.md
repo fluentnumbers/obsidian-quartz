@@ -47,7 +47,7 @@ tags::
 - the optimization is formulated as
 
 ![[Pasted image 20241013192256.png|700]]
-where dist is some kind of distance; [[Kullback-Leibler divergence]] between the predicted probability distributions is popular in this role. This way, we maximize the reward while keeping the distance low.
+where dist is some kind of distance; [[Kullback-Leibler divergence 1]] between the predicted probability distributions is popular in this role. This way, we maximize the reward while keeping the distance low.
 - same formula written as in the [[direct preference optimization#^64ec23|DPO paper]]:
 
 ![[Pasted image 20241028103813.png|900]]
