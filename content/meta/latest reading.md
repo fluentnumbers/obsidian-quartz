@@ -15,7 +15,7 @@ related:
   - "[[index|about-me]]"
   - "[[meta]]"
 created: 2024/08/20
-updated: 2025/06/29
+updated: 2025/09/01
 ---
 %%
 date:: [[2024-08-20]]
@@ -27,7 +27,8 @@ tags::
 # [[latest reading]]
 
 ## 2025
-- [[Daughters of the Samurai A Journey from East to West and Back - Janice P Nimura]] - true story of 3 girls who left their families in 187x to be the first ever Japanese studying in the US. After 10 years they come back *home* with ambitions to help their country education and development; but they know English better than Japanese, struggle with being accepted back. Each of them finds own way eventually... The second half of the book is most interesting. Readers can observe tectonic cultural shifts happening in Japan, which goes through self-identification process. So much has changed in ~150 years, but still, some aspects of nowadays Japanese society take their roots back then.
+- [[The Goldfinch - Donna Tartt]] -
+- [[Daughters of the Samurai A Journey from East to West and Back - Janice P Nimura]] - a true story of 3 girls who left their families in 187x to be the first ever Japanese studying in the US. After 10 years they come back *home* with ambitions to help their country education and development; but they know English better than Japanese, struggle with being accepted back. Each of them finds own way eventually... The second half of the book is most interesting. Readers can observe tectonic cultural shifts happening in Japan, which goes through self-identification process. So much has changed in ~150 years, but still, some aspects of nowadays Japanese society take their roots back then.
 - [[Taal voor de leuk - Paulien Cornelisse]] - a collection of *anecdotes* and short observations about the Dutch language and how speaking a language shapes our culture and perception of the world. Humor is particularly hard to grasp in a foreign language, so every laugh I get from this book is a small compliment to myself.
 - [[Under the Dome Part 1 - Stephen King]] - another one from a storyteller-genius. I am not a fan of mystics, so my choice of King's books is rather limited to the ones with *sort-of-realistic* setting. And although my absolute top-1 is occupied by the his 11/22/63 *novel*, reading *this* one also kept me on my toes non-stop. If you forget about the reasons, why all inhabitants of one small city in the US, couldn't leave it and no one (and nothing) could come within the city borders - it is a very realistic description of a group behavior under stress and scare. Really frightening times when making a thousand people believe total bullshit is easier than persuading an individual. And don't even think about watching the series, even if you don't have time for the book. Movies can hardly pass on the suspense of King's books, let alone bad movies.
 - [[AI Engineering - Chip Huyen]] in progress
@@ -37,7 +38,7 @@ tags::
 
 ### Books I stopped reading, but may return to
 - [[Thinking with Data - Max Shron]]
-- [[The Man Who Mistook His Wife for a Hat - Oliver Sacks]]
+- [[The Man Who Mistook His Wife for a Hat - Oliver Sacks]] - my expectations were for the book to be more funny and witty, but it mostly reads like a dry medical report about peculiar medical cases. Couldn't find much additive value on top of short chapter summaries on [wikipedia](https://en.wikipedia.org/wiki/The_Man_Who_Mistook_His_Wife_for_a_Hat).
 - [[The Making of the Atomic Bomb - Richard Rhodes]] - another monumental, interesting, but heavy read, which will take more than one re-start to read... in progress
 ## 2024
 
@@ -66,5 +67,5 @@ tags::
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```

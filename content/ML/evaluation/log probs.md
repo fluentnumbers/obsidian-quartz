@@ -19,7 +19,7 @@ updated: 2025/08/30
 date:: [[2025-08-30]]
 parent:: [[LLM metric]]
 source::
-related:: [[entropy]] [[Kullback-Leibler divergence 1]]
+related:: [[entropy]] [[Kullback-Leibler divergence]]
 tags::
 %%
 # [[log probs]]
@@ -50,7 +50,7 @@ tags::
 	- continuous metrics are better as they detect changes in distribution even when argmax is still the same
 - [[entropy]]
 	- When a model becomes less certain about its predictions, the entropy of its output distribution increases, even if the top prediction remains the same
-- [[Kullback-Leibler divergence 1]]
+- [[Kullback-Leibler divergence]]
 	- Maintain a set of stable test prompts that remain consistent, run each prompt N times, calculate statistics, establish a baseline
 	- Run these prompts daily through the model
 	- Use token-wise KL divergence to compare today's [[softmax]] output against the baseline.
@@ -62,5 +62,5 @@ tags::
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```

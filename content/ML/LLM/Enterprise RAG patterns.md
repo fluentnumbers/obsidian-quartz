@@ -220,5 +220,5 @@ Model providers send the response structure to their servers, unwrap into a JSON
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```

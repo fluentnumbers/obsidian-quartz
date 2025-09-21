@@ -1,3 +1,8 @@
+/*
+https://www.emilebangma.com/Quartz/Modifications/Layout-Changes
+*/
+
+
 @use "./base.scss";
 @use "./variables.scss" as *;
 
@@ -7,6 +12,11 @@
     p.meta:has(> time) {
         display: none;
     }
+}
+
+/* The following hides tag links from all list pages (tags and folders)*/
+.page-listing .tag-link {
+    display: none;
 }
 
 

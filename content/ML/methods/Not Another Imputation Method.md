@@ -54,7 +54,7 @@ tags::
 
 ### Masked self-attention
 - The traditional transformer calculates the query, key and value matrices through linear transformation of the input matrix $e$, mapping the embedding into a smaller space And the number of heads $h$.
-- Normally, then[[attention#Masked multi-head attention|masked self-attention]] is applied for excluding future tokens (causal masking) or last (padding) tokens.
+- Normally, then [[attention#Masked multi-head attention|masked self-attention]] is applied for excluding future tokens (causal masking) or last (padding) tokens.
 ![[Pasted image 20250529181414.png|450]]
 with $Q \times K^T$ being an attention matrix and $M$ - a mask.
 - Traditional approach (masking columns corresponding to missing features) to design $M$ does not completely exclude the effect of missing values, because these can appear as keys, values, but also queries.
@@ -82,5 +82,5 @@ with $Q \times K^T$ being an attention matrix and $M$ - a mask.
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```

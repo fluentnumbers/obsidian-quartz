@@ -70,7 +70,7 @@ First they train on a small context window (8K), then increase it to 128K tokens
 > - heuristic filtering
 > 	- removing duplicated lines which are different: logging, error messages
 > 	- *dirty words* counting
-> 	- [[Kullback-Leibler divergence 1]] to filter out documents with many outliers comparing to the training corpus token distribution
+> 	- [[Kullback-Leibler divergence]] to filter out documents with many outliers comparing to the training corpus token distribution
 > - model-based quality filtering: find high-quality tokens
 > 	- light text classifiers as [[fasttext]]
 > 	- heavy pipelines: ^a7b252
@@ -271,5 +271,5 @@ A collection of model-based techniques to remove low-quality training samples an
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, file.outlinks from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```

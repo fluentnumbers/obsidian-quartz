@@ -34,7 +34,8 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({'title': 'On this site','folderClickBehavior':'link', mapFn: (node) => {
+    Component.Explorer({'title': 'On this site','folderClickBehavior':'link',
+      mapFn: (node) => {
       if (node.displayName === "000_processed") {
         node.displayName = "Other"
       }
@@ -43,7 +44,37 @@ export const defaultContentPageLayout: PageLayout = {
       } else {
         node.displayName = "📄 " + node.displayName
       }
-    },}),
+    },
+    // Sort order: folders first, then files. Sort folders and files alphabetically
+    sortFn: (a, b) => {
+      if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+        return a.displayName.localeCompare(b.displayName, undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      }
+
+      if (!a.isFolder && b.isFolder) {
+        return 1
+      } else {
+        return -1
+      }
+    },
+
+    // Remove files
+    filterFn: (node) => {
+      // set containing names of everything you want to filter out
+      const omit = new Set(["authoring content", "tags", "advanced"])
+
+      // can also use node.slug or by anything on node.data
+      // note that node.data is only present for files that exist on disk
+      // (e.g. implicit folder nodes that have no associated index.md)
+      return (
+      (!omit.has(node.displayName.toLowerCase()))
+      // && (!node.data.tags?.includes("explorerexclude") == true)
+      )
+    },
+  }),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),

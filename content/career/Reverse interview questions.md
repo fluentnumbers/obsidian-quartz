@@ -7,7 +7,7 @@ publish: "true"
 link: 
 tags: 
 created: 2025/06/08
-updated: 2025/08/13
+updated: 2025/09/18
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
@@ -31,8 +31,12 @@ tags::
 	- How can I develop in my new role / what opportunities are offered?
 	- Is there a separate tech and management career path?
 	- Are co-workers attend external conferences together? Which ones?
-- Which educational and professional backgrounds the team possesses?
-## About responsibilities
+- Is this team multi-disciplinary? Which professional backgrounds people have? ==What will I be able to learn besides my own line of work?==
+- What is your definition of success for this role?
+	- Tell me about the behaviors of a person that you would consider a high-performing/high-potential employee.
+	- Why do you think some engineers perform better or worse than others?
+	- How is the performance review process set up? How is the progress tracked on team and individual level?
+## About responsibilities and WoW
 - Tell about the ASAP tasks for the coming month\quarter?
 	- Which technically engaging projects\tasks do you see ahead or set for the team?
 	- What does a typical day/week look like in this role?
@@ -41,12 +45,12 @@ tags::
 	- Is the high-level path to deliverable is always clear from the beginning?
 - <font color="#00b050">How much time percentage-wise engineers spent for on-the-job learning?</font> (reading papers, researching the best way to implement a solution)
 - <font color="#00b050">During sprint planning, is the team successful in estimating tasks' effort?</font>
-- What is your definition of success for this role?
-	- Tell me about the behaviors of a person that you would consider a high-performing/high-potential employee.
-	- Why do you think some engineers perform better or worse than others?
-	- How is the performance review process set up? How is the progress tracked on team and individual level?
+- ==How is the work planning and allocation process?== ^ca5714
+	- How long ahead? Sprint\release cadende?
+	- Do you allocate % of time for unplanned urgent activities and firefighting? How often does this happen?
 - <font color="#00b050">how does the DS team gets projects and allocates their time? Do the projects come from upper management, from internal\external stakeholders or do the DS need to propose and *defend* their project ideas internally themselves?</font> ^edacb2
-- <font color="#00b050">Could you share one of your recent successful AI initiatives? I want to understand the baseline...</font> 
+- <font color="#00b050">Could you share one of your recent successful AI initiatives? I want to understand the baseline...</font>
+- What is the core most important and tangible output of my work? Algorithms, Git commits, dashboards, ...? ^31cb69
 ## About communication at work
 - Who are the stakeholders? Do you enjoy working with them?
 	- Tell me about who I would be working most closely with.
@@ -57,7 +61,7 @@ tags::
 	- Are the cameras usually on or off during online meetings?
 	- What kind of meetings happen every week?
 	- What kind of social events does the team/company host and are these attended by everyone?
-- How many handshakes between me and stakeholders? CTO? Data Director?
+- How many handshakes between me and stakeholders?
 
 ## About technology and development practices
 - <font color="#00b050">What are the official and unofficial, but established ways of [[knowledge sharing]]?</font>
@@ -66,14 +70,11 @@ tags::
 	- Do you publish in journals, write whitepapers, open-source libraries?
 - Are you prepared for disaster recovery?
 - Would you be ashamed if your closed source codebase is published on the internet tomorrow?
-- Is AI being seen as money-maker or money-saver (hopefully, not a money spender)?
-- What kind of laptops do data scientists get? Which computational resources are available?
-- <font color="#00b050">What is the plan to make or save more money by using cloud and data?</font>
 - <font color="#00b050">What kind of laptop do data scientists get? What kind of compute resources do they have access to?</font>
-### About ML and MLOps
-- The JD mentions [[Spark|PySpark]] - how much is it really needed, how big is the datasets? Does work require tweaking the internals of Spark for best performance?
-- What is the process of getting the output of your work in the production and how long does it take?
+- ==What is the process of getting the output of your work in the production and how long does it take?==
 	- What is the entire process for a one line change in code to make it to production?
+### About ML and MLOps
+- The JD mentions [[Spark|PySpark]] - how crucial performance optimization is? Does work require tweaking the internals of Spark for best performance? how big are the datasets?
 - How much time and effort it takes to maintain existing models w.r.t. creating new value?
 - Do you have an [[ML system design]] document that you follow in every project? What are the must do points there?
 - Custom datasets
@@ -100,6 +101,8 @@ tags::
 - What is the company's growth plan for the next 1 year? 5 years?
 - Where does the funding come from and who influences the high level plan/direction?
 - What are the bottlenecks for the company at the moment? How do you plan to solve them?
+- <font color="#00b050">What is the plan to make or save more money by using cloud \ data \ AI?</font>
+	- Is AI being seen as money-maker or money-saver (hopefully, not a money spender)?
 ## About the interview, routine and closing up
 - Is there anything else I can tell you about my skills and qualifications to let you know that I am a good fit for this job?
 	- Is there anything more in my profile\CV that requires highlighting\clarifying?
@@ -117,5 +120,5 @@ tags::
 ---
 ###### Links to this File
 ```dataview
-table file.tags from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```
