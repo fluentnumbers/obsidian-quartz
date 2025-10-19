@@ -35,6 +35,7 @@ tags::
 	- Use small chunks on embedding stage and large size during the inference, by appending adjacent chunks before feeding to LLM
 	- page-size chunks, because we answer the question "on which page can I find this?"
 	- ==sub-chanks with links to a parent-chunk with larger context== ^df06d6
+- parent-child chunking, when search is done on smaller chunks but the context gets filled with, for instance, full page data 
 - hierarchical chunking gradually zooms into relevant context and improves efficiency of *clarifying questions* within a multi-turn conversation
 	- multiple levels based on document metadata, sections, pages, paragraphs and sentences
 	- Each chunk retains information about its metadata, hierarchical level, parent-child relationship, extracts confidence scores, etc.

@@ -1,14 +1,14 @@
 ---
-cssclasses: 
-aliases: 
-permalink: note/scaling-laws
+cssclasses:
+aliases:
+permalink: LLM/scaling-laws
 publish: true
 "date:": "[[2024-10-25]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[model training]]"
-source: 
-related: 
+source:
+related:
 created: 2024/10/25
 updated: 2025/05/01
 ---
@@ -42,7 +42,7 @@ tags::
 > 	- const $A$ and $\alpha$ are fit using **compute-optimal data points** from experimental isoFLOPs curves
 > 	-
 
-> 	![[SmartSelect_20240820_203617_Xodo.jpg|350]]
+> ![[SmartSelect_20240820_203617_Xodo.jpg|350]]
 >
 > > We fit A and α using the data from Figure 2. We find that (α, A) = (0.53, 0.29); the corresponding fit is shown in Figure 3. Extrapolation of the resulting scaling law to 3.8 × 1025 FLOPs suggests training a 402B parameter model on 16.55T tokens.
 >

@@ -53,6 +53,11 @@ tags::
 
 ## Services
 - [GitHub - braintrustdata/autoevals: AutoEvals is a tool for quickly and easily evaluating AI model ou...](https://github.com/braintrustdata/autoevals)
+- [[Databricks]] Mosaic
+	- [Use built-in LLM scorers \| Databricks on AWS](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/predefined-judge-scorers)
+	- [Creating custom LLM scorers \| Databricks on AWS](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/custom-judge/) 
+- [[Azure]] AI Foundry
+- 
 - [[Ragas]]
 ## Resources
 - [Using LLM-as-a-judge 🧑‍⚖️ for an automated and versatile evaluation - Hugging Face Open-Source AI Cookbook](https://huggingface.co/learn/cookbook/en/llm_judge)

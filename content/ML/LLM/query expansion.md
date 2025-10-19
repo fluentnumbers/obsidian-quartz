@@ -1,16 +1,17 @@
 ---
-cssclasses: 
+cssclasses:
 aliases:
   - query enhancement
   - query reformulation
+  - query rephrasing
 permalink: RAG/query-expansion
 publish: "true"
 "date:": "[[2024-12-04]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[Enterprise RAG patterns]]"
-source: 
-related: 
+source:
+related:
 created: 2024/12/04
 updated: 2025/05/12
 ---

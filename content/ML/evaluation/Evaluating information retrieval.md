@@ -51,6 +51,7 @@ tags::
 	- user feedback or the way they interact with the results can be the ultimate metric
 		- [[Evaluating information retrieval#^96c623|for AI-generated emails]]: do users make edits before sending?
 - Implement evaluation **before** increasing the system complexity, otherwise you can't monitor performance progression.
+- If your knowledge base is dynamic, ==evaluation must happen periodically==, although there are other reasons for that too.
 - Separate retrieval evaluations vs generation evals and focus on the retrieval part first
 	- retrieval is cheap, generation expensive
 	- generation comes later in the pipeline and assumes the retrieval is correct
@@ -128,12 +129,20 @@ tags::
 ## Metrics
 [[ML metric]]
 ### Technical
-- [[precision and recall|recall@k]]: include everything that is relevant
+- [[precision and recall|recall@k]]: include everything that is relevant, High recall means effective usage of relevant information.
 	- Most current models are very good at recall because they are optimized for [[needle in a haystack]] tests., But the sensitivity to irrelevant information is less well optimized, therefore don't forget about the precision
-- [[precision and recall|precision@k]]: do not include anything irrelevant
+- [[precision and recall|precision@k]]: do not include anything irrelevant, High precision means fewer noisy documents.
 - [[Normalized Discounted Cumulative Gain]]@k:
-	-  [NDCG: What It Is and Where To Use It? AI Essential Lessons](https://arize.com/blog-course/ndcg/)
+	- [NDCG: What It Is and Where To Use It? AI Essential Lessons](https://arize.com/blog-course/ndcg/)
 - [[Mean Reciprocal Rank]]
+- Coverage 
+	- Measures whether the retrieve documents collectively address all subtopics or facets of the user query.
+	- Important for complex or multi-[[intent recognition]], [[multi-hop question answering]]
+	- Evaluate by embedding-based diversity metrics
+		- Cluster analysis of retrieved embeddings versus subtopic embeddings
+- Indexing quality
+	- Are the indexes used for retrieval complete and fresh?
+	- Evaluated by index age, corpus-to-index freshness ratio, document ingestion success rate.
 - LGTM@10
 - Monitor the average [[cosine similarity]] of your queries over time. A sudden change might signal a shift in user behavior or data. For instance, in a [[recommendation system]] many new users attracted by a **seasonal promotion** may be unable to afford regular (expensive) goods, bought by regular customers.
 
@@ -151,7 +160,7 @@ tags::
 - [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/)
 - [Mastering RAG: 8 Scenarios To Evaluate Before Going To Production - Galileo](https://galileo.ai/blog/mastering-rag-8-scenarios-to-test-before-going-to-production)
 - [RAGChecker: A Fine-grained Framework For Diagnosing RAG](https://github.com/amazon-science/RAGChecker)
-- 
+- [Cheat at Search Essentials: Evaluation, NDCG, and pals](https://maven.com/p/8b3be4/cheat-at-search-essentials-evaluation-ndcg-and-pals)
 ---
 ###### Links to this File
 ```dataview

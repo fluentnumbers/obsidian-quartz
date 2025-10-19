@@ -73,6 +73,7 @@ tags::
 - [Word Embeddings](https://lena-voita.github.io/nlp_course/word_embeddings.html) [[thesaurus]]
 - [How LLMs See the World](https://blog.bytebytego.com/p/how-llms-see-the-world)
 - [Let's build the GPT Tokenizer - YouTube](https://youtu.be/zduSFxRajkE?si=KGKdZBeLDp2FepCx)
+- [Cheat at Search Essentials: Vectors and Embeddings](https://maven.com/p/7b01bb/cheat-at-search-essentials-vectors-and-embeddings)
 
 ---
 ###### Links to this File

@@ -13,7 +13,7 @@ related:
   - "[[vector search]]"
   - "[[information retrieval]]"
 created: 2024/02/28
-updated: 2025/07/31
+updated: 2025/09/27
 ---
 %%
 date:: [[2024-02-28]]
@@ -83,7 +83,7 @@ tags::
 
 #### How to select every ranking model for fine tuning
 - It's an iterative process where one cannot just select the perfect model architecture from the beginning. Instead, it's good to create a framework which will include testing several models and evaluating them against specific constraints such as latency, costing requirements, and performance.
-- https://bge-model.com/ I 
+- https://bge-model.com/ I
 ### Full MVP vanilla RAG
 - Full MVP *vanilla* RAG pipeline may look like this (with *combine the scores* module too)
 
@@ -92,6 +92,32 @@ tags::
 ## Evaluating information retrieval
 - See [[Evaluating information retrieval]]
 
+## Evaluating generation
+- Grounding \ [[faithfulness]]
+	- Is the output supported by retrieved chunks?
+		- [[ROUGE]] \ [[BERTScore]] overlap vs retrieved chunks
+		- [[LLM-as-a-judge]] Asking whether this claim is supported
+- Context utilization
+	- Does the LLM use the retrieved facts effectively?
+		- Entity or keyword match rate between documents and output
+		- [[attention]] weight alignment in case of using open LLMs
+- Attribution accuracy
+	- Can we trace back specific statements in the output to individual chunks?
+		- Manual or automatic tagging of outputs links to source IDs.
+		- [[LLM-as-a-judge]]: Which document supports this statement?
+- [[hallucination]] rate
+	- Detect invented content
+	- % of claims unsupported by retrieval.
+- Handling irrelevant retrieval
+	- Can it ignore noisy or unrelated content?
+	- [[LLM-as-a-judge]]: Categorize items and rate how model uses relevant and irrelevant content.
+- Faithfulness under distractors.
+	- Is it robust to misleading or conflicting information?
+	- Manual adversarial testing with incorrect retrieval.
+	- Automated contradiction detection.
+- Information combination 
+	- Is it able to stitch multiple pieces of evidence into a coherent answer?
+	- Count the number of unique sources referenced.
 ---
 
 ## Challenges with RAG

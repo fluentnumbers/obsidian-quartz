@@ -70,6 +70,10 @@ tags::
 		 - multi-media content without text captions
 
 ## Tools
+- Generation 
+	- [GitHub - meta-llama/synthetic-data-kit: Tool for generating high quality Synthetic datasets](https://github.com/meta-llama/synthetic-data-kit)
+	- [Generate Synthetic and Simulated Data for Evaluation - Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/simulator-interaction-data)
+	- [Synthesize evaluation sets \| Databricks on AWS](https://docs.databricks.com/aws/en/generative-ai/agent-evaluation/synthesize-evaluation-set)
 - [[Ragas]]
 ## Resources
 - [[Systematically Improving RAG Applications]]

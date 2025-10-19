@@ -1,15 +1,16 @@
 ---
-cssclasses: 
+cssclasses:
 aliases:
   - statistical test
-permalink: ML/hypothesis-testing
+permalink: stats/hypothesis-testing
 publish: true
 "date:": "[[2024-09-10]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[statistics]]"
-source: 
-related: 
+source:
+related:
+  - "[[t-test]]"
 created: 2024/09/10
 updated: 2025/07/04
 ---
@@ -17,7 +18,7 @@ updated: 2025/07/04
 date:: [[2024-09-10]]
 parent:: [[statistics]]
 source::
-related::
+related:: [[t-test]]
 tags::
 %%
 # [[hypothesis testing]]

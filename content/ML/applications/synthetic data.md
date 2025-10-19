@@ -26,6 +26,7 @@ tags::
 - [[synthetic data generation for RAG evaluation]]
 
 ## Resources
+- [Comprehensive Exploration of Synthetic Data Generation: A Survey](https://arxiv.org/abs/2401.02524)
 - [Q: What makes a good custom interface for reviewing LLM outputs? – Hamel’s Blog](https://hamel.dev/blog/posts/evals-faq/what-makes-a-good-custom-interface-for-reviewing-llm-outputs.html)
 - [[Sergey Nikolenko]] about pre-LLM [[computer vision]] applications
 	- [sergeynikolenko.ru/blog/top-5-applications-of-synthetic-data](https://www.sergeynikolenko.ru/blog/top-5-applications-of-synthetic-data)

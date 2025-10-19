@@ -6,7 +6,7 @@ publish: true
 "date:": "[[2024-08-22]]"
 link: 
 tags: 
-parent: "[[transformer]]"
+parent: "[[transformer|transformer architecture]]"
 source: 
 related: 
 created: 2024/08/22
@@ -14,7 +14,7 @@ updated: 2025/05/01
 ---
 %%
 date:: [[2024-08-22]]
-parent:: [[transformer]]
+parent:: [[transformer|transformer architecture]]
 source::
 related::
 tags::
@@ -28,6 +28,8 @@ tags::
 - in simplest form, position encoding vectors are added to input sequences
 
 ## Rotary Position Embeddings (RoPE)
+- [[AI school razinkov.ai]]
+	- [RoPE: Rotary Position Embeddings](https://youtu.be/3vDe2n1Zojg?si=vJ6OmArhjcvy-78o)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding Explained - YouTube](https://www.youtube.com/watch?v=YMcwsLGU_U8)
 - [RoPE (Rotary positional embeddings) explained: The positional workhorse of modern LLMs - YouTube](https://www.youtube.com/watch?v=GQPOtyITy54)
 - Original Paper : [https://arxiv.org/pdf/2104.09864.pdf](https://arxiv.org/pdf/2104.09864.pdf)

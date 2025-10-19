@@ -1,23 +1,24 @@
 ---
 permalink: career/reverse-interview-questions
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
 publish: "true"
 "date:": "[[2025-06-08]]"
-link: 
-tags: 
+link:
+tags:
 created: 2025/06/08
 updated: 2025/09/18
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
+  - "[[Know How Your Org Works]]"
 source:
 ---
 %%
 date:: [[2025-06-08]]
 parent:: [[interview]]
 source::
-related::: [[all kinds of lists]]
+related::: [[all kinds of lists]] [[Know How Your Org Works]]
 tags::
 %%
 # [[Reverse interview questions]]

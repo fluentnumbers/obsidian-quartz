@@ -27,6 +27,7 @@ tags::
 ## Note
 - evaluates how well a system places the first relevant result in a ranked list
 	- at which position is the first *relevant* hit?
+	- If the first relevant document is at position 2, then MRR is 0.5.
 - Highlights the importance of quickly surfacing at least one relevant document, with an emphasis on the efficiency of relevance delivery. ==Matters a lot when there are only a few items we can show to the user at any given time.==
 - [The best business example I can give of MRR is thinking about something like a "play next" button. If you're building Spotify, you probably don't really care if one of the next 50 songs might be a banger. If the songs in the queue are not good, users will likely churn. The same applies to YouTube rankings.](https://jxnl.co/writing/2024/02/05/when-to-lgtm-at-k/#mean-reciprocal-rank-mrr-k)
 ## Resources

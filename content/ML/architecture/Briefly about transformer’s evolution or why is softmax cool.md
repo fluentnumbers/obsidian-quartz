@@ -1,13 +1,13 @@
 ---
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
 permalink: LLM/evolution-of-architectures-and-softmax
 publish: "true"
 "date:": "[[2025-01-28]]"
 link: https://fluentnumbers.medium.com/briefly-about-transformers-evolution-or-why-is-softmax-cool-5ececb8db645
-tags: 
+tags:
 parent: "[[neural network architecture]]"
-source: 
+source:
 related:
   - "[[published]]"
   - "[[blogs archive]]"
