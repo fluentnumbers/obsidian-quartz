@@ -43,6 +43,17 @@ tags::
 	- for [[image retrieval|object retrieval]]: [[image retrieval#Metrics]]
 	- for [[Retrieval-Augmented Generation#Evaluating information retrieval|retrieval evaluation]]
 - ==In practice it is good to track evolution of metrics for various $k$: 1, 10, 50, 1000....==
+
+### Difference of PR-curve vs ROC curve 
+- [[ROC curve]] is a visualization of true positive rate (TPR) and [[false positive rate]] (FPR), whereas PR-curve tells about precision and recall 
+- [Precision-Recall AUC vs ROC AUC for class imbalance problems \| Kaggle](https://www.kaggle.com/discussions/general/7517)
+
+> the difference between ROC and precision-recall is in how each treats true negatives. Typically, if true negatives are not meaningful to the problem or negative examples just dwarf the number of positives, precision-recall is typically going to be more useful;
+ 
+ > I think intuitively you can say that if your model needs to perform equally well on the positive class as the negative class (for example, for classifying images between cats and dogs, you would like the model to perform well on the cats as well as on the dogs. For this you would use the ROC AUC.
+ > On the other hand, if you're not really interested in how the model performs on the negative class, but just want to make sure every positive prediction is correct (precision), and that you get as many of the positives predicted as positives as possible (recall), then you should choose PR AUC. For example, for detecting cancer, you don't care how many of the negative predictions are correct, you want to make sure all the positive predictions are correct, and that you don't miss any. (In fact, in this case missing a cancer would be worse then a false positive so you'd want to put more weight towards recall.)
+ 
+
 ## Resources
 - 
 

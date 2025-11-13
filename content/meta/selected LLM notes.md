@@ -10,7 +10,7 @@ parent: "[[meta]]"
 source: 
 related: "[[LLM]]"
 created: 2024/11/25
-updated: 2025/07/29
+updated: 2025/10/25
 ---
 %%
 date:: [[2024-11-25]]
@@ -29,6 +29,8 @@ tags::
 - [[how to evaluate LLM chatbots]]
 - [[Briefly about transformer’s evolution or why is softmax cool]]
 - [[paper review - Llama 3 Herd of Models| Paper Review - Llama 3.1 model - how is the one of the best open-source models designed?]]
+- [[Generative AI System Design Interview - Ali Aminian (Computer scientist) Hao Sheng (Researcher in computational mathematics)]]
+	- [[Generative AI System Design Interview - Chapter 1 - Introduction and Overview]]
 
 %%
 [[LLM]] - basic info and the source to other notes for deeper understanding

@@ -7,7 +7,7 @@ permalink: meta/productivity-hacks
 publish: "true"
 "date:": "[[2025-06-27]]"
 link: 
-tags: [0]
+tags: 
 parent: "[[productivity]]"
 source: 
 related:

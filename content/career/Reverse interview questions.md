@@ -7,7 +7,7 @@ publish: "true"
 link:
 tags:
 created: 2025/06/08
-updated: 2025/09/18
+updated: 2025/10/25
 parent: "[[interview]]"
 related:
   - "[[all kinds of lists]]"
@@ -70,6 +70,7 @@ tags::
 	- Are there internal meet-ups, conferences, hackathone events?
 	- Do you publish in journals, write whitepapers, open-source libraries?
 - Are you prepared for disaster recovery?
+<font color="#00b050">- how does the team balance between shipping new features and technical debt?</font>
 - Would you be ashamed if your closed source codebase is published on the internet tomorrow?
 - <font color="#00b050">What kind of laptop do data scientists get? What kind of compute resources do they have access to?</font>
 - ==What is the process of getting the output of your work in the production and how long does it take?==
@@ -111,6 +112,7 @@ tags::
 
 ## Resources
 - [Ask About Company](https://askabout.company/)
+- [know how your org works (or how to become a more effective engineer)](https://copyconstruct.medium.com/know-how-your-org-works-or-how-to-become-a-more-effective-engineer-1a3287d1f58d)
 - [GitHub - viraptor/reverse-interview: Questions to ask the company during your interview](https://github.com/viraptor/reverse-interview)
 - [How to ask interviewers great questions | by Sam Franklin | Otta | Medium](https://medium.com/otta-blog/how-to-ask-interviewers-great-questions-3a0add17ba42)
 - [Questions I'm asking in interviews](https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/)

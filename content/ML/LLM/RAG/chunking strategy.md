@@ -10,20 +10,22 @@ tags:
 parent: "[[Advanced RAG techniques]]"
 source: 
 related: 
+- "[[docling]]"
 created: 2025/07/26
-updated: 2025/08/11
+updated: 2025/11/13
 ---
 %%
 date:: [[2025-07-26]]
 parent:: [[Advanced RAG techniques]]
 source::
-related::
+related:: [[docling]]
 tags::
 %%
 # [[chunking strategy]]
 <sub>scroll ↓ to [[#Resources]]</sub>
 
 ## Note
+- This whitepaper [Finding the Best Chunking Strategy for Accurate AI Responses \| NVIDIA Technical Blog](https://developer.nvidia.com/blog/finding-the-best-chunking-strategy-for-accurate-ai-responses/) claims that ==Performance curves aren’t always linear==, ==Query characteristics influence optimal chunk size== and ==Inconsistent patterns even within similar document types==, so there is no one size fits all.
 - ==[[chunking strategy]]== can have a huge impact on [[Evaluating information retrieval|RAG performance]]. ^c77646
 	- small chunks --> limited context --> incomplete answers ^789f4e
 	- large chunks --> noise in data --> poor [[precision and recall|recall]]
@@ -35,7 +37,7 @@ tags::
 	- Use small chunks on embedding stage and large size during the inference, by appending adjacent chunks before feeding to LLM
 	- page-size chunks, because we answer the question "on which page can I find this?"
 	- ==sub-chanks with links to a parent-chunk with larger context== ^df06d6
-- parent-child chunking, when search is done on smaller chunks but the context gets filled with, for instance, full page data 
+- parent-child chunking, when search is done on smaller chunks but the context gets filled with, for instance, full page data
 - hierarchical chunking gradually zooms into relevant context and improves efficiency of *clarifying questions* within a multi-turn conversation
 	- multiple levels based on document metadata, sections, pages, paragraphs and sentences
 	- Each chunk retains information about its metadata, hierarchical level, parent-child relationship, extracts confidence scores, etc.
@@ -49,6 +51,12 @@ tags::
 
 ## Resources
 - [r/Rag -  Best chunking strategy for RAG on annual/financial reports?](https://www.reddit.com/r/Rag/comments/1mjwde9/best_chunking_strategy_for_rag_on_annualfinancial/)
+- [Text splitters \| 🦜️🔗 LangChain](https://python.langchain.com/docs/concepts/text_splitters/)
+- [Finding the Best Chunking Strategy for Accurate AI Responses \| NVIDIA Technical Blog](https://developer.nvidia.com/blog/finding-the-best-chunking-strategy-for-accurate-ai-responses/#:~:text=The%20optimal%20chunking%20strategy%20varies,using%20NVIDIA%20NeMo%20Retriever%20extraction)
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

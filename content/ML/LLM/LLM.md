@@ -141,6 +141,10 @@ tags::
 > ![[whitepaper_Foundational Large Language models & text generation.pdf]]
 
 ---
+
+![[base - related.base]]
+
+---
 ###### Links to this File
 ```dataview
 table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"

@@ -1,19 +1,20 @@
 ---
-cssclasses: 
+cssclasses:
 aliases:
   - sampling strategy
   - sampling strategies
   - decoding strategies
   - sequence decoding
   - LLM sampling
+  - sampling methods
 permalink: LLM/decoding-strategy
 publish: true
 "date:": "[[2024-11-03]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[LLM inference]]"
-source: 
-related: 
+source:
+related:
 created: 2024/11/03
 updated: 2025/05/12
 ---

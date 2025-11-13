@@ -9,16 +9,16 @@ tags:
 parent: "[[psychology]]"
 source:
 related:
-  - "[[Daniel Kaneman]]"
+  - "[[Daniel Kahneman]]"
   - "[[statistics]]"
 created: 2025/06/01
-updated: 2025/07/15
+updated: 2025/10/26
 ---
 %%
 date:: [[2025-06-01]]
 parent:: [[psychology]]
 source::
-related:: [[Daniel Kaneman]]
+related:: [[Daniel Kahneman]]
 tags::
 %%
 # [[cognitive bias]]
@@ -32,11 +32,8 @@ tags::
 - [[look-ahead bias]]
 - [[confirmation bias]]
 
-
-> [!NOTE]- 50 cognitive biases 
-> ![[50-cognitive-biases-2.png|1000]]
-
-
+> [!NOTE]- 50 cognitive biases
+> ![[50-cognitive-biases-2.png|1400]]
 
 ## Resources
 - [Infographic: 50 Cognitive Biases in the Modern World](https://www.visualcapitalist.com/50-cognitive-biases-in-the-modern-world/)

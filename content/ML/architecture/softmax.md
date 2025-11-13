@@ -10,7 +10,7 @@ parent: "[[activation function]]"
 source: 
 related: "[[Briefly about transformer’s evolution or why is softmax cool]]"
 created: 2025/01/12
-updated: 2025/06/18
+updated: 2025/11/13
 ---
 %%
 date:: [[2025-01-12]]
@@ -30,7 +30,8 @@ tags::
 ![[Pasted image 20250112194036.png|300]]
 - $\vec z$ of input elements [$z_0...z_K$]
 - Output of softmax is always a positive number regardless of the input sign
-- dividing the exponent by a parameter [[temperature]] T allows for controlling [[entropy]] and affecting the output distribution
+- ==not invariant under scaling==: $softmax(C\times y)$ is not equal to $C\times softmax(y)$
+- [[temperature]] scaling: dividing the exponent by a parameter [[temperature]] T allows for controlling [[entropy]] and affecting the output distribution - making it more uniform (large T) or sharp, confident (low T).
 - ==See also [[Briefly about transformer’s evolution or why is softmax cool]]==
 ## Resources
 - 

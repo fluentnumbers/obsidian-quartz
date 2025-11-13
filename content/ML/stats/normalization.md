@@ -1,15 +1,15 @@
 ---
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
 permalink: ML/normalization
 publish: "true"
 "date:": "[[2024-12-06]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[data preprocessing]]"
-source: 
+source:
 related:
-  - "[[standartization]]"
+  - "[[standardization]]"
 created: 2024/12/06
 updated: 2025/05/01
 ---
@@ -17,7 +17,7 @@ updated: 2025/05/01
 date:: [[2024-12-06]]
 parent:: [[data preprocessing]]
 source::
-related:: [[standartization]]
+related:: [[standardization]]
 tags::
 %%
 # [[normalization]]

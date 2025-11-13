@@ -15,7 +15,7 @@ related:
   - "[[byte pair encoding]]"
   - "[[Retrieval-Augmented Generation|RAG]]"
 created: 2024/08/15
-updated: 2025/07/10
+updated: 2025/10/30
 ---
 %%
 date:: [[2024-08-15]]
@@ -35,13 +35,14 @@ tags::
 
 ## Note
 - Embeddings aim to obtain a low dimensional representation of the original data in a continuous vector space, while preserving most of the essential information
-- Tokenization is a substep of the embedding process, but often these are seen as synonyms
+- Tokenization is a substep of the embedding process, distinct, but connected
 - Tokenizer is an object separate from an [[LLM]] model, a *preprocessing* stage that requires an (independent) multi-language training set
 	- more training data in a particular language fed into tokenizer results in denser sequences, which is beneficial for the [[attention]] mechanism with limited context length
 - After training a tokenizer once, it is used for encoding and decoding
 ![[Pasted image 20240830121005.png|350]]
 - Online tokenizer to play with: [Tiktokenizer](https://tiktokenizer.vercel.app/) or [The Tokenizer Playground](https://huggingface.co/spaces/Xenova/the-tokenizer-playground)
 - Feeding raw bytes of each character (UTF-8) into [[LLM]] would make the process *tokenization-free*, but it would stretch the [[attention]] over much longer number of tokens, and make it prohibitively expensive, that's why we resort to [[byte pair encoding]]
+- Embeddings generally take more space than the original data, which creates a large storage footprint of [[vector database|vector databases]]
 
 ## Evolution of embeddings
 - See [[Evolution of embeddings]]
@@ -61,7 +62,7 @@ tags::
 - spelling words, spelling tasks like reversing strings: some tokens denote multiple quite long character sequences, so too much is cramped into one token
 	- asking the model to split a string into a list of characters first and then answer your question helps
 - LLM are worse at handling non-English language, not only because the model itself has seen less data, but also because the tokenizer was trained on less data from other languages, so its compression is worse
-- arithmetic problems
+- arithmetic problems ^afa104
 	- [Integer tokenization is insane](https://www.beren.io/2023-02-04-Integer-tokenization-is-insane/)
 - GPT4 has seen major improvements in [[Python]] coding vs GPT2 partially due to the way their new tokenizer handled repeated spaces and indentation
 - handling of special tokens by chance encountered in the input: `< |endofstring| >`
@@ -74,6 +75,10 @@ tags::
 - [How LLMs See the World](https://blog.bytebytego.com/p/how-llms-see-the-world)
 - [Let's build the GPT Tokenizer - YouTube](https://youtu.be/zduSFxRajkE?si=KGKdZBeLDp2FepCx)
 - [Cheat at Search Essentials: Vectors and Embeddings](https://maven.com/p/7b01bb/cheat-at-search-essentials-vectors-and-embeddings)
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

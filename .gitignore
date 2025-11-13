@@ -12,3 +12,5 @@ replit.nix
 /.specstory
 content/sync_log.txt
 .env
+
+temp.py

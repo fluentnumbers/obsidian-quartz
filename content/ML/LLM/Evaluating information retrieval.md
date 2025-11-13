@@ -111,7 +111,7 @@ tags::
 - different [[tokenization|embedding]] models by size, dimensionality, developer, ...
 	- `text-embeddings-3-small` vs `large`
 - [[chunking strategy]]
-- test how the [[reranker]] performance changes depending on the N chunks we pass in
+- test how the [[reranking|reranker]] performance changes depending on the N chunks we pass in
 	- composite scoring function of several sources
 	- [[chunking strategy#^447647|shuffling vs no-shuffling]]
 - [[hybrid search]] vs [[vector search]]-only
@@ -127,7 +127,7 @@ tags::
 - compare [[latency]] trade-offs
 - Head (frequent) queries vs tail queries
 ## Metrics
-[[ML metric]]
+[[LLM metric]]
 ### Technical
 - [[precision and recall|recall@k]]: include everything that is relevant, High recall means effective usage of relevant information.
 	- Most current models are very good at recall because they are optimized for [[needle in a haystack]] tests., But the sensitivity to irrelevant information is less well optimized, therefore don't forget about the precision
@@ -144,7 +144,7 @@ tags::
 	- Are the indexes used for retrieval complete and fresh?
 	- Evaluated by index age, corpus-to-index freshness ratio, document ingestion success rate.
 - LGTM@10
-- Monitor the average [[cosine similarity]] of your queries over time. A sudden change might signal a shift in user behavior or data. For instance, in a [[recommendation system]] many new users attracted by a **seasonal promotion** may be unable to afford regular (expensive) goods, bought by regular customers.
+- Monitor the average [[cosine similarity]] of your queries over time. A sudden change might signal a shift in user behavior or data. For instance, in a [[recommender systems]] many new users attracted by a **seasonal promotion** may be unable to afford regular (expensive) goods, bought by regular customers.
 
 ### Industrial
 - end-user-engagement: click, add, dwell

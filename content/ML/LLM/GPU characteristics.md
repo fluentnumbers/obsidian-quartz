@@ -30,7 +30,11 @@ tags::
 ![[1,3,6,5.png|500]]
 - Nvidia A100 has 312 TFLOPS for FP16 or 19.5 TFLOPS for FP32
 ## Resources
-- 
+- [Making Deep Learning go Brrrr From First Principles](https://horace.io/brrr_intro.html)
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

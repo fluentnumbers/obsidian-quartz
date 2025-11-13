@@ -44,6 +44,7 @@ tags::
 - [Webinar: "Quantization: unlocking scalability for LLMs" - YouTube](https://www.youtube.com/watch?v=qx6p9thgEno)
 - [Егор Швецов | Model compression -Introduction intro Quantization - YouTube](https://www.youtube.com/watch?v=L4liz40QRTk)
 - [Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
+- [r/LocalLLaMA - For those who don't know what different model formats (GGUF, GPTQ, AWQ, EXL2, etc.) mean](https://www.reddit.com/r/LocalLLaMA/comments/1ayd4xr/for_those_who_dont_know_what_different_model/)
 
 ---
 ###### Links to this File

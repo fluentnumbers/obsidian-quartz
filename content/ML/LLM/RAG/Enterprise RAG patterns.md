@@ -1,22 +1,23 @@
 ---
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
 permalink: RAG/enterprise-rag-patterns
 publish: true
 "date:": "[[2025-05-06]]"
-link: 
-tags: 
+link:
+tags:
 parent: "[[Retrieval-Augmented Generation|RAG]]"
-source: 
+source:
+  - "[[LLM under the hood]]"
 related:
   - "[[Advanced RAG techniques]]"
 created: 2025/05/06
-updated: 2025/05/14
+updated: 2025/10/26
 ---
 %%
 date:: [[2025-05-06]]
 parent:: [[Retrieval-Augmented Generation|RAG]]
-source::
+source:: [[LLM under the hood]]
 related::[[Advanced RAG techniques]]
 tags::
 %%
@@ -155,6 +156,7 @@ Example of actions could be - downloading additional data, performing database\w
 - Enterprise B2B sales assistant
 - Automated customer support at Fintech
 ### Human in the Loop (HITL)
+[[human-in-the-loop]]
 In an existing business process involving humans, identify the most repetitive, irritative, cumbersome or error-prone steps and automate them. Keep human in the loop for steps requiring more control, overview or emotional intelligence. Another name for the pattern would be *cognitive load sharing*.
 
 #### Use cases and products
@@ -216,6 +218,10 @@ Model providers send the response structure to their servers, unwrap into a JSON
 
 ## Resources
 - 
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

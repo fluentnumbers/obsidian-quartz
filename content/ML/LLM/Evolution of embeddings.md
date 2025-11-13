@@ -10,7 +10,7 @@ parent: "[[tokenization|embedding]]"
 source: 
 related: 
 created: 2024/11/14
-updated: 2025/05/01
+updated: 2025/10/25
 ---
 %%
 date:: [[2024-11-14]]
@@ -35,7 +35,7 @@ tags::
 - [[#Resources|Resources]]
 
 ## Note
-
+- 
 ## Evolution of embeddings
 ### Word Embeddings
 - lightweight, **context-free** word embedding
@@ -68,12 +68,20 @@ tags::
 - Model families generating **multi-vector** embedding [[ColBERT]], [[XTR]]
 
 ### Image & multimodal embeddings
-
+- dedicated image embedding model
+	- [CLIP: Connecting text and images](https://openai.com/index/clip/)
+- image captioning model
+	- image --> caption --> text embedding
 ### Structured data embeddings
-
+- 
 ### Graph embeddings
+- 
 ## Resources
 - [[Google 5-Day Gen AI Intensive Course]]
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

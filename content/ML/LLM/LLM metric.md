@@ -12,7 +12,7 @@ source:
 related:
   - "[[ML metric]]"
 created: 2024/10/30
-updated: 2025/07/31
+updated: 2025/10/25
 ---
 %%
 date:: [[2024-10-30]]
@@ -23,7 +23,6 @@ tags::
 %%
 # [[LLM metric]]
 <sub>scroll ↓ to [[#Resources]]</sub>
-
 
 ## Contents
 
@@ -57,14 +56,17 @@ tags::
 - [[perplexity]]
 - [[hallucination]]
 
-### For images 
+### For images
 - FID, IS, KID, SWD, PPL, LPIPS
-
 
 ### Text-to-Video
 - FVD, CLIPScore, FID, LPIPS, KID
 ## Resources
 - [Key LLM Evaluation Metrics & How to Calculate Them](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/?utm_source=substack&utm_medium=email&utm_campaign=dlw&utm_content=llm-evaluation-metrics-every-developer-should-know/)
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File

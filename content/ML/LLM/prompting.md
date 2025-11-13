@@ -1,21 +1,23 @@
 ---
-cssclasses: 
-aliases: 
+cssclasses:
+aliases:
+  - prompt engineering
+  - prompt
 permalink: LLM/prompting
 publish: "true"
 "date:": "[[2025-01-12]]"
-link: 
-tags: 
-parent: "[[LLM inference]]"
-source: 
+link:
+tags:
+parent: "[[LLM methods]]"
+source:
 related:
   - "[[reasoning]]"
 created: 2025/01/12
-updated: 2025/05/01
+updated: 2025/10/25
 ---
 %%
 date:: [[2025-01-12]]
-parent:: [[LLM inference]]
+parent:: [[LLM methods]]
 source::
 related:: [[reasoning]]
 tags::
@@ -44,6 +46,7 @@ tags::
 ### Reasoning
 - [[Chain-of-Thought]] - add *let's think step by step* to your prompt
 	- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903)
+	- [[schema-guided reasoning]] is a way to restrict non-reasoning model to follow certain determined checklist
 - self-consistency + CoT - generate several different LLM outputs to the same prompt, take the most often answer
 - [[Tree-of-Thought]] - iteratively generate different candidate outputs, pick the best and add them back to the tree of potential solutions
 	- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)
@@ -53,13 +56,22 @@ tags::
 ### Other
 - [[meta prompting]]
 	- ask the model to improve own answer
+- algorithmic prompt optimizations
+- User-context prompting with [[Retrieval-Augmented Generation|RAG]]
+- Role-specific prompt
+	- *You are an expert...*
 
 ## Resources
 - [An Empirical Categorization of Prompting Techniques for Large Language Models: A Practitioner's Guide](https://arxiv.org/abs/2402.14837)
 - [A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications](https://arxiv.org/pdf/2402.07927) ^44dbf0
+- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+
+---
+
+![[base - related.base]]
 
 ---
 ###### Links to this File
 ```dataview
-table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
+table file.inlinks, filter(file.outlinks, (x) => !contains(string(x), ".jpg") AND !contains(string(x), ".pdf") AND !contains(string(x), ".jpeg") AND !contains(string(x), ".png")) as "Outlinks" from [[]] and !outgoing([[]])  AND -"Changelog"
 ```
