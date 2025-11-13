@@ -4,18 +4,18 @@ aliases:
 - tricky interview questions
 permalink: career/tricky-interview-questions
 publish: true
-"date:": "[[2025-09-16]]"
+"date:": "[[2025-11-13]]"
 link:
 tags: 
 parent: "[[Interview questions]]"
 source: 
 related: 
 - "[[all kinds of lists]]"
-created: 2025/09/16
+created: 2025/11/13
 updated: 2025/11/13
 ---
 %%
-date:: [[2025-09-16]]
+date:: [[2025-11-13]]
 parent:: [[Interview questions]]
 source::
 related:: [[all kinds of lists]]
