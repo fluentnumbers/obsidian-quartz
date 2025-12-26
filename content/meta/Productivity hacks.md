@@ -53,6 +53,7 @@ tags::
 
 ---
 
+- https://lemire.me/blog/2025/12/05/why-speed-matters/ about the misperception that higher speed is always in-line and proportional to worse quality of work
 - 
 
 ## Resources

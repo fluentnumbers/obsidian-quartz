@@ -58,6 +58,7 @@ tags::
 		- floating-point non-associativity, batch invariance
 	- [Thinking Machines: Defeating Nondeterminism in LLM Inference](https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/#batch-invariance-and-determinism)
 - how does [[structured output]] [[structured output#^5c7271|work under the hood]]?
+- why do [[LLM]]s have difficulty with tasks such as counting letters in text? 
 - why does increasing the [[temperature]] parameter may lead to increased [[latency]]?
 	- flatter [[log probs]] distribution increases token count (until the end-of-sequence token is selected)
 	- worse [[speculative decoding]] yield. draft-verify methods accept less draft tokens
@@ -71,7 +72,7 @@ tags::
 		- [[bootstraping]] to asses [[confidence interval]] around predicted probabilities
 		- use an ensemble of multiple models, variance among their prediction is an indicator of uncertainty
 		- [[Bayesian|Bayesian methods]] to quantify uncertainty by treating model parameters as distributions rather than point estimates
-- how to demonstrate LLM system performance to [[stakeholder management|stakeholders]]?
+- how to demonstrate LLM system performance to [[stakeholder management|stakeholders]]? ^1d9ffb
 	- technical and business metrics for [[Evaluating information retrieval#Metrics]]
 	- demos
 		- [[chatbot]] demo where users are presented with two responses based on their query: one response presents info from FAQ **exactly** as it is in the docs (no summarization, no generative action used), another response - information after the GenAI block. Ask users to vote on the best option to subjectively estimate the quality of GenAI and to understand ==whether users need a chatbot or a search-bot==.

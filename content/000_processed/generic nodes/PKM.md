@@ -32,6 +32,10 @@ tags::
 - [Digital Garden Terms of Service](https://www.swyx.io/digital-garden-tos)
 - [Idle Musings - Digital Garden Model](https://codingkoi.com/garden/digital-garden-model.html)
 - [A Brief History & Ethos of the Digital Garden](https://maggieappleton.com/garden-history/)
+
+### Obsidian 
+- [Obsidian Playbook Readme - Fork My Brain](https://notes.nicolevanderhoeven.com/obsidian-playbook/Obsidian+Playbook+Readme)
+
 - 
 ---
 ###### Links to this File
